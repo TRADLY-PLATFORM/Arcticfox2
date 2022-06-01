@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppTheme">
+        <attr name="colorPrimary90" format="reference"/>
+        <attr name="homeTopViewItemBg" format="reference"/>
+        <attr name="homeCategoryImageTwo" format="reference"/>
+        <attr name="toolbarBackground" format="reference"/>
+        <attr name="defaultRipple" format="reference|color"/>
+        <attr name="buttonOutlineCorner" format="reference"/>
+        <attr name="buttonGradientBg" format="reference"/>
+        <attr name="cursorColor" format="reference"/>
+        <attr name="otpTextColor" format="reference"/>
+        <attr name="fullScreenDialogStyle" format="reference"/>
+        <attr name="bottomSheetDialogIsFloat" format="reference"/>
+        <attr name="colorRightChat" format="reference"/>
+        <attr name="colorChatDocBgRight" format="reference"/>
+        <attr name="checkBox" format="reference"/>
+        <attr name="checkBoxIcon" format="reference"/>
+        <attr name="buttonPressColor" format="reference"/>
+        <attr name="buttonPressedStateColor" format="reference"/>
+        <attr name="orderTabColor" format="reference"/>
+        <attr name="reviewRatingStyle" format="reference"/>
+        <attr name="materialButtonStyle" format="reference"/>
+    </declare-styleable>
+</resources>

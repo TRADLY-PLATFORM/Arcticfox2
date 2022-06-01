@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="EventTimeCreateBinding">
+        <import type="tradly.social.common.base.CustomOnClickListener"/>
+        <import type="android.view.View"/>
+        <variable
+            name="onClickListener"
+            type="CustomOnClickListener" />
+        <variable
+            name="startMillis"
+            type="Long" />
+        <variable
+            name="endMillis"
+            type="Long" />
+
+        <variable
+            name="timeFormat"
+            type="String" />
+        <variable
+            name="dateFormat"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorLightGrey">
+
+        <CalendarView
+            android:id="@+id/calenderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/clSelectedDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="@{startMillis!=0L?View.VISIBLE:View.GONE}"
+            bind:onClickListener="@{onClickListener}"
+            bind:startMillis="@{startMillis}"
+            bind:endMillis = "@{endMillis}"
+            bind:timeFormat="@{timeFormat}"
+            bind:dateFormat="@{dateFormat}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calenderView"
+            layout="@layout/layout_event_time_card"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_event_time_save"
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:onClick="@{(view)->onClickListener.onClick(view)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

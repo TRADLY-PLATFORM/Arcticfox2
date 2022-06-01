@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="17dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalOrderInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="61dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticaltimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <View
+        android:id="@+id/viewCircle"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalOrderInfo"
+        tools:background="@drawable/bg_glow_green_gradient_circle" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="3dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="@id/viewCircle"
+        app:layout_constraintTop_toBottomOf="@id/viewCircle"
+        app:layout_constraintEnd_toEndOf="@id/viewCircle"
+        android:background="?attr/colorPrimary"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalOrderInfo"
+        app:layout_constraintTop_toTopOf="@+id/viewCircle"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticaltimeStamp"
+        android:textSize="14sp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPureDarkBlack"
+        android:textStyle="bold"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        tools:text="Order Placed"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalOrderInfo"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticaltimeStamp"
+        android:textSize="12sp"
+        android:theme="@style/TextViewRTL"
+        android:visibility="invisible"
+        android:textColor="@color/colorMidDarkBlue"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        tools:text="Order#12345 from fashion point"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticaltimeStamp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="12sp"
+        android:textColor="@color/colorMidDarkBlue"
+        tools:text="05/08/2019"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticaltimeStamp"
+        app:layout_constraintTop_toBottomOf="@id/textDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="12sp"
+        android:textColor="@color/colorMidDarkBlue"
+        tools:text="11:10 AM"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

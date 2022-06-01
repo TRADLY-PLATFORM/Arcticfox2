@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data class="EventConfirmBookingBinding">
+
+        <import type="tradly.social.domain.entities.Address" />
+
+        <import type="tradly.social.common.base.CustomOnClickListener" />
+
+        <variable
+            name="onClickListener"
+            type="CustomOnClickListener" />
+
+        <variable
+            name="price"
+            type="String" />
+
+        <variable
+            name="startMillis"
+            type="Long" />
+
+        <variable
+            name="endMillis"
+            type="Long" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="dateFormat"
+            type="String" />
+
+        <variable
+            name="timeFormat"
+            type="String" />
+
+        <variable
+            name="address"
+            type="Address" />
+
+        <variable
+            name="quantity"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:background="@color/colorLightGrey"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clEventNamePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="16dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <tradly.social.common.views.custom.CustomTextView
+                        android:id="@+id/tvEventTitle"
+                        style="@style/TextView.Subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{title}"
+                        android:textColor="@color/colorTextBlack"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                         />
+
+                    <tradly.social.common.views.custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextBlack"
+                        android:textStyle="bold"
+                        android:text="@{price}"
+                        app:layout_constraintBottom_toBottomOf="@id/tvEventTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvEventTitle"
+                         />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <include
+                    android:id="@+id/layoutEventTimeLocationDetail"
+                    layout="@layout/layout_event_time_location_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clEventNamePrice"
+                    bind:dateFormat="@{dateFormat}"
+                    bind:endMillis="@{endMillis}"
+                    bind:formattedAddress="@{address.formattedAddress}"
+                    bind:geoPoint="@{address.geoPoint}"
+                    bind:landMark="@{address.city}"
+                    bind:onClickListener="@{onClickListener}"
+                    bind:startMillis="@{startMillis}"
+                    bind:timeFormat="@{timeFormat}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPaymentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:padding="16dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutEventTimeLocationDetail"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/list_item_payment" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutTotalQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:padding="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvPaymentList">
+
+                    <tradly.social.common.views.custom.CustomTextView
+                        android:id="@+id/tvMembersHint"
+                        style="@style/TextView.Subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_confirm_bookings_number_of_tickets"
+                        android:textColor="@color/colorTextBlack"
+                        app:layout_constraintBottom_toBottomOf="@id/btnGroup"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/btnGroup" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/btnGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:selectionRequired="false">
+
+                        <Button
+                            android:id="@+id/button1"
+                            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="?attr/colorPrimary"
+                            android:onClick="@{(view)->onClickListener.onClick(view)}"
+                            app:icon="@drawable/ic_baseline_add_24"
+                            app:iconTint="@color/white" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:enabled="false"
+                            android:text="@{quantity}"
+                            android:textColor="@color/colorTextBlack"
+                            tools:text="1" />
+
+                        <Button
+                            android:id="@+id/button3"
+                            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="?attr/colorPrimary"
+                            android:onClick="@{(view)->onClickListener.onClick(view)}"
+                            app:icon="@drawable/ic_baseline_minus_24"
+                            app:iconTint="@color/white" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                    <View
+                        android:id="@+id/div"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorMediumGrey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btnGroup" />
+
+                    <tradly.social.common.views.custom.CustomTextView
+                        android:id="@+id/tvTotal"
+                        style="@style/TextView.Subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/event_confirm_bookings_total"
+                        android:textColor="@color/colorTextBlack"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/div" />
+
+                    <tradly.social.common.views.custom.CustomTextView
+                        android:id="@+id/tvTotalValue"
+                        style="@style/TextView.Subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@{price}"
+                        android:textColor="@color/colorTextBlack"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTotal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTotal"
+                        tools:text="$100" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btnConfirmBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:minHeight="56dp"
+                    android:onClick="@{(view)->onClickListener.onClick(view)}"
+                    android:text="@string/event_confirm_booking_confirm_booking"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutTotalQuantity" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:visibility="visible"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

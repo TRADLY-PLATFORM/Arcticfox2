@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="tradly.social.event.eventbooking">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/dynamic_module_event_bookings_title">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application>
+        <activity android:name=".MyBookingHostActivity"></activity>
+        <activity
+            android:name=".BookingHostActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

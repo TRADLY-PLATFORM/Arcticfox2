@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tradly.social.common.base">
+
+    <application android:name=".AppController">
+        <activity android:name="tradly.social.common.subscription.InAppSubscriptionActivity"></activity>
+    </application>
+
+</manifest>

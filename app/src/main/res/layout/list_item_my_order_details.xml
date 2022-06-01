@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/CardViewOrderDetails"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="4dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalDividerEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="12dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="12dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalImageStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalPriceUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/imageOrderProduct"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:siRadius="4dp"
+        app:siBorderWidth="0dp"
+        app:siBorderColor="@color/colorWhiteLight"
+        app:siBorderType="fill"
+        app:siStrokeJoin="round"
+        app:siBorderAlpha="0.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalStart"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalEnd"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalImageStart"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        tools:src="@drawable/placeholder_image"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textProductName"
+        android:layout_width="0dp"
+        android:theme="@style/TextViewRTL"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDarkBlack"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalImageStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        app:layout_constraintBottom_toTopOf="@id/textProductDescription"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="White Full Slive Top"/>
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textProductDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorMediumGrey"
+        android:layout_marginTop="4dp"
+        android:theme="@style/TextViewRTL"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalImageStart"
+        app:layout_constraintTop_toBottomOf="@id/textProductName"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        app:layout_constraintBottom_toTopOf="@id/textProductUnits"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        tools:text="Zara"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textProductUnitsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:theme="@style/TextViewRTL"
+        android:textColor="@color/colorDarkBlack"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalImageStart"
+        app:layout_constraintTop_toTopOf="@id/textProductUnits"
+        app:layout_constraintBottom_toBottomOf="@id/textProductUnits"
+        app:layout_constraintEnd_toStartOf="@id/textProductUnits"
+        android:gravity="center_vertical"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/orderdetail_units"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textProductUnits"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/colorDarkBlack"
+        app:layout_constraintStart_toEndOf="@id/textProductUnitsLabel"
+        app:layout_constraintTop_toTopOf="@id/textProductPrice"
+        app:layout_constraintBottom_toBottomOf="@id/textProductPrice"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalPriceUnit"
+        android:gravity="center_vertical"
+        android:theme="@style/TextViewRTL"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/textProductPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:theme="@style/TextViewRTL"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalPriceUnit"
+        app:layout_constraintTop_toBottomOf="@id/textProductDescription"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        app:layout_constraintBottom_toTopOf="@id/productDivider"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:gravity="end"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+
+    <View
+        android:id="@+id/productDivider"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/colorVeryLightBlack"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/textProductPrice"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalImageStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalDividerEnd"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textProductReview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryRed"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalImageStart"
+        app:layout_constraintTop_toBottomOf="@id/productDivider"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalEnd"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="@string/orderdetail_review_product"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

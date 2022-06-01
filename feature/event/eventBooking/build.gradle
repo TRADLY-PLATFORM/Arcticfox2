@@ -1,0 +1,32 @@
+import tradly.Dependencies
+import tradly.Modules
+
+apply from: "$rootDir/common-android-dynamic-feature.gradle"
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation project(Modules.app)
+    implementation project(Modules.base)
+    implementation project(Modules.network)
+    implementation project(Modules.resources)
+    implementation project(Modules.views)
+    implementation project(Modules.domain)
+    implementation project(Modules.navigation)
+    implementation project(Modules.util)
+    implementation project(Modules.cache)
+    implementation Dependencies.ImageView.shape_imageview
+    implementation Dependencies.Kotlin.kotlin_stdlib_jdk7
+    implementation Dependencies.PlayServices.locations
+    implementation Dependencies.PlayServices.maps
+    implementation Dependencies.ViewModel.view_model
+    implementation Dependencies.appcompat
+    implementation Dependencies.legacy_support_v4
+    implementation Dependencies.android_material_design
+    implementation Dependencies.core_ktx
+    implementation Dependencies.androidx_constraint_layout
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+}

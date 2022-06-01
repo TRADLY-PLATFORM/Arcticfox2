@@ -1,0 +1,796 @@
+<resources>
+
+    <!--region INTRO SCREEN-->
+    <string name="intro_next">التالي</string>
+    <string name="intro_get_started">ابتداء</string>
+    <!--endregion-->
+
+    <!-- region LOGIN SCREEN-->
+    <string name="login_welcome_to_app">حياك الله في تطبيق %s</string>
+    <string name="login_login">سجل الدخول</string>
+    <string name="login_login_to_your_account">ادخل على حسابك</string>
+    <string name="login_email">بريدك الالكتروني</string>
+    <string name="login_mobile">رقم جوالك</string>
+    <string name="login_forgot_your_password">نسيت كلمة السر؟</string>
+    <string name="login_dont_have_an_account">ماعندي حساب؟</string>
+    <string name="login_sign_up">سجل معنا</string>
+    <string name="login_password">كلمة السر</string>
+    <string name="login_required">متطلب</string>
+    <string name="login_to_continue">تسجيل الدخول للمتابعة</string>
+    <string name="login_no_user_found">هذا الحساب ماهو موجود</string>
+    <string name="login_invalid_credentials">معرفك غير صحيح</string>
+    <string name="login_alert_message_select_country">لاهنت اختار دولتك</string>
+    <!--endregion-->
+
+    <!--region SIGNUP SCREEN-->
+    <string name="signup_welcome_to_message">حياك الله في تطبيق %s</string>
+    <string name="signup_mobile">رقم جوالك</string>
+    <string name="signup_password">كلمة السر</string>
+    <string name="signup_already_have_an_account">عندي حساب معكم؟</string>
+    <string name="signup_create">انشاء</string>
+    <string name="signup_first_name">اسمك الاول</string>
+    <string name="signup_last_name">اسم الشهرة او القبيلة</string>
+    <string name="signup_email">بريدك الالكتروني</string>
+    <string name="signup_re_enter_password">ادخل كلمة السر مره ثانية</string>
+    <string name="signup_agree_terms_and_conditions"><b> الشروط والأحكام </b>وافق على</string>
+    <string name="signup_create_your_account">انشاء حساب لك</string>
+    <string name="signup_required">متطلب</string>
+    <string name="signup_invalid_email">بريد إلكتروني خاطئ</string>
+    <string name="signup_password_mismatch">لم تطابق كلمة السر</string>
+    <string name="signup_min_password_validation">كلمة السر لارم تحتوي على ٦ احرف على الاقل</string>
+    <string name="signup_user_already_registered">المعرف هذا مسجل من قبل</string>
+    <string name="signup_alert_message_select_country">لاهنت اختار دولتك</string>
+    <string name="signup_accept_terms_condition">الرجاء قبول الشروط والأحكام</string>
+    <!--endregion-->
+
+    <!--region OTP SCREEN-->
+    <string name="otp_email_verification">تحقق من البريد الإلكتروني</string>
+    <string name="otp_phone_verification">تحقق من الجوال</string>
+    <string name="otp_enter_verification_code_here">ادخل رمز التحقق</string>
+    <string name="otp_did_not_receive_code">ما وصلني رمز تحقق؟</string>
+    <string name="otp_resend_code">ارسلي رمز التحقق مره ثناية</string>
+    <string name="otp_verify">تم التحقق</string>
+    <string name="otp_otp_verifying">جاري التحقق من الرمز</string>
+    <string name="otp_please_enter_otp">لاهنت ادخل رمز التحقق</string>
+    <string name="otp_sent_to">+%s %s</string>
+    <string name="otp_invalid_otp">رمز التحقق غير صحيح</string>
+    <string name="otp_expired">انتهت مدة رمز التحقق</string>
+    <string name="otp_resend_message">تم إرسال الرمز بنجاح</string>
+    <string name="opt_could_not_set_password">هنالك خطأ. تعذر تعيين كلمة المرور في هذا الوقت. حاول مرة أخرى في وقت لاحق</string>
+    <string name="otp_password_changed_success_msg">تم تغيير كلمة المرور بنجاح</string>
+    <string name="otp_otp_send_info">ولا عليك امر ادخل رمز التحقق هنا. تم ارساله لبريدك %s</string>
+    <!--endregion-->
+
+    <!--region SPLASH SCREEN-->
+    <string name="splash_welcome_to_message">حياك الله في تطبيق %s</string>
+    <string name="splash_required">متطلب</string>
+    <string name="splash_enter_your_tenantId">أدخل معرف المستأجر الخاص بك</string>
+    <string name="splash_submit">يقدم</string>
+    <string name="splash_tenant_id">معرف المستأجر</string>
+    <string name="splash_change_tenant">تغيير المستأجر</string>
+    <string name="splash_invalid_tenant_id">معرف المستأجر غير صالح</string>
+    <!--endregion-->
+
+    <!--region FORGOT PASSWORD SCREEN-->
+    <string name="forgotpassword_email">البريد الإلكتورني</string>
+    <string name="forgotpassword_mobile">رقم الجوال</string>
+    <string name="forgotpassword_alert_message_select_country">لاهنت اختار دولتك</string>
+    <string name="forgotpassword_forgot_your_password">نسيت كلمة السر؟</string>
+    <string name="forgotpassword_enter_your_mobile_number">ادخل رقم الجوال</string>
+    <string name="forgotpassword_enter_your_email">أدخل بريدك الإلكتروني</string>
+    <string name="forgotpassword_password_mismatch">لم تطابق كلمة السر</string>
+    <string name="forgotpassword_invalid_email">بريد إلكتروني خاطئ</string>
+    <string name="forgotpassword_required">متطلب</string>
+    <string name="forgotpassword_verification_password">رمز التحقق</string>
+    <string name="forgotpassword_verify">تحقق</string>
+    <string name="forgotpassword_otp_send_info">الرجاء إدخال OTP هنا ، لقد أرسلنا رمز التحقق إلى %s</string>
+    <string name="forgotpassword_new_password">كلمة المرور الجديدة</string>
+    <string name="forgotpassword_confirm_new_password">تأكيد كلمة المرور الجديدة</string>
+    <!--endregion-->
+
+    <!--region SEARCH SCREEN-->
+    <string name="search_search">ابحث</string>
+    <string name="search_stores">المتاجر</string>
+    <string name="search_header_title">ايش تبحث عنه؟</string>
+    <string name="search_type_to_search">أكتب الي تبيه للبحث</string>
+    <string name="search_sort_by">حسب الترتيب</string>
+    <string name="search_filter_by_distace">فلتر لاقرب مسافة عنك</string>
+    <string name="search_location">الموقع</string>
+    <string name="search_category">انواع الخدمات</string>
+    <string name="search_search_a_product">ابحث عن منتج</string>
+    <string name="search_search_a_store">ابحث عن متجر</string>
+    <string name="search_listings">القوائم</string>
+    <string name="search_low_to_high">من اقل الى اعلى</string>
+    <string name="search_high_to_low">من اعلى الى اقل</string>
+    <string name="search_relevance">متناسب</string>
+    <!--endregion-->
+
+    <!--region NOTIFICATION CENTER ORDER STATUS-->
+    <string name="notification_header_title">تنبيهات</string>
+    <string name="notification_no_notification_at_the_moment">لا يوجد تنبيهات الان</string>
+    <string name="notification_order_placed_success">مبروك ، تم تقديم طلبك بنجاح</string>
+    <string name="notification_order_cancelled">تم الغاء طلبك</string>
+    <string name="notification_order_return_initiated">بدأت عملية إرجاع طلبك</string>
+    <string name="notification_order_is_in_progress">طلبك تحت التنفيذ</string>
+    <string name="notification_order_shipped">تم شحن طلبك</string>
+    <string name="notification_order_deliver_returned">تم إرجاع طلب التسليم</string>
+    <string name="notification_order_delivery_return_confrmed">تأكيد عودة تسليم الطلب</string>
+    <string name="notification_order_order_delivered">تم تسليم طلبك بنجاح</string>
+    <string name="notification_order_picked_up">تم استلام طلبك من قبل شريك البريد السريع</string>
+    <string name="notification_order_out_for_delivery">طلبك خارج للتسليم</string>
+    <string name="notification_order_customer_return_confirmed">تم تأكيد عودة الطلب</string>
+    <string name="notification_order_customer_return_disputed">طلب إعادة النزاع</string>
+    <string name="notification_order_customer_unreachable">لا يمكن الوصول للعميل</string>
+    <string name="notification_started_following_your_account">%s بدأ في متابعة حسابك %s</string>
+    <string name="notification_liked_your_listing">%s اعجب بقائمتك</string>
+    <!--endregion-->
+
+    <!--region NOTIFICATION-->
+    <string name="notification_chat_message_fallback">Sent you a message</string>
+    <string name="notification_chat_listing_fallback">Sent you a listing</string>
+    <string name="notification_chat_image_fallback">Sent you a photo</string>
+    <string name="notification_chat_file_fallback">Sent you a file</string>
+    <string name="notification_notification_approved_fallback">Your recent listing has been approved and ready for sale.</string>
+    <string name="notification_rejected_fallback">Your recent listing has been rejected for quality reasons.</string>
+    <string name="notification_liked_fallback">%s liked your listing</string>
+    <string name="notification_followed_fallback">%s following you</string>
+    <string name="notification_order_title">Order#&#160;%s</string>
+    <string name="notification_order_change_fallback">Your order status has been changed to %s</string>
+    <string name="notification_new_order_fallback">Your have got a new order</string>
+    <!--endregion-->
+
+    <!--region CART SCREEN-->
+    <string name="cart_required">متطلب</string>
+    <string name="cart_header_title">سلتي</string>
+    <string name="cart_remove">إزالة</string>
+    <string name="cart_some_items_removed">تم ازالة بعض من منتجاتك</string>
+    <string name="cart_cancel">الغاء</string>
+    <string name="cart_item_removed_cart">تم إزالة المنتج من السلة</string>
+    <string name="cart_item_added_cart">تمت إضافة العنصر إلى سلة التسوق</string>
+    <string name="cart_alert_stock_not_available">Stocks not available for selected Quantity</string>
+    <string name="cart_max_quantity">الكمية القصوى %s</string>
+    <string name="cart_apply">يطبق</string>
+    <string name="cart_enter_quantity">أدخل الكمية</string>
+    <string name="cart_your_cart_is_empty">سلتك فاضيه!</string>
+    <string name="cart_more">أكثر</string>
+    <string name="cart_shipment">الشحن</string>
+    <string name="cart_qty">كمية:</string>
+    <string name="cart_shop_now">تسوق الآن</string>
+    <string name="cart_invalid_qty">كمية غير صالحة</string>
+    <string name="cart_alert_message_min_balance_checkout">يتوجب ان يكون إجمالي مبلغ سلة التسوق اعلي من %s لإكمال الطلب</string>
+    <string name="cart_could_not_delete_cart_item">هناك خطأ ما. تعذرت إزالة عنصر سلة التسوق في الوقت الحالي. حاول مرة أخرى لاحقًا</string>
+    <string-array name="cart_qty_min">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>@string/cart_more</item>
+        <item>default</item>
+    </string-array>
+    <!--endregion-->
+
+    <!-- region WISH LIST-->
+    <string name="wishlist_header_title">قائمة رغباتي</string>
+    <string name="wishlist_continue_wish_list">استمر في التسوق</string>
+    <string name="wishlist_item_added_to_wish_list">ضفنا المنتج لقائمتك</string>
+    <string name="wishlist_item_deleted_to_wish_list">تم حذف المنتج من قائمتك</string>
+    <string name="wishlist_login_to_continue">تسجيل الدخول للمتابعة</string>
+    <!--endregion-->
+
+    <!--region PAYMENT-->
+    <string name="payment_continue_shopping">استمر في التسوق</string>
+    <string name="payment_price_details">تفاصيل السعر</string>
+    <string name="payment_price">السعر(%s العنصر)</string>
+    <string name="payment_prices">السعر(%s العناصر)</string>
+    <string name="payment_total_amount">المبلغ الإجمالي</string>
+    <string name="payment_header_title">دفع</string>
+    <string name="payment_order">الطلب</string>
+    <string name="payment_not_able_to_checkout_msg">عذرًا ، لم نتمكن من إجراء الدفع في الوقت الحالي ، حاول مرة أخرى لاحقًا</string>
+    <string name="payment_select_delivery_address">يرجى تحديد عنوان التسليم</string>
+    <string name="payment_select_payment">اختر طريقة الدفع</string>
+    <string name="payment_order_successfully_placed">تم وضع طلبك بنجاح</string>
+    <string name="payment_order_status_message">It might be due to payment gateway issue.</string>
+    <string name="payment_order_payment_failed">Your payment is failed</string>
+    <string name="payment_order_retry_payment">Retry payment</string>
+    <!--endregion-->
+
+    <!--region SHIPMENT-->
+    <string name="shipment_header_title">Shipment</string>
+    <string name="shipment_delivery_fee">Delivery Fee</string>
+    <string name="shipment_delivery_address">Delivery Address</string>
+    <string name="shipment_address_data">%s,%s,%s - %s</string>
+    <string name="shipment_continue">Continue</string>
+    <string name="shipment_pickup_address">Pickup Address</string>
+    <string name="shipment_change">Change</string>
+    <string name="shipment_delivery_to">Deliver to %s,%s</string>
+    <string name="shipment_alert_message_choose_shipment">Please choose preferred shipping</string>
+    <!--endregion-->
+
+    <!--region ADDRESS SCREEN-->
+    <string name="address_my_address">عنواني</string>
+    <string name="address_no_address_found">لا يوجد عنوان</string>
+    <string name="address_add_new_address">اضف عنوان جديد</string>
+    <string name="address_add_pickup_address">اضف عنوان استلام</string>
+    <string name="address_name">اسم</string>
+    <string name="address_phone">جوال</string>
+    <string name="address_state">ولاية</string>
+    <string name="address_city">مدينة</string>
+    <string name="address_country">الدولة</string>
+    <string name="address_landmark">معلم معروف قريب منك</string>
+    <string name="address_use_current_location">استخدام الموقع الحالي</string>
+    <string name="address_edit_address">تعديل العنوان</string>
+    <string name="address_edit_pickup_address">تعديل عنوان الاستلام</string>
+    <string name="address_address_added_successfully">تم اضافة العنوان بنجاح</string>
+    <string name="address_address_updated_successfully">تم تحديث العنوان بننجاح</string>
+    <string name="address_zipcode">الرمز البريدي</string>
+    <string name="address_address_one">عنوان ١</string>
+    <string name="address_address_two">عنوان ٢</string>
+    <string name="address_save">أحفظ</string>
+    <string name="address_alert_message_add_pickup_address">عنوان الالتقاء غير متوفر. الرجاء إضافة عنوان الالتقاط</string>
+    <string name="address_cant_fetch_location">تعذر الحصول على الموقع حاليا ، حاول مرة أخرى</string>
+    <!--endregion-->
+
+    <!--region CATEGORIES-->
+    <string name="category_header_title">كل الفئات والخدمات</string>
+    <string name="category_alert_message_category_list_fetch_failed">حدث خطأ أثناء الجلب فئة</string>
+
+    <!--endregion-->
+
+    <!--region STORE LIST-->
+    <string name="storelist_header_title">المتاجر</string>
+    <string name="storelist_follow">تابع</string>
+    <string name="storelist_following">أتابع</string>
+    <string name="storelist_no_stores_found">لم يتم العثور على متاجر</string>
+    <string name="storelist_no_stores_available">المتاجر غير متاحة</string>
+    <string name="storelist_no_stores_blocked">No Stores blocked</string>
+
+    <!--endregion-->
+
+    <!--region PRODUCT LIST-->
+    <string name="productlist_header_title">المنتجات</string>
+    <string name="productlist_no_products_found">لا توجد منتجات</string>
+    <string name="productlist_under_review">قيد المراجعة</string>
+
+    <!--endregion-->
+
+    <!--region SOCIAL FEED-->
+    <string name="socialfeed_trending">تتجه</string>
+    <string name="socialfeed_latest_item">أحدث العناصر</string>
+    <string name="socialfeed_most_followers">معظم المتابعين</string>
+    <string name="socialfeed_no_feeds_found">لم يتم العثور على موجزات ويب</string>
+    <!--endregion-->
+
+    <!--region TIME AGO-->
+    <string name="justNow">تو الان</string>
+    <string name="a_minute_ago">قبل دقيقة</string>
+    <string name="minutesAgo">قبل دقايق</string>
+    <string name="an_hour_ago">قبل ساعه</string>
+    <string name="hours_ago">قبل ساعة</string>
+    <string name="yesterday">امس</string>
+    <!--endregion-->
+
+    <!--region CHAT LIST SCREEN-->
+    <string name="chat_no_new_message">لا توجد رسائل جديدة</string>
+    <string name="chat_fetch_error_msg">حدث خطأ ما أثناء الحصول على الدردشات الخاصة بك. حاول مرة أخرى لاحقاً</string>
+    <string name="chat_offer">Offer</string>
+    <string name="chat_buy_now">Buy Now</string>
+    <string name="chat_accepted">Accepted</string>
+    <string name="chat_declined">Declined</string>
+    <string name="chat_requested_an_offer">Requested an offer</string>
+    <string name="chat_offer_accepted">Offer Accepted</string>
+    <string name="chat_offer_declined">Offer Declined</string>
+    <string name="chat_expired">Expired</string>
+
+    <!--endregion-->
+
+    <!--region HOME SCREEN-->
+    <string name="home_Home">الرذيسية</string>
+    <string name="home_social_feed">الردود الاجتماعية</string>
+    <string name="home_chats">دردشات كتابية</string>
+    <string name="home_more">اكثر</string>
+    <string name="home_sell">بيع</string>
+    <string name="home_donate">يتبرع</string>
+    <string name="home_rent">إيجار</string>
+    <string name="home_view_all">عرض الكل</string>
+    <string name="home_follow">متابعة</string>
+    <!--endregion-->
+
+    <!--region MORE SCREEN-->
+    <string name="more_exit_from">الخروج &#160;</string>
+    <string name="more_welcome">هلا بك</string>
+    <string name="more_my_orders">طلباتي</string>
+    <string name="more_my_wish_list">قائمتي</string>
+    <string name="more_my_store">متجري</string>
+    <string name="my_groups">مجموعاتي</string>
+    <string name="more_my_cart">سلتي</string>
+    <string name="more_my_sales">مبيعاتي</string>
+    <string name="more_payments">المدفعات</string>
+    <string name="more_language">اللغة</string>
+    <string name="more_settings">الإعدادات</string>
+    <string name="more_faq">اسأله</string>
+    <string name="more_tell_a_friend">أخبر صديق</string>
+    <string name="uploading_profile">تحميل صورة الملف الشخصي</string>
+    <string name="more_terms_condition">الشروط والأحكام</string>
+    <string name="more_privacy_policy">سياسة الخصوصية</string>
+    <string name="more_feedback">الردود</string>
+    <string name="more_signin_signup">سجل الدخول/سجل معنا</string>
+    <string name="more_stores_i_follow">Stores I follow</string>
+    <string name="more_stored_i_blocked">Stores I’ve blocked</string>
+    <string name="more_are_you_sure_change_tenant_id">هل أنت متأكد؟ هل تريد تغيير المستأجر</string> <!--NT-->
+    <!--endregion-->
+
+    <!--region SETTINGS SCREEN-->
+    <string name="settings_header_title">الإعدادات</string>
+    <string name="settings_email">البريد الإلكتروني</string>
+    <string name="settings_fullname">الاسم كاملا</string>
+    <string name="settings_mobile">رقم الجوال</string>
+    <string name="settings_location">موقعك</string>
+    <string name="settings_welcome">هلا فيك!</string>
+    <string name="settings_language">اللغة</string>
+    <string name="settings_store">المتجر</string>
+    <string name="settings_theme">موضوعات/انماط</string>
+    <string name="settings_logout">تسجيل الخروج</string>
+    <string name="settings_app_settings">إعدادات التطبيق</string>
+    <string name="settings_eg_email">eg.tradly.com</string>
+    <string name="settings_add_store">أضف المتجر</string>
+    <string name="settings_others">اخرى</string>
+    <string name="settings_signin_signup">سجل الدخول/سجل معنا</string>
+    <string name="settings_something_while_logging_out">كان هناك خطأ في تسجيل الخروج. الرجاء معاودة المحاولة في وقت لاحق</string> <!--NT-->
+    <string name="settings_version">الإصدار&#160;</string>
+    <string name="settings_are_you_sure_logout">هل أنت متأكد. هل تريد تسجيل الخروج؟</string>
+    <string name="settings_profile_pic_updated_message">تم تحديث صورة الملف الشخصي</string>
+    <string name="settings_cant_upload_profile">لا يمكن تحميل الملف الشخصي في الوقت الحالي ، حاول مرة أخرى لاحقًا </string>
+    <!--endregion-->
+
+    <!--region STORE DETAIL-->
+    <string name="storedetail_location">تم</string>
+    <string name="storedetail_listings">القوائم</string>
+    <string name="storedetail_store_not_available">المتجر متاح</string>
+    <string name="storedetail_header_title">تفاصيل المتجر</string>
+    <string name="storedetail_block">حظر</string>
+    <string name="storedetail_unblock">رفع الحظر</string>
+    <string name="storedetail_description">وصف</string>
+    <string name="storedetail_cannot_block_store">لا يمكن حظر المتجر. حاول مرة أخرى في وقت لاحق</string>
+    <string name="storedetail_view_location">الإطلاع على الموقع؟</string>
+    <string name="storedetail_no_details_found">ماي اي معلومات</string>
+    <string name="storedetail_link_copied">تم نسخ الرابط</string>
+    <string name="storedetail_active_inactive_your_store">%s متجرك؟</string>
+    <string name="storedetail_active_info">هل أنت متأكد أنك تحب ان متجرك يصير مؤقتًا %s!</string>
+    <string name="storedetail_set_days_time">حدد التاريخ والوقت</string>
+    <string name="storedetail_active">نشط</string>
+    <string name="storedetail_activated">مفعل</string>
+    <string name="storedetail_inactive">غير نشط</string>
+    <string name="storedetail_inactivated">تم تعطيله</string>
+    <string name="storedetail_total_followers">مجموع المتابعين</string>
+    <string name="storedetail_details">تفاصيل</string>
+    <string name="storedetail_about">حول</string>
+    <string name="storedetail_total_products">مجموع المنتجات</string>
+    <string name="storedetail_business_register_document">وثيقة تسجيل الأعمال</string>
+    <string name="storedetail_upload_doc_limit_5mb">تحميل مستند ملف بحد 5 ميغا بايت</string>
+    <string name="storedetail_store_currently_unavailable">المتجر متاح</string>
+    <string name="storedetail_account_activated_successfully">لقد تم حسابك بنجاح%s بنجاح</string>
+    <string name="storedetail_alert_message_account_activate">حدث خطأ أثناء %s حسابك ، حاول مرة أخرى لاحقًا</string>
+    <string name="storedetail_alert_message_store_rejected">تم رفض حسابك لأسباب تتعلق بالجودة. يرجى تحديث تفاصيل حسابك.</string>
+    <string name="storedetail_alert_message_store_waiting_for_approval">لم تتم الموافقة على حسابك حتى الآن. يرجى الانتظار حتى يوافق المسؤول على حسابك للمتابعة</string>
+
+    <!--endregion-->
+
+    <!--region MY SALES-->
+    <string name="sales_transactions">عمليات</string>
+    <string name="sales_payouts">مدفوعات</string>
+    <string name="sales_your_balance">رصيدك</string>
+    <string name="sales_balance">الرصيد</string>
+    <string name="sales_no_transaction">لا %s وجدت</string>
+    <string name="sales_all_payouts">جميع المدفوعات</string>
+    <string name="sales_see_payouts">المدفوعات</string>
+    <!--endregion-->
+
+    <!--region PAYOUTS-->
+    <string name="payouts_header_title">ضبط المدفوعات</string>
+    <string name="payments_setup_payout">Setup Payouts to receive \n payments</string>
+    <string name="payments_connect_with_stripe">تواصل مع الشريط</string>
+    <string name="payments_stripe_connected">تم الاتصال بالشريط</string>
+    <string name="payments_disconnect_stripe">افصل الشريط</string>
+    <string name="payments_disconnect_stripe_warning">هل أنت متأكد أنك تريد قطع اتصال Stripe؟</string>
+    <string name="payments_disconnect_stripe_info">بمجرد قطع الاتصال بالشريط ادناه لن تتمكن من رؤية سجل المدفوعات السابقه في التطبيق </string>
+    <string name="payments_redirected_to_stripe">سيتم اعادة توجيهك الى الشريط</string>
+    <string name="payment_set_up_info_link">In order to receive payments, follow this <a href="https://connect.stripe.com/register">link</a> to set-up or login to your Stripe Connect account, then come back to this page to authenticate</string>
+
+    <string name="payments_stripe_config_screen_connect_message_standard_fallback">لتلقي المدفوعات٬ اضغط على الزر ادناه  لإعداد او تسجيل الدخول لحسابك. بمجرد الانتهاء من ربط الحساب سوف يتم توجيهك الى هذه الصفحه</string>
+    <string name="payments_stripe_express_connect_message">Every user who creates a store has a Stripe Connect account automatically created under their email address. Click the below button to complete your account, so you can receive payments to the bank account of your choice!</string>
+    <string name="payments_stripe_config_screen_disconnect_message_standard_fallback">في حال تم فصل الحساب لن تتمكن من تلقي مدفوعات للطلبات القادمة الا في حال تم الاتصال بالشريط مرة أخرى</string>
+    <string name="payments_stripe_config_screen_disconnect_message_express_fallback">في حال تم حذف الحساب لن تتمكن من تلقي مدفوعات للطلبات القادمة الا في حال تم الاتصال بالشريط مرة أخرى</string>
+
+    <string name="payments_stripe_status_waiting_message">انتظارالتحقق من الشريط </string>
+    <string name="payments_stripe_status_connect">الاتصال بدفع الشريط لتلقي المدفوعات </string>
+    <string name="payments_stripe_status_verification_failed">فشل التحقق من الشريط</string>
+    <string name="payments_stripe_status_connection_success">نجاح التحقق من الشريط</string>
+    <string name="payments_view_dashboard">عرض لوحة المعلومات</string>
+
+    <string name="payments_stripe_express_connect_waiting">Your Stripe connect profile is under verification from Stripe.  If you want to change the information, view the dashboard to change.</string>
+    <string name="payments_stripe_express_connect_failed1">Verification failed due to&#160;</string>
+    <string name="payments_stripe_express_connect_failed2">&#160;Go to your dashboard and update the relevant details.</string>
+    <string name="payments_stripe_express_connect_success">Congratulations, your Stripe account has been connected successfully. Now you can receive payments to the bank account of your choice!</string>
+
+    <string name="payments_stripe_connect_error_msg">Something went wrong while configure Stripe. Try again later</string>
+    <string name="payments_stripe_disconnect_error_msg">Something went wrong while disconnecting Stripe. Try again later</string>
+    <string name="payments_stripe_disconnected_success">Stripe Disconnected Successfully</string>
+
+    <string name="payments_init_failed">Something went wrong while initiate %s. Try again later</string>
+    <string name="payments_failed">Payment failed. Try again later</string>
+    <string name="payments_alert_message_stripe_status_failed">Something went wrong, couldn\'t able to fetch Stripe details. Try again later</string> <!--NT-->
+
+    <!--endregion-->
+
+    <!--region MY ORDER LIST SCREEN-->
+    <string name="myorders_my_store_orders">طلبات متجري</string>
+    <string name="myorders_all">الكل</string>
+    <string name="myorders_week">اسبوع</string>
+    <string name="myorders_month">شهر</string>
+    <string name="myorders_year">سنه</string>
+    <string name="myorders.orders">طلبات</string>
+    <string name="myorders_filter_by">صنف ب</string>
+    <string name="myorders_filter_by_cancelled_order">طلب ملغي</string>
+    <string name="myorders_filter_by_order_delivered">تم التوصيل</string>
+    <string name="myorders_filter_by_order_in_progress">جاري الطلب</string>
+    <string name="myorders_filter_by_shipped">تم الشحن</string>
+    <string name="myorders_no_orders_found">مافيه طلبات</string>
+    <string name="myorders_my_orders">طلباتي</string>
+    <!--endregion-->
+
+    <!--region ORDER DETAIL-->
+    <string name="orderdetail_change">غير</string>
+    <string name="orderdetail_pickup_address">عنوان الاستلام</string>
+    <string name="orderdetail_chat">الدردشة</string>
+    <string name="orderdetail_order_detail">تفاصيل الطلب</string>
+    <string name="orderdetail_review_all_product">مراجعة كل الطلبات</string>
+    <string name="orderdetail_track_order">تتبع طلبك</string>
+    <string name="orderdetail_amount">كمية: </string>
+    <string name="orderdetail_order_id">-&#160;رقم الطلب </string>
+    <string name="_order_id">#رقم الطلب: %s</string>
+    <string name="orderdetail_delivery_address">عنوان التوصيل</string>
+    <string name="orderdetail_address">العنوان: </string>
+    <string name="orderdetail_name">اسم:</string>
+    <string name="orderdetail_mobile">الجوال: </string>
+    <string name="orderdetail_change_status">تغيرحالة الطلب</string>
+    <string name="orderdetail_review_product">راجع المنتج</string>
+    <string name="orderdetail_units">الوحدات:</string>
+    <string name="orderdetail_select_status">اخترحالة</string>
+    <string name="orderdetail_order_cancelled">تم الغاء الطلب</string>
+    <string name="orderdetail_no_orders_found">لايوجد طلبات</string>
+    <!--Buyer status-->
+    <string name="orderdetail_order_in_progress">الطلب قيد التنفيذ</string>
+    <string name="orderdetail_return_initiated">تمت عملية الارجاع</string>
+    <string name="orderdetail_delivery_confirmed">تم تأكيد التوصيل</string>
+    <string name="orderdetail_out_for_delivery">خارج للتوصيل</string>
+    <string name="orderdetail_shipped">تم الشحن</string>
+    <string name="orderdetail_order_status_incomplete">حالة الطلب غير مكتملة</string>
+    <string name="orderdetail_order_placed">تم الطلب</string>
+    <string name="orderdetail_cancelled">ألغيت</string>
+
+    <!--Seller status-->
+    <string name="orderdetail_undelivered_returned">رحع له</string>
+    <string name="orderdetail_undelivered_return_confirmed">رجع الطلب لعدم الاستلام</string>
+    <string name="orderdetail_order_delivered">تم توصيل الطلب</string>
+    <string name="orderdetail_return_pickedup">اعادة الاستلام</string>
+    <string name="orderdetail_ready_for_pickup">جاهز للاستلام</string>
+    <string name="orderdetail_unreachable">لا يمكن الوصول للعميل</string>
+    <string name="orderdetail_order_return_confirmed">تأكيد ارجاع الطلب</string>
+    <string name="orderdetail_order_return_disputed">تأكيد اعتراض الطلب</string>
+    <!--endregion-->
+
+    <!--region EDIT PROFILE SCREEN-->
+    <string name="editprofile_email">البريد الإلكتروني</string>
+    <string name="editprofile_mobile">رقم الجوال</string>
+    <string name="editprofile_first_name">اسمك الاول</string>
+    <string name="editprofile_last_name">اسم الشهرة او القبيلة</string>
+    <string name="editprofile_invalid_email">بريد إلكتروني خاطئ</string>
+    <string name="editprofile_profile_updated_message">تم تحديث الملف الشخصي بنجاح</string>
+    <string name="editprofile_alert_message_select_country">لاهنت اختار دولتك</string>
+    <!--endregion-->
+
+    <!--region GROUP SCREEN-->
+    <string name="group" translatable="false" >Groups</string>
+    <string name="group_invalid_email" translatable="false">Invalid Email</string>
+    <string name="group_required" translatable="false">Required</string>
+    <string name="group_location" translatable="false">Location</string>
+    <string name="group_join" translatable="false">Join</string>
+    <string name="group_add_your_group_photo" translatable="false">Add your Group photo</string>
+    <string name="group_you_have_not_following_groups" translatable="false">You haven\'t joined to any groups</string>
+    <string name="group_tap_to_join" translatable="false">Tap to Join</string>
+    <string name="group_header_title" translatable="false">Add Group</string>
+    <string name="group_type" translatable="false">Group Type</string>
+    <string name="group_name" translatable="false">Group Name</string>
+    <string name="group_about" translatable="false">About</string>
+    <string name="group_added_successfully" translatable="false">Group has been added successfully</string>
+    <string name="group_could_not_load_group" translatable="false">Couldn\'t able to load group.Try again</string>
+    <string name="group_could_not_add_group" translatable="false">Couldn\'t add group at a moment.Try again later</string>
+    <string name="group_add_tag_group" translatable="false">Add Tags to group</string>
+    <string name="group_joined" translatable="false">Joined</string>
+    <string name="group_select_cover_photo" translatable="false">Select Cover Photo</string>
+    <string name="group_add" translatable="false">Add Group</string>
+    <string name="group_select_type" translatable="false">Select Group Type</string>
+    <string name="group_following_count" translatable="false">%s Followers</string>
+    <string name="group_members" translatable="false">%s members</string>
+    <string name="group_information" translatable="false">Group Information</string>
+    <string name="group_members_data" translatable="false">Members(%s)</string>
+    <string name="market_place" translatable="false">Marketplace</string>
+    <string name="discussion" translatable="false">Discussions</string>
+    <string name="group_to_join" translatable="false">Groups to Join</string>
+    <string name="groups_no_available" translatable="false">No Groups available</string>
+    <!--endregion-->
+
+    <!--region CHAT DETAIL SCREEN-->
+    <string name="chatdetail_type_message">اكتب رسالتك</string>
+    <string name="chatdetail_send">ارسل</string>
+    <string name="chatdetail_file">ملف</string>
+    <string name="chatdetail_photo">صورة</string>
+    <string name="chatdetail_video">فيديو</string>
+    <string name="chatdetail_audio">صوت</string>
+    <string name="chatdetail_product">منتج</string>
+    <string name="chatdetail_decline">Decline</string>
+    <string name="chatdetail_ratings">%s ratings</string>
+    <string name="chatdetail_no_messages">لا توجد رسائل</string>
+    <string name="chatdetail_offer_requested" >You requested an offer</string> <!--SKIP NEW FR-->
+    <string name="chatdetail_accept">Accept</string> <!--SKIP NEW FR-->
+    <string name="chatdetail_make_offer">Make Offer</string> <!--SKIP NEW FR-->
+    <!--endregion-->
+
+    <!--region ADD STORE SCREEN-->
+    <string name="addstore_required">متطلب</string>
+    <string name="addstore_category">الفئة</string>
+    <string name="addstore_address">العنوان</string>
+    <string name="addstore_add_your_store_photo">لاهنت ضيف صورة المتجر</string>
+    <string name="addstore_header_title">إنشاء متجرك الخاص</string>
+    <string name="addstore_alert_message_choose_shipment">طريقة الشحن المفضلة</string>
+    <string name="addstore_use_comma_to_add_value"><font size="12">استخدم الفواصل لإضافة القيم</font></string>
+    <string name="addstore_store_name">أسم المتجر</string>
+    <string name="addstore_store_web_address">عنوان ويب المتجر</string>
+    <string name="addstore_store_description">وصف المتجر</string>
+    <string name="addstore_store_url">رابط المتجر</string>
+    <string name="addstore_alert_please_select_address">لو سمحت اختر العنوان</string>
+    <string name="addstore_edit_store">تحرير المتجر</string>
+    <string name="addstore_select_cover_photo">حدد صورة الغلاف الخاصة بك</string>
+    <string name="addstore_invalid_url">رابط غير صالح</string>
+    <string name="addstore_alert_message_store_link_alias">الاسم مسجل مسبقاً</string> <!--NT-->
+    <string name="addstore_store_created_successfully">تم إنشاء المتجر بنجاح</string>
+    <string name="addstore_store_updated_successfully">تم تحديث المتجر بنجاح</string>
+    <!--endregion-->
+
+    <!--region MAP SCREEN-->
+    <string name="map_location">منطقة</string>
+    <string name="map_change">غير</string>
+    <string name="map_select_location">إختر منطقة</string>
+    <!--endregion-->
+
+    <!--region PRODUCT DETAIL SCREEN-->
+    <string name="product_location">منطقة</string>
+    <string name="product_follow">متابعة</string>
+    <string name="product_following">أتابع</string>
+    <string name="product_add_to_cart">اضف للسلة</string>
+    <string name="product_adding_to_cart">تم الاضافة للسلة</string>
+    <string name="product_chat">محادثة</string>
+    <string name="product_directions">إتجاهات</string>
+    <string name="product_go_to_cart">الذهاب لسلة</string>
+    <string name="product_no_reviews_found">لا توجد ردود افعال/ او اراء</string>
+    <string name="product_description">وصف</string>
+    <string name="product_sold_out">نفذت الكمية</string>
+    <string name="product_mark_as_sold">مباع</string>
+    <string name="product_tags">التسمية</string>
+    <string name="product_details">تفاصيل</string>
+    <string name="shipping_charge">رسوم الشحن</string>
+    <string name="product_select_variant">حدد متغير</string>
+    <string name="product_edit">تعديل</string>
+    <string name="product_waiting_for_approval">بانتظار الموافقة</string>
+    <string name="product_rejected">رفض</string>
+    <string name="product_delete">حذف</string>
+    <string name="product_error_alert_product_delete">تعذر حذف منتج حالياً. حاول مرة أخرى</string>
+    <string name="product_delete_product">حذف المنتج</string>
+    <string name="product_alert_success_product_delete">تم حذف المنتج بنجاح</string>
+    <string name="product_alert_product_delete">هل أنت متأكد تريد حذف هذا المنتج؟</string>
+    <string name="product_combination_not_exist">This Combination doesn\'t exist</string>
+    <string name="product_added_successfully">تمت إضافة المنتج بنجاح</string>
+    <string name="product_updated_successfully">تم تحديث المنتج بنجاح</string>
+    <string name="product_go_to_store">اذهب للمتجر</string>
+    <string name="product_clear_cart">مسح السلة</string>
+    <string name="product_alert_message_cart_clear_failed">لا يمكن مسح سلة التسوق حالياً. حاول مرة أخرى</string>
+    <string name="product_clear_cart_info">هناك منتجات في سلتك من بائع آخر. هل تريد مسح سلة التسوق الخاصة بك وإضافة هذا المنتج؟</string>
+    <string name="product_choose_category">اختر ولاية</string>
+    <string name="product_buy_now">Buy Now</string>
+    <string name="product_negotiate">Negotiate</string>
+    <string name="product_negotiated">Negotiated</string>
+    <string name="product_share">Share</string>
+    <string name="product_whatsapp">WhatsApp</string>
+    <string name="product_copy_link">Copy Link</string>
+    <string name="product_link_copied">Link Copied</string>
+    <string name="product_similar_product_title">You may like this</string>
+    <!--endregion-->
+
+    <string name="makeoffer_enter_amount">Enter Amount</string>
+    <string name="makeoffer_alert_less_amount">Negotiated price should not be less than product price %s%s</string>
+
+    <!--region ADD PRODUCT -->
+    <string name="addproduct_product_title">عنوان المنتج</string>
+    <string name="addproduct_header_title">تفاصيل المنتج</string>
+    <string name="addproduct_price">السعر</string>
+    <string name="addproduct_location">الموقع</string>
+    <string name="addproduct_category">Catégorie</string>
+    <string name="addproduct_alert_image_select_add_product">على الاقل اختار صورة منتج واحد</string>
+    <string name="addproduct_alert_message_add_product_failed">لم نتمكن من اضافة المنتج. حاول مرة أخرى</string>
+    <string name="addproduct_upload_image">&#8230;تحميل الصورة</string>
+    <string name="addproduct_upload_listing">التحديث&#8230;</string>
+    <string name="addproduct_sub_category">تصنيف فرعي</string>
+    <string name="addproduct_description">وصف</string>
+    <string name="addproduct_address">العنوان</string>
+    <string name="addproduct_add_product">أضف منتج</string>
+    <string name="addproduct_max_qty">الكمية القصوى</string>
+    <string name="addproduct_price_offer">سعر العرض</string>
+    <string name="addproduct_add_products">أضف المنتجات</string>
+    <string name="addproduct_save">أحفظ</string>
+    <string name="addproduct_go_to_myorders">طلباتي</string>
+    <string name="addproduct_required">Required</string>
+    <string name="addproduct_stock">Stock</string>
+    <string name="addproduct_your_product">ضع علامة على منتجك (اختياري)</string>
+    <string name="addproduct_alert_message_upload_file_failed">ما قدرنا نحمل الملف </string>
+    <string name="addproduct_alert_no_subscription">You are not allowed to add product, kindly check your email for more details</string>
+
+    <!--endregion-->
+
+    <!--region FEEDBACK SCREEN-->
+    <string name="feedback_location">الموقع</string>
+    <string name="feedback_header_title">رايك يهمنا</string>
+    <string name="feedback_reaction_title">ما رأيك في تطبيقك الخاص</string>
+    <string name="feedback_title">ما الذي تود مشاركته معنا؟</string>
+    <string name="feedback_contactInfo_title">هل يمكننا الاتصال بك لمزيد من المعلومات؟</string>
+    <string name="feedback_tell_us_about_it">اخبرنا عنها</string>
+    <string name="feedback_email_mobileNo">البريد الإلكتروني أو رقم الهاتف</string>
+    <string name="feedback_additional_information">معلومات إضافية</string>
+    <string name="feedback_attachment">المرفق</string>
+    <string name="feedback_attachments">المرفقات(%s)</string>
+    <string name="feedback_email">Email</string>
+    <string name="feedback_mobileno">Phone number</string>
+    <string name="feedback_sending_feedback">ارسل رأيك</string>
+    <string name="feedback_max_attachment_message">لا يمكن تحديد أكثر من 4 ملفات</string>
+    <string name="feedback_sent_successfully">تم إرسال الملاحظات بنجاح</string>
+    <string name="feedback_upload_attachment">تحميل المرفق</string>
+    <string name="feedback_alert_message_feedback_failed">حدث خطأ ما أثناء إرسال التعليقات</string>
+    <!--endregion-->
+
+    <!-- region GENERAL-->
+    <string name="general" translatable="false">General</string>
+    <string name="empty"></string>
+    <string name="gallery">الكاميرا</string>
+    <string name="camera">الكاميرا</string>
+    <string name="document">مستندات</string>
+    <string name="share">شارك</string>
+    <string name="done">تم</string>
+    <string name="save">أحفظ</string>
+    <string name="off_data">%s%% off</string>
+    <string name="media_failed_msg">ما قدرنا نحمل الملف </string>
+    <string name="app_permission_gallery">التطبيق يحتاج انك تسمح له يخزن خارجي</string>
+    <string name="app_permission_camera">التطبيق في يحتاج تسمح له يستخدم الكاميرا</string>
+    <string name="app_need_location_permission">التطبيق يحتاج انه يستخدم خاصية المواقع</string>
+    <string name="update_tradly">تحديث التطبيق</string>
+    <string name="powered_by_tradly_platform">Powered by \n <b>Tradly Platform</b></string>
+    <string name="update">تحديث</string>
+    <string name="add_photo">إضافة صورة</string>
+    <string name="take_photo">آلة تصوير</string>
+    <string name="select_from_gellery">اختر من المعرض</string>
+    <string name="check_data_connection">تحقق من اتصال البيانات الخاص بك أو قد يكون بطيئًا وحاول مرة أخرى.</string>
+    <string name="dial_code_country">(+%s) %s</string>
+    <string name="dialCodeConcat">+%s</string>
+    <string name="logging_in">&#8230;تسجيل الدخول</string>
+    <string name="logging_out">&#8230;sign out</string>
+    <string name="please_wait">&#8230;انتظر من فضلك</string>
+    <string name="no_internet">لا انترنت</string>
+    <string name="authFailed">المصادقة فشلت</string>
+    <string name="choose">&#160;أختر</string>
+    <string name="currency">عملة</string>
+    <string name="two_data">%s%s</string>
+    <string name="invalid_no">رقم غير صالح</string>
+    <string name="invalid_price">السعر غير صحيح</string>
+    <string name="edit_photo">قم بتحرير الصورة</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="available">Available %s</string>
+    <string name="two_data_seperator">%s,%s</string>
+    <string name="hast_tag">#%s</string>
+    <string name="timeout_message">غير قادر على الاتصال بالشبكة ، يرجى المحاولة مرة أخرى.</string><!--NT-->
+    <string name="browser_not_found">جهازك لا يحتوي على تطبيق متصفح.</string><!--NT-->
+    <string name="app_not_found">جهازك ليس لديه تطبيق محدد لفتحه.</string>
+    <string name="near_by_store_title">البحث عن المتاجر القريبة</string>
+    <string name="rate_our_app">قيم تطبيقنا!</string><!--NT-->
+    <string name="cancel">الغاء</string>
+    <string name="from">من</string><!--NT-->
+    <string name="to">إلي</string><!--NT-->
+    <string name="support">الدعم</string>
+    <string name="install_now">تثبيت</string>
+    <string name="app_migration_message">We have made tremendous improvement to our TradlySocial App. Promosing a new feature every month from now. This app will be unavailable from play store from 1st September, 2020.  To avail this, download the new app </string>
+    <string name="date_month_placeholder">dd/mm/yy - hh:mm</string> <!--NT-->
+    <string name="near_by_store_desc">شارك موقعك للعثور على متاجر بالقرب من مجتمعك. نحن نستخدم موقعك فقط عند استخدام التطبيق.</string>
+    <string name="something_went_wrong">حدث خطأ ما ، حاول مرة أخرى لاحقًا</string>
+    <string name="no_internet_warning_message"> اتصالك بالإنترنت بطئ او تعطل! لاهنت عيد تشغيله وحاول مرة أخرى!</string>
+    <string name="version_update_msg">حدثنا لك التطبيق وصار أفضل. حدث التطبيق الآن وستفيد من التحسينات والميزات!</string>
+    <!--endregion-->
+
+    <!--region TAG SCREEN-->
+    <string name="tag_header_title">أضف علامة</string>
+    <string name="tag_use_comma_to_add_tag"><font size="12">استخدم الفواصل لإضافة علامة</font></string>
+    <!--endregion-->
+
+    <!--region REVIEW SCREEN-->
+    <string name="review_read_all_reviews">قراءة جميع الأراء</string>
+    <string name="product_all_reviews">جميع الأراء</string>
+    <string name="review_rating_count">%s التقيم</string>
+    <string name="review_reviews_count">%s ردود الآفعال/ الأراء</string>
+    <string name="review_helpful">مفيد</string>
+    <string name="addreview_what_you_rate">ايش تقيمك؟</string>
+    <string name="addreview_share_opinion">شاركنا رايك في المنتج ولا عليك امر!</string>
+    <string name="addreview_write_your_review_note">&#8230;اكتب رسالة شكر اذا تحب!</string>
+    <string name="addreview_send_review">ارسل رأيك</string>
+    <string name="addreview_review_success_message">رأيك مهم وتم استلامه بنجاح</string>
+    <string name="addreview_review_error_message">حدث خطأ تقني وقت مشاركة رأيك ، أعد المحاولة لاحقًا</string>
+    <string name="addreview_please_provide_rating">لاهنت تقيمك</string>
+    <string name="addreview_opinion_one">خدمة مميزه</string>
+    <string name="addreview_opinion_two">منتج ممتاز</string>
+    <string name="addreview_opinion_three">تغليف جيد</string>
+    <string name="addreview_opinion_four">رد سريع</string>
+    <string name="review_rate_this_store">قيم هذا المتجر</string>
+    <string name="review_write_review">شارك رايك معنا</string>
+    <string name="review_with_photo">مع الصور</string>
+    <string name="review_tell_others_think">قل للآخرين ما هو رأيك</string>
+    <!--endregion-->
+
+    <!--region PREFERENCE SCREEN-->
+    <string name="preference_open_shop">Open Shop</string>
+    <string name="preference_buy_item">Buy Items</string>
+    <string name="preference_what_your_preference">What your Preference?</string>
+    <!--endregion-->
+
+    <!--region LANGUAGE SCREEN-->
+    <string name="language_select">اختر اللغة</string>
+    <string name="language_choose">اختر اللغة</string>
+    <string name="language_alert_message_choose_your_language">اختر اللغة</string> <!--NT-->
+    <!--endregion-->
+
+    <!-- region INVITE SCREEN-->
+    <string name="invite_tradly">ادعي ربعك وأخوياك %s</string>
+    <string name="invite_friends">ادعي من يعز عليك وربعك لعلهم يشترون او يعرضون منتجاتهم</string>
+    <string name="invite_your_friends_products">ادعي من يعز عليك وربعك لعلهم يشترون او يعرضون منتجاتهم %s</string>
+    <string name="invite_now">ادعي من تحب</string>
+    <!--endregion-->
+
+    <!--region DEEPLINK-->
+    <string name="link_listing_desc">Check out this listing on %s.Buy, Sell, Chat to get what you wanted. </string>
+    <string name="link_store_desc">Check out this shop on %s.Buy, Sell, Chat to get what you wanted.</string>
+    <!--endregion-->
+
+    <!--region APP STATIC URL-->
+    <string name="google_play_url">https://play.google.com/store/apps/details?id=%s</string>
+    <!--endregion-->
+
+    <string name="sales">المبيعات</string>
+    <string name="sales_cancelled">تم إلغاء المبيعات</string>
+    <string name="commision_created">تم تفعيل العمولة</string>
+    <string name="commision_canceled">تم إلغاء العمولة</string>
+    <string name="transfer_created">تم تفعيل التحويل</string>
+    <string name="transfer_canceled">تم إلغاء التحويل</string>
+    <string name="payout_sent">تم ارسال الدفع</string>
+    <string name="subscription_fee">رسوم الإشتراك</string>
+    <string name="processing_fee">رسوم المعالجة</string>
+    <string name="processing_fee_canceled">إلغاء رسوم المعالجة</string>
+
+    <!-- subscription-->
+    <string name="purchases">المشتريات</string>
+    <string name="important_message">رسالة مهمة</string>
+    <string name="membership_management_not_supported">إدارة العضوية ماهي مدعومة في التطبيق</string>
+    <string name="membership_since">العضوية منذ ذاك الوقت:</string>
+    <string name="membership">العضوية:</string>
+    <string name="appname_subscription">%s الاشتراك</string>
+    <string name="membership_subscription">العضوية: %s الاشتراك</string>
+    <string name="billing_status">حالة الفواتير</string>
+    <string name="billing_charging_date">في %s, ، ستحصّل الرسوم لمدة شهر عن %s</string>
+    <string name="subscription_mail_sent">إرسال البريد بنجاح</string>
+    <string name="alert_message_cancel_order_failed">Something went wrong While cancelling order, Try again later</string>
+    <string name="alert_message_order_cancelled_successfully">Order Cancelled Successfully</string>
+</resources>

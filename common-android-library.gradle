@@ -1,0 +1,84 @@
+import tradly.Config
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply from: "$rootDir/common-flavours.gradle"
+apply from: "$rootDir/common-defaultconfig.gradle"
+
+
+
+android {
+    compileSdkVersion Config.compileSDK
+    with commonDefaultConfig
+
+    aaptOptions {
+        ignoreAssetsPattern "!app.properties"
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            if (Config.BuildTypes.enableReleaseDebug){
+                minifyEnabled Config.BuildTypes.Debug.MINIFY_ENABLED
+                useProguard Config.BuildTypes.Debug.USE_PROGUARD
+                crunchPngs Config.BuildTypes.Debug.CRUNCH_PNGS
+                initWith(buildTypes.debug)
+            }
+            else{
+                minifyEnabled Config.BuildTypes.Release.MINIFY_ENABLED
+                useProguard Config.BuildTypes.Release.USE_PROGUARD
+                crunchPngs Config.BuildTypes.Release.CRUNCH_PNGS
+            }
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.PRODUCTION\"")
+        }
+
+        debug {
+            minifyEnabled Config.BuildTypes.Debug.MINIFY_ENABLED
+            useProguard Config.BuildTypes.Debug.USE_PROGUARD
+            crunchPngs Config.BuildTypes.Debug.CRUNCH_PNGS
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.DEBUG\"")
+        }
+
+        sandBox {
+            initWith(buildTypes.debug)
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.SANDBOX\"")
+        }
+
+        sandBoxRelease {
+            initWith(buildTypes.release)
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.SANDBOX\"")
+        }
+    }
+
+    with flavours
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/metadata.kotlin_module'
+    }
+
+
+    compileOptions {
+        sourceCompatibility Config.sourceCompatibility
+        targetCompatibility Config.targetCompatibility
+    }
+
+    kotlinOptions {
+        jvmTarget = Config.jvmTarget
+    }
+
+    variantFilter { variant -> // these variants are not needed
+        if(
+                variant.name == "tradlySocialSandBoxRelease"
+        )
+        {
+            setIgnore(true)
+        }
+    }
+}

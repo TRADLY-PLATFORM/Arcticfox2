@@ -1,0 +1,90 @@
+import tradly.Config
+
+apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply from: "$rootDir/common-defaultconfig.gradle"
+apply from: "$rootDir/common-android-flavour-dynamic-feature.gradle"
+
+
+android {
+    compileSdkVersion Config.compileSDK
+    with commonDefaultConfig
+
+    aaptOptions {
+        ignoreAssetsPattern "!app.properties"
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+
+
+    buildTypes {
+        release {
+            if (Config.BuildTypes.enableReleaseDebug){
+                useProguard Config.BuildTypes.Debug.USE_PROGUARD
+                initWith(buildTypes.debug)
+            }
+            else{
+                useProguard Config.BuildTypes.Release.USE_PROGUARD
+            }
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.PRODUCTION\"")
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles 'proguard-rules-dynamic-features.pro'
+        }
+
+        debug {
+            useProguard Config.BuildTypes.Debug.USE_PROGUARD
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.DEBUG\"")
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles 'proguard-rules-dynamic-features.pro'
+        }
+
+        sandBox {
+            initWith(buildTypes.debug)
+        }
+
+        sandBoxRelease {
+            initWith(buildTypes.release)
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.SANDBOX\"")
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        disable "Instantiatable"
+        checkReleaseBuilds false
+    }
+
+    with flavours
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/metadata.kotlin_module'
+    }
+
+
+    compileOptions {
+        sourceCompatibility Config.sourceCompatibility
+        targetCompatibility Config.targetCompatibility
+    }
+
+    kotlinOptions {
+        jvmTarget = Config.jvmTarget
+    }
+
+    variantFilter { variant -> // these variants are not needed
+        if(variant.name == "tradlySocialSandBoxRelease")
+        {
+            setIgnore(true)
+        }
+    }
+}

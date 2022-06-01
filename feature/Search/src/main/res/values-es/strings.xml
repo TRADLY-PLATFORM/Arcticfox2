@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_products">Productos</string>
+    <string name="search_stores">Tienda</string>
+    <string name="search_sort">Clasificar</string>
+    <string name="search_filter">Filtrar</string>
+    <string name="search_done">Hecho</string>
+</resources>

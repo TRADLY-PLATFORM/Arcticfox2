@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clNegotiationLeft"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:background="@drawable/bg_chat_left_bubble">
+
+    <include layout="@layout/layout_negotiation_chat"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="EventTimeSheetBinding">
+        <import type="tradly.social.common.base.CustomOnClickListener"/>
+        <variable
+            name="onClickListener"
+            type="CustomOnClickListener" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_sheet_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/viewNotch"
+                android:layout_width="60dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_bottom_sheet_top_notch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvSetTimeHint"
+                style="@style/TextView.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:text="@string/event_set_time_title"
+                app:layout_constraintStart_toStartOf="@id/clFromToContainer"
+                app:layout_constraintTop_toBottomOf="@id/viewNotch"
+                tools:text="Set Time" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFromToContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSetTimeHint">
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/tvFromHint"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/event_set_time_from"
+                    android:textColor="@color/colorTextBlack"
+                    app:layout_constraintStart_toStartOf="@id/clFromHour"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clFromHour"
+                    android:layout_width="56dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/colorWhiteWhisper"
+                    app:layout_constraintEnd_toStartOf="@id/fromColon"
+                    app:layout_constraintTop_toBottomOf="@id/tvFromHint">
+
+                    <ImageView
+                        android:id="@+id/ivFromHourIconUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="@{(view)->onClickListener.onClick(view)}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_arrow_drop_up_24"
+                        app:tint="@color/colorMediumGrey" />
+
+                    <NumberPicker
+                        android:id="@+id/pickerFromHour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:theme="@style/DefaultNumberPickerTheme"
+                        app:layout_constraintBottom_toTopOf="@id/ivFromHourIconDown"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivFromHourIconUp" />
+
+                    <ImageView
+                        android:id="@+id/ivFromHourIconDown"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="4dp"
+                        android:onClick="@{(view)->onClickListener.onClick(view)}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:tint="@color/colorMediumGrey" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <tradly.social.common.views.custom.CustomTextView
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/event_set_time_hours"
+                    android:textColor="@color/colorDarkGrey"
+                    app:layout_constraintEnd_toEndOf="@id/clFromHour"
+                    app:layout_constraintStart_toStartOf="@id/clFromHour"
+                    app:layout_constraintTop_toBottomOf="@id/clFromHour" />
+
+                <tradly.social.common.views.custom.CustomTextView
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/event_set_time_minute"
+                    android:textColor="@color/colorDarkGrey"
+                    app:layout_constraintEnd_toEndOf="@id/clFromMinute"
+                    app:layout_constraintStart_toStartOf="@id/clFromMinute"
+                    app:layout_constraintTop_toBottomOf="@id/clFromMinute" />
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/fromColon"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/event_set_time_colon"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintBottom_toBottomOf="@id/clFromHour"
+                    app:layout_constraintEnd_toStartOf="@id/clFromMinute"
+                    app:layout_constraintTop_toTopOf="@id/clFromHour" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clFromMinute"
+                    android:layout_width="56dp"
+                    android:layout_height="160dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/colorWhiteWhisper"
+                    app:layout_constraintEnd_toStartOf="@id/fromAMPMDiv"
+                    app:layout_constraintTop_toTopOf="@id/clFromHour">
+
+                    <ImageView
+                        android:id="@+id/ivFromMinuteIconUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="@{(view)->onClickListener.onClick(view)}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_arrow_drop_up_24"
+                        app:tint="@color/colorMediumGrey" />
+
+                    <NumberPicker
+                        android:id="@+id/pickerFromMinute"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:theme="@style/DefaultNumberPickerTheme"
+                        app:layout_constraintBottom_toTopOf="@id/ivFromMinuteIconDown"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivFromMinuteIconUp" />
+
+                    <ImageView
+                        android:id="@+id/ivFromMinuteIconDown"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="4dp"
+                        android:onClick="@{(view)->onClickListener.onClick(view)}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:tint="@color/colorMediumGrey" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/fromAMPMDiv"
+                    android:layout_width="16dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/colorDarkGrey"
+                    app:layout_constraintBottom_toBottomOf="@id/clFromMinute"
+                    app:layout_constraintEnd_toStartOf="@id/clToHour"
+                    app:layout_constraintStart_toStartOf="@id/clToHour"
+                    app:layout_constraintTop_toTopOf="@id/clFromMinute" />
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/tvFromAM"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/event_set_time_AM"
+
+                    android:onClick="@{(view)->onClickListener.onClick(view)}"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/fromAMPMDiv"
+                    app:layout_constraintEnd_toEndOf="@id/fromAMPMDiv"
+                    app:layout_constraintStart_toStartOf="@id/fromAMPMDiv" />
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/tvFromPM"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/event_set_time_PM"
+                    android:onClick="@{(view)->onClickListener.onClick(view)}"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/fromAMPMDiv"
+                    app:layout_constraintStart_toStartOf="@id/fromAMPMDiv"
+                    app:layout_constraintTop_toBottomOf="@id/fromAMPMDiv" />
+
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/tvToHint"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_set_time_to"
+                    android:textColor="@color/colorTextBlack"
+                    app:layout_constraintBottom_toBottomOf="@id/tvFromHint"
+                    app:layout_constraintStart_toStartOf="@id/clToHour"
+                    app:layout_constraintTop_toTopOf="@id/tvFromHint" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clToHour"
+                    android:layout_width="56dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/colorWhiteWhisper"
+                    app:layout_constraintStart_toEndOf="@id/fromAMPMDiv"
+                    app:layout_constraintTop_toBottomOf="@id/tvToHint">
+
+                    <ImageView
+                        android:id="@+id/ivToHourIconUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="@{(view)->onClickListener.onClick(view)}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_arrow_drop_up_24"
+                        app:tint="@color/colorMediumGrey" />
+
+                    <NumberPicker
+                        android:id="@+id/pickerToHour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:theme="@style/DefaultNumberPickerTheme"
+                        app:layout_constraintBottom_toTopOf="@id/ivToHourIconDown"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivToHourIconUp" />
+
+                    <ImageView
+                        android:id="@+id/ivToHourIconDown"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:onClick="@{(view)->onClickListener.onClick(view)}"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:tint="@color/colorMediumGrey" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <tradly.social.common.views.custom.CustomTextView
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/event_set_time_hours"
+                    android:textColor="@color/colorDarkGrey"
+                    app:layout_constraintEnd_toEndOf="@id/clToHour"
+                    app:layout_constraintStart_toStartOf="@id/clToHour"
+                    app:layout_constraintTop_toBottomOf="@id/clToHour" />
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/toColon"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/event_set_time_colon"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintBottom_toBottomOf="@id/clToHour"
+                    app:layout_constraintStart_toEndOf="@id/clToHour"
+                    app:layout_constraintTop_toTopOf="@id/clToHour" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clToMinute"
+                    android:layout_width="56dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/colorWhiteWhisper"
+                    app:layout_constraintStart_toEndOf="@id/toColon"
+                    app:layout_constraintTop_toTopOf="@id/clToHour">
+
+                    <ImageView
+                        android:id="@+id/ivToMinuteIconUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="@{(view)->onClickListener.onClick(view)}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_arrow_drop_up_24"
+                        app:tint="@color/colorMediumGrey" />
+
+                    <NumberPicker
+                        android:id="@+id/pickerToMinute"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:theme="@style/DefaultNumberPickerTheme"
+                        app:layout_constraintBottom_toTopOf="@id/ivToMinuteIconDown"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivToMinuteIconUp" />
+
+                    <ImageView
+                        android:id="@+id/ivToMinuteIconDown"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="4dp"
+                        android:onClick="@{(view)->onClickListener.onClick(view)}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:tint="@color/colorMediumGrey" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <tradly.social.common.views.custom.CustomTextView
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/event_set_time_minute"
+                    android:textColor="@color/colorDarkGrey"
+                    app:layout_constraintEnd_toEndOf="@id/clToMinute"
+                    app:layout_constraintStart_toStartOf="@id/clToMinute"
+                    app:layout_constraintTop_toBottomOf="@id/clToMinute" />
+
+
+                <View
+                    android:id="@+id/toAMPMDiv"
+                    android:layout_width="16dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/colorDarkGrey"
+                    app:layout_constraintBottom_toBottomOf="@id/clToMinute"
+                    app:layout_constraintStart_toEndOf="@id/clToMinute"
+                    app:layout_constraintTop_toTopOf="@id/clToMinute" />
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/tvToAM"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/event_set_time_AM"
+                    android:onClick="@{(view)->onClickListener.onClick(view)}"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/fromAMPMDiv"
+                    app:layout_constraintEnd_toEndOf="@id/toAMPMDiv"
+                    app:layout_constraintStart_toStartOf="@id/toAMPMDiv" />
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/tvToPM"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/event_set_time_PM"
+                    android:onClick="@{(view)->onClickListener.onClick(view)}"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/toAMPMDiv"
+                    app:layout_constraintStart_toStartOf="@id/toAMPMDiv"
+                    app:layout_constraintTop_toBottomOf="@id/toAMPMDiv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="@string/add_event_time_set"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:onClick="@{(view)->onClickListener.onClick(view)}"
+                app:layout_constraintEnd_toEndOf="@id/clFromToContainer"
+                app:layout_constraintStart_toStartOf="@id/clFromToContainer"
+                app:layout_constraintTop_toBottomOf="@id/clFromToContainer"
+                tools:text="@string/add_event_time_set" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

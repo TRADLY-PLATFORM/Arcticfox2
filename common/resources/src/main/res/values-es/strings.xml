@@ -1,0 +1,827 @@
+<resources>
+
+    <!--region INTRO SCREEN-->
+    <string name="intro_next">Siguiente</string>
+    <string name="intro_get_started">Empezar a trabajar</string>
+    <!--endregion-->
+
+    <!-- region LOGIN SCREEN-->
+    <string name="login_welcome_to_app">Bienvenido a %s</string>
+    <string name="login_login">Inicio de sesión</string>
+    <string name="login_login_to_your_account">Acceda a su cuenta</string>
+    <string name="login_email">correo electrónico</string>
+    <string name="login_mobile">Número de móvil</string>
+    <string name="login_forgot_your_password">¿Ha olvidado su contraseña?</string>
+    <string name="login_dont_have_an_account">¿No tiene una cuenta?</string>
+    <string name="login_sign_up">Inscríbete</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_required">Requerido</string>
+    <string name="login_facebook">Facebook</string>
+    <string name="login_google">Google</string>
+    <string name="login_or">o</string>
+    <string name="login_to_continue">Inicie sesión para continuar</string>
+    <string name="login_no_user_found">No se ha encontrado ningún usuario</string>
+    <string name="login_invalid_credentials">Credenciales inválidas</string>
+    <string name="login_alert_message_select_country">Selecciona un país</string>
+    <!--endregion-->
+
+    <!--region SIGNUP SCREEN-->
+    <string name="signup_welcome_to_message">Bienvenido a %s</string>
+    <string name="signup_mobile">Número de móvil</string>
+    <string name="signup_password">Contraseña</string>
+    <string name="signup_already_have_an_account">Ya tienes cuenta ?</string>
+    <string name="signup_create">Crear</string>
+    <string name="signup_first_name">Nombre</string>
+    <string name="signup_last_name">Número de teléfono no válido</string>
+    <string name="signup_email"> correo electrónico </string>
+    <string name="signup_re_enter_password">Vuelva a introducir la contraseña</string>
+    <string name="signup_agree_terms_and_conditions">Aceptar los <b>Términos y Condiciones</b></string>
+    <string name="signup_create_your_account">Cree su cuenta</string>
+    <string name="signup_required">Requerido</string>
+    <string name="signup_invalid_email">Correo electrónico no válido</string>
+    <string name="signup_password_mismatch">Falta de coincidencia con la contraseña</string>
+    <string name="signup_min_password_validation">La contraseña debe contener al menos 6 caracteres</string>
+    <string name="signup_user_already_registered">Usuario ya registrado.</string>
+    <string name="signup_alert_message_select_country">Selecciona un país</string>
+    <string name="signup_accept_terms_condition">Acepte los términos y condiciones</string>
+    <!--endregion-->
+
+    <!--region OTP SCREEN-->
+    <string name="otp_email_verification">Verificación del correo electrónico</string>
+    <string name="otp_phone_verification">Verificación telefónica</string>
+    <string name="otp_enter_verification_code_here">Introduzca el código de verificación aquí</string>
+    <string name="otp_did_not_receive_code">¿No ha recibido un código?</string>
+    <string name="otp_resend_code">Reenviar código</string>
+    <string name="otp_verify">Verificar</string>
+    <string name="otp_otp_verifying">Otp verificando</string>
+    <string name="otp_please_enter_otp">Por favor, introduzca otp</string>
+    <string name="otp_sent_to">+%s %s</string>
+    <string name="otp_invalid_otp">Código otp inválido</string>
+    <string name="otp_expired">Otp expiradod</string>
+    <string name="otp_resend_message">El código Otp ha sido enviado con éxito</string>
+    <string name="opt_could_not_set_password">Algo salió mal. No se ha podido establecer la contraseña en este momento.</string>
+    <string name="otp_password_changed_success_msg">La contraseña ha sido cambiada con éxito</string>
+    <string name="otp_otp_send_info">Por favor, introduzca la OTP aquí, hemos enviado el código de verificación a %s</string>
+    <!--endregion-->
+
+    <!--region SPLASH SCREEN-->
+    <string name="splash_welcome_to_message">Bienvenido a %s</string>
+    <string name="splash_required">Requerido</string>
+    <string name="splash_enter_your_tenantId">Ingrese su ID de inquilino</string>
+    <string name="splash_submit">Enviar</string>
+    <string name="splash_tenant_id">ID de inquilino</string>
+    <string name="splash_change_tenant">Cambiar inquilina</string>
+    <string name="splash_invalid_tenant_id">ID de inquilino no válido</string>
+    <!--endregion-->
+
+    <!--region FORGOT PASSWORD SCREEN-->
+    <string name="forgotpassword_email">Correo electrónico</string>
+    <string name="forgotpassword_mobile">Número de móvil</string>
+    <string name="forgotpassword_alert_message_select_country">Seleccione el país</string>
+    <string name="forgotpassword_forgot_your_password">¿Ha olvidado su contraseña?</string>
+    <string name="forgotpassword_enter_your_mobile_number">Introduzca su número de móvil</string>
+    <string name="forgotpassword_enter_your_email">Introduzca su correo electrónico</string>
+    <string name="forgotpassword_password_mismatch">Falta de coincidencia con la contraseña</string>
+    <string name="forgotpassword_invalid_email">Correo electrónico no válido</string>
+    <string name="forgotpassword_required">Requerido</string>
+    <string name="forgotpassword_verification_password">Código de verificación</string>
+    <string name="forgotpassword_verify">Verificar</string>
+    <string name="forgotpassword_otp_send_info">Por favor, introduzca la OTP aquí, hemos enviado el código de verificación a  %s</string>
+    <string name="forgotpassword_new_password">Nueva contraseña</string>
+    <string name="forgotpassword_confirm_new_password">Confirmar nueva contraseña</string>
+    <!--endregion-->
+
+    <!--region SEARCH SCREEN-->
+    <string name="search_search">Buscar en</string>
+    <string name="search_stores">Tiendas</string>
+    <string name="search_header_title">¿Qué buscas?</string>
+    <string name="search_type_to_search">Tipo de búsqueda</string>
+    <string name="search_sort_by">Ordenar por</string>
+    <string name="search_filter_by_distace">Filtrar a distancia</string>
+    <string name="search_location">Ubicación</string>
+    <string name="search_category">Categoría</string>
+    <string name="search_search_by">Búsqueda por</string>
+    <string name="search_no_result_found">No se han encontrado resultados</string>
+    <string name="search_search_a_product">Búsqueda de productos</string>
+    <string name="search_search_a_store">Buscar una tienda</string>
+    <string name="search_listings">Listados</string>
+    <string name="search_low_to_high">Precio: De menor a mayor</string>
+    <string name="search_high_to_low">Precio: de mayor a menor</string>
+    <string name="search_relevance">Relevancia</string>
+    <!--endregion-->
+
+    <!--region NOTIFICATION CENTER ORDER STATUS-->
+    <string name="notification_header_title">Notificaciones</string>
+    <string name="notification_no_notification_at_the_moment">Ninguna notificación disponible</string>
+    <string name="notification_order_placed_success">Felicidades, tu pedido se ha realizado correctamente.</string>
+    <string name="notification_order_cancelled">Su pedido ha sido cancelado</string>
+    <string name="notification_order_return_initiated">Se ha iniciado el proceso de devolución de su pedido</string>
+    <string name="notification_order_is_in_progress">Su pedido está en curso</string>
+    <string name="notification_order_shipped">Su pedido ha sido enviado</string>
+    <string name="notification_order_deliver_returned">Entrega de pedidos devueltos</string>
+    <string name="notification_order_delivery_return_confrmed">Pedido Entrega devolución confirmada</string>
+    <string name="notification_order_order_delivered">Su pedido ha sido entregado con éxito</string>
+    <string name="notification_order_picked_up">Su pedido ha sido recogido por el socio de mensajería</string>
+    <string name="notification_order_out_for_delivery">Su pedido está listo para ser entregado</string>
+    <string name="notification_order_customer_return_confirmed">Confirmación de la devolución del pedido</string>
+    <string name="notification_order_customer_return_disputed">Devolución de pedidos impugnados</string>
+    <string name="notification_order_customer_unreachable">Cliente inalcanzable</string>
+    <string name="notification_started_following_your_account">%s a comenzado a seguirte %s</string>
+    <string name="notification_liked_your_listing">%s le gustó tu anuncio</string>
+    <!--endregion-->
+
+    <!--region NOTIFICATION-->
+    <string name="notification_chat_message_fallback">Te envié un mensaje</string>
+    <string name="notification_chat_listing_fallback">Te envió un listado</string>
+    <string name="notification_chat_image_fallback">Te envió una foto</string>
+    <string name="notification_chat_file_fallback">Te envió un archivo</string>
+    <string name="notification_notification_approved_fallback">Su anuncio reciente ha sido aprobado y está listo para la venta.</string>
+    <string name="notification_rejected_fallback">Tu ficha reciente ha sido rechazada por motivos de calidad.</string>
+    <string name="notification_liked_fallback">%s le gustó su listado</string>
+    <string name="notification_followed_fallback">%s siguiendote</string>
+    <string name="notification_order_title">pedido#&#160;%s</string>
+    <string name="notification_order_change_fallback">El estado de su pedido se ha cambiado a %s</string>
+    <string name="notification_new_order_fallback">Tienes un nuevo pedido</string>
+    <!--endregion-->
+
+    <!--region CART SCREEN-->
+    <string name="cart_required">Requerido</string>
+    <string name="cart_header_title">Mi cesta</string>
+    <string name="cart_remove">Borrar</string>
+    <string name="cart_some_items_removed">Algunos de sus artículos pueden ser retirados</string>
+    <string name="cart_cancel">Cancelar</string>
+    <string name="cart_item_removed_cart">Artículo eliminado de la cesta</string>
+    <string name="cart_item_added_cart">Artículo añadido a la cesta</string>
+    <string name="cart_max_quantity">Cantidad Máxima %s</string>
+    <string name="cart_apply">Aplica</string>
+    <string name="cart_enter_quantity">Introduzca la cantidad</string>
+    <string name="cart_your_cart_is_empty">Su cesta está vacía</string>
+    <string name="cart_more">Más</string>
+    <string name="cart_shipment">Envio</string>
+    <string name="cart_qty">Cantidad:</string>
+    <string name="cart_shop_now">Compra ahora</string>
+    <string name="cart_alert_message_cart_clear_failed">El carrito no se pudo limpiar en este momento. Intentar otra vez</string>
+    <string name="cart_alert_stock_not_available">Existencias no disponibles para la cantidad seleccionada</string>
+    <string name="cart_invalid_qty">Cantidad inválida</string>
+    <string name="cart_alert_message_min_balance_checkout">El importe total de su cesta debe ser superior a %s para proceder con este pedido..</string>
+    <string name="cart_could_not_delete_cart_item">Algo salió mal. No se puede quitar el artículo del carrito en este momento. Vuelve a intentarlo más tarde.</string>
+    <string-array name="cart_qty_min">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>@string/cart_more</item>
+        <item>default</item>
+    </string-array>
+    <!--endregion-->
+
+    <!-- region WISH LIST-->
+    <string name="wishlist_header_title">Lista de deseos</string>
+    <string name="wishlist_continue_wish_list">Seguir comprando</string>
+    <string name="wishlist_item_added_to_wish_list">Artículo añadido a la lista de deseos</string>
+    <string name="wishlist_item_deleted_to_wish_list">Artículo eliminado de la lista de deseos</string>
+    <string name="wishlist_login_to_continue">No hay artículos en tu lista de compra</string>
+    <!--endregion-->
+
+    <!--region PAYMENT-->
+    <string name="payment_continue_shopping">Seguir comprando</string>
+    <string name="payment_price_details">Detalles del precio</string>
+    <string name="payment_price">Precio(%s item)</string>
+    <string name="payment_prices">Precios(%s items)</string>
+    <string name="payment_total_amount">Importe total</string>
+    <string name="payment_header_title">Pago</string>
+    <string name="payment_order">Pida</string>
+    <string name="payment_not_able_to_checkout_msg">Lo siento. No se puede pagar en este momento. Inténtelo más tarde.</string>
+    <string name="payment_select_delivery_address">Por favor, seleccione la dirección de entrega</string>
+    <string name="payment_select_payment">Por favor, seleccione el pago</string>
+    <string name="payment_order_successfully_placed">Su pedido ha sido realizado con éxito</string>
+    <string name="payment_order_status_message">Puede deberse a un problema con la pasarela de pago.</string>
+    <string name="payment_order_payment_failed">Tu pago ha fallado</string>
+    <string name="payment_order_retry_payment">Reintente el pago</string>
+
+    <!--endregion-->
+
+    <!--region SHIPMENT-->
+    <string name="shipment_header_title">Envío</string>
+    <string name="shipment_delivery_fee">Tarifa de entrega</string>
+    <string name="shipment_delivery_address">Dirección de entrega</string>
+    <string name="shipment_address_data">%s,%s,%s - %s</string>
+    <string name="shipment_continue">Continuar</string>
+    <string name="shipment_pickup_address">Dirección de recogida</string>
+    <string name="shipment_change">Cambiar</string>
+    <string name="shipment_delivery_to">Entregar a %s,%s</string>
+    <string name="shipment_alert_message_choose_shipment">Por favor, elija el envío que prefiera</string>
+    <!--endregion-->
+
+    <!--region ADDRESS SCREEN-->
+    <string name="address_my_address">Mi dirección</string>
+    <string name="address_no_address_found">No se encontró la dirección</string>
+    <string name="address_add_new_address">Añadir una nueva dirección</string>
+    <string name="address_add_pickup_address">Añadir dirección de recogida</string>
+    <string name="address_name">Nombre</string>
+    <string name="address_phone">Teléfono</string>
+    <string name="address_state">Estado</string>
+    <string name="address_city">Ciudad</string>
+    <string name="address_country">País</string>
+    <string name="address_landmark">Hito</string>
+    <string name="address_use_current_location">Usar la ubicación actual</string>
+    <string name="address_edit_address">Editar la dirección</string>
+    <string name="address_edit_pickup_address">Editar la dirección de recogida</string>
+    <string name="address_address_added_successfully">Dirección añadida con éxito</string>
+    <string name="address_address_updated_successfully">Dirección actualizada con éxito</string>
+    <string name="address_zipcode">Código postal</string>
+    <string name="address_address_one">Dirección 1</string>
+    <string name="address_address_two">Dirección 2</string>
+    <string name="address_save">Guardar</string>
+    <string name="address_alert_message_add_pickup_address">Dirección de recogida no disponible. Por favor, añada la dirección de recogida</string>
+    <string name="address_cant_fetch_location">No se pudo conseguir la ubicación en un momento, inténtelo de nuevo</string>
+    <!--endregion-->
+
+    <!--region CATEGORIES-->
+    <string name="category_header_title">Categoria / Todas las categorías</string>
+    <string name="category_alert_message_category_list_fetch_failed">Algo salió mal, mientras se buscaba la categoría</string>
+
+    <!--endregion-->
+
+    <!--region STORE LIST-->
+    <string name="storelist_header_title">Tiendas</string>
+    <string name="storelist_follow">Seguir</string>
+    <string name="storelist_following">Siguiendo</string>
+    <string name="storelist_no_stores_blocked">No hay tiendas bloqueadas</string>
+    <string name="storelist_no_stores_found">No se han encontrado tiendas</string>
+    <string name="storelist_no_stores_available">No hay tiendas disponibles</string>
+    <!--endregion-->
+
+    <!--region STORE FOLLOWERS LIST-->
+    <string name="store_followers_title">Seguidores</string>
+    <string name="store_followers_no_followers_found">No se encontraron seguidores</string>
+    <!--endregion-->
+
+    <!--region PRODUCT LIST-->
+    <string name="productlist_header_title">Productos</string>
+    <string name="productlist_no_products_found">No se han encontrado productos</string>
+    <string name="productlist_under_review">En revisión</string>
+
+    <!--endregion-->
+
+    <!--region SOCIAL FEED-->
+    <string name="socialfeed_trending">Tendencias</string>
+    <string name="socialfeed_latest_item">Últimos artículos</string>
+    <string name="socialfeed_most_followers">La mayoría de los seguidores</string>
+    <string name="socialfeed_no_feeds_found">Ningún producto encontrado</string>
+    <!--endregion-->
+
+    <!--region TIME AGO-->
+    <string name="justNow">ahora</string>
+    <string name="a_minute_ago">hace un minuto</string>
+    <string name="minutesAgo">hace minutos</string>
+    <string name="an_hour_ago">hace una hora</string>
+    <string name="hours_ago">hace horas</string>
+    <string name="yesterday">Ayer</string>
+    <!--endregion-->
+
+    <!--region CHAT LIST SCREEN-->
+    <string name="chat_buy_now">Compra ahora</string>
+    <string name="chat_accepted">Aceptado</string>
+    <string name="chat_offer">Oferta</string>
+    <string name="chat_declined">Rechazado</string>
+    <string name="chat_requested_an_offer">Solicitó una oferta</string>
+    <string name="chat_offer_accepted">Oferta aceptada</string>
+    <string name="chat_offer_declined">Oferta rechazada</string>
+    <string name="chat_expired">Caducado</string>
+    <string name="chat_no_new_message">No hay mensajes nuevos</string>
+    <string name="chat_fetch_error_msg">algo salió mal al recibir tus chats. Vuelve a intentarlo más tarde</string>
+    <!--endregion-->
+
+    <!--region HOME SCREEN-->
+    <string name="home_Home">Inicio</string>
+    <string name="home_social_feed">Redes sociales</string>
+    <string name="home_chats">Chat</string>
+    <string name="home_more">Más</string>
+    <string name="home_sell">Vender</string>
+    <string name="home_donate">Donar</string>
+    <string name="home_rent">Renta</string>
+    <string name="home_view_all">Ver todo</string>
+    <string name="home_follow">Seguir</string>
+    <!--endregion-->
+
+    <!--region MORE SCREEN-->
+    <string name="more_exit_from">Salir de&#160;</string>
+    <string name="more_welcome">Bienvenido!</string>
+    <string name="more_my_orders">Mis pedidos</string>
+    <string name="more_my_wish_list">Mi listade favoritos</string>
+    <string name="more_my_store">Mi tienda</string>
+    <string name="my_groups">Mi grupo</string>
+    <string name="more_my_cart">Mi cesta</string>
+    <string name="more_my_sales">Mis ventas</string>
+    <string name="more_payments">Pagos</string>
+    <string name="more_language">Idioma</string>
+    <string name="more_settings">Ajustes</string>
+    <string name="more_faq">FAQ</string>
+    <string name="more_tell_a_friend">Díselo a un amigo</string>
+    <string name="uploading_profile">Subiendo foto de perfil</string>
+    <string name="more_terms_condition">Términos y condiciones</string>
+    <string name="more_privacy_policy">Política de privacidad</string>
+    <string name="more_feedback">Comentarios</string>
+    <string name="more_signin_signup">Registrarse/Iniciar sesión</string>
+    <string name="more_stores_i_follow">Tiendas que sigo</string>
+    <string name="more_stored_i_blocked">Tiendas que he bloqueado</string>
+    <string name="more_upgrade">Potenciar</string>
+    <string name="more_pro_account">Cuenta Pro</string>
+    <string name="more_upgrade_desc">Desbloquea y aprovecha más funciones</string>
+    <string name="more_are_you_sure_change_tenant_id">¿Está seguro? ¿Quieres cambiar de inquilino?</string> <!--NT-->
+    <!--endregion-->
+
+    <!--region SETTINGS SCREEN-->
+    <string name="settings_header_title">Ajustes</string>
+    <string name="settings_email">Correo electrónico</string>
+    <string name="settings_fullname">Nombre completo</string>
+    <string name="settings_mobile">Número de móvil</string>
+    <string name="settings_location">Lugar</string>
+    <string name="settings_welcome">Bienvenido!</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_store">Tienda</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_logout">Cierre de sesión</string>
+    <string name="settings_app_settings">Configuraciones de la aplicación</string>
+    <string name="settings_eg_email">eg.tradly.com</string>
+    <string name="settings_add_store">Crear una tienda</string>
+    <string name="settings_others">Otro</string>
+    <string name="settings_signin_signup">Registrarse/Iniciar sesión</string>
+    <string name="settings_something_while_logging_out">Algo salió mal al cerrar la sesión. Por favor, inténtelo de nuevo más tarde</string> <!--NT-->
+    <string name="settings_version">Versión&#160;</string>
+    <string name="settings_are_you_sure_logout">Está seguro. ¿Quieres cerrar sesión?</string>
+    <string name="settings_profile_pic_updated_message">Imagen de perfil actualizada</string>
+    <string name="settings_cant_upload_profile">No puedo subir el perfil en este momento. Vuelve a intentarlo más tarde. </string>
+    <!--endregion-->
+
+    <!--region STORE DETAIL-->
+    <string name="storedetail_location">Ubicación</string>
+    <string name="storedetail_listings">Listados</string>
+    <string name="storedetail_store_not_available">Tienda no disponible</string>
+    <string name="storedetail_header_title">Detalle de la tienda</string>
+    <string name="storedetail_block">Bloque</string>
+    <string name="storedetail_unblock">Desbloquear</string>
+    <string name="storedetail_description">Descripción</string>
+    <string name="storedetail_cannot_block_store">No se ha podido bloquear la tienda, inténtalo más tarde.</string>
+    <string name="storedetail_view_location">Ver ubicación</string>
+    <string name="storedetail_no_details_found">No se han encontrado detalles</string>
+    <string name="storedetail_link_copied">Enlace copiado</string>
+    <string name="storedetail_active_inactive_your_store">%s tienda?</string>
+    <string name="storedetail_active_info">Estás seguro de %s tu tienda de manera temporal</string>
+    <string name="storedetail_set_days_time">Establecer días y horas</string>
+    <string name="storedetail_active">Activo</string>
+    <string name="storedetail_activated">Activado</string>
+    <string name="storedetail_inactive">Inactivar</string>
+    <string name="storedetail_inactivated">Inactivado</string>
+    <string name="storedetail_total_followers">Total de seguidores</string>
+    <string name="storedetail_details">Detalles</string>
+    <string name="storedetail_about">A cerca de</string>
+    <string name="storedetail_total_products">Productos totales</string>
+    <string name="storedetail_business_register_document">Documento de registro de la empresa</string>
+    <string name="storedetail_upload_doc_limit_5mb">Subir documento de archivo Límite de 5 MB</string>
+    <string name="storedetail_store_currently_unavailable">Esta tienda no está disponible actualmente</string>
+    <string name="storedetail_account_activated_successfully">Su cuenta ha sido %s con éxito</string>
+    <string name="storedetail_alert_message_account_activate">Algo ha ido mal al %s su cuenta.</string> <!--NT-->
+    <string name="storedetail_alert_message_store_rejected">Su cuenta ha sido rechazada por razones de calidad. Por favor, actualice los datos de su cuenta.</string> <!--NT-->
+    <string name="storedetail_alert_message_store_waiting_for_approval">Su cuenta no está aprobada todavía. Por favor, espere a que el administrador apruebe su cuenta para continuar.</string> <!--NT-->
+
+    <!--endregion-->
+
+    <!--region MY SALES-->
+    <string name="sales_transactions">Transacciones</string>
+    <string name="sales_payouts">Pagos</string>
+    <string name="sales_your_balance">Tu equilibrio</string>
+    <string name="sales_balance">Balance</string>
+    <string name="sales_no_transaction">No se ha encontrado ninguna %s</string>
+    <string name="sales_all_payouts">Todos los pagos</string>
+    <string name="sales_see_payouts">Ver los pagos</string>
+    <!--endregion-->
+
+    <!--region PAYOUTS-->
+    <string name="payouts_header_title">Configurar el pago</string>
+    <string name="payments_setup_payout">Configurar pagos para recibir \n pagos</string>
+    <string name="payments_connect_with_stripe">Conéctate con Stripe</string>
+    <string name="payments_stripe_connected">Stripe conectado</string>
+    <string name="payments_disconnect_stripe">Desconectarse de Stripe</string>
+    <string name="payments_disconnect_stripe_warning">¿Estás segura de que quieres desconectar Stripe?</string>
+    <string name="payments_disconnect_stripe_info">Una vez que desconecte stripe de la lista a continuación, no podrá ver su historial de pagos anterior en la aplicación.</string>
+    <string name="payments_redirected_to_stripe">Serás redirigido a Stripe</string>
+    <string name="payment_set_up_info_link">In order to receive payments, follow this <a href="https://connect.stripe.com/register">link</a> to set-up or login to your Stripe Connect account, then come back to this page to authenticate</string>
+
+    <string name="payments_stripe_config_screen_connect_message_standard_fallback">Para recibir el pago, haga clic en el botón de abajo para configurar o iniciar sesión en su cuenta de Stripe Connect. Una vez que el enlace de la cuenta esté completo, será redirigido a esta página.</string>
+    <string name="payments_stripe_express_connect_message">Cada usuario que crea una tienda tiene una cuenta de Stripe Connect creada automáticamente con su dirección de correo electrónico. Haga clic en el botón de abajo para completar su cuenta, de modo que pueda recibir pagos en la cuenta bancaria que elija.</string>
+    <string name="payments_stripe_config_screen_disconnect_message_standard_fallback">Si desconecta la cuenta, ya no podrá recibir pagos para pedidos futuros a menos que vuelva a conectar Stripe.</string>
+    <string name="payments_stripe_config_screen_disconnect_message_express_fallback">Si elimina la cuenta, ya no podrá recibir pagos de pedidos futuros a menos que vuelva a conectar stripe..</string>
+
+    <string name="payments_stripe_status_waiting_message">Esperando la verificación de franjas</string>
+    <string name="payments_stripe_status_connect">Conéctese a stripe payout para recibir pagos</string>
+    <string name="payments_stripe_status_verification_failed">Falló la verificación de la franja</string>
+    <string name="payments_stripe_status_connection_success">Éxito en la verificación de bandas</string>
+    <string name="payments_view_dashboard">Ver tablero</string>
+
+    <string name="payments_stripe_express_connect_waiting">Su perfil de Stripe Connect está siendo verificado por Stripe. Si desea cambiar la información, vea el tablero para cambiar.</string>
+    <string name="payments_stripe_express_connect_failed1">La verificación falló debido a&#160;</string>
+    <string name="payments_stripe_express_connect_failed2">&#160;Vaya a su panel y actualice los detalles relevantes.</string>
+    <string name="payments_stripe_express_connect_success">Felicitaciones, su cuenta de Stripe se ha conectado correctamente. ¡Ahora puede recibir pagos en la cuenta bancaria que elija!</string>
+
+    <string name="payments_stripe_connect_error_msg">Se produjo un error al configurar Stripe. Inténtalo de nuevo más tarde.</string>
+    <string name="payments_stripe_disconnect_error_msg">Se produjo un error al desconectar Stripe. Inténtalo de nuevo más tarde.</string>
+    <string name="payments_stripe_disconnected_success">Stripe se desconectó correctamente</string>
+
+    <string name="payments_init_failed">Algo salió mal al iniciar %s. Inténtalo de nuevo más tarde.</string>
+    <string name="payments_failed">Pago fallido. Inténtalo de nuevo más tarde.</string>
+    <string name="payments_alert_message_stripe_status_failed">Algo salió mal, no se pudieron recuperar los detalles de Stripe. Inténtalo de nuevo más tarde.</string> <!--NT-->
+
+    <!--endregion-->
+
+    <!--region MY ORDER LIST SCREEN-->
+    <string name="myorders_my_store_orders">Mis pedidos de la tienda</string>
+    <string name="myorders_all">Todo</string>
+    <string name="myorders_week">semana</string>
+    <string name="myorders_month">Mes</string>
+    <string name="myorders_year">Año</string>
+    <string name="myorders.orders">pedidos</string>
+    <string name="myorders_filter_by">Filtrar por:</string>
+    <string name="myorders_filter_by_cancelled_order">Orden cancelada</string>
+    <string name="myorders_filter_by_order_delivered">Pedido entregado</string>
+    <string name="myorders_filter_by_order_in_progress">Pedido en curso</string>
+    <string name="myorders_filter_by_shipped">Enviado</string>
+    <string name="myorders_no_orders_found">No se han encontrado pedidos</string>
+    <string name="myorders_my_orders">Mis pedidos</string>
+    <!--endregion-->
+
+    <!--region ORDER DETAIL-->
+    <string name="orderdetail_change">Cambiar</string>
+    <string name="orderdetail_pickup_address">Dirección de recogida</string>
+    <string name="orderdetail_chat">Chat</string>
+    <string name="orderdetail_order_detail">Detalle del pedido</string>
+    <string name="orderdetail_review_all_product">Revisar todos los productos</string>
+    <string name="orderdetail_track_order">Orden de seguimiento</string>
+    <string name="orderdetail_amount">Cantidad: </string>
+    <string name="orderdetail_order_id">ID de pedido -&#160; </string>
+    <string name="_order_id">#ID de pedido: %s</string>
+    <string name="orderdetail_delivery_address">Dirección de entrega</string>
+    <string name="orderdetail_address">Dirección: </string>
+    <string name="orderdetail_name">Nombre:</string>
+    <string name="orderdetail_mobile">Móviles: </string>
+    <string name="orderdetail_change_status">Cambiar el estado</string>
+    <string name="orderdetail_review_product">Revisar el producto</string>
+    <string name="orderdetail_units">Unidades:</string>
+    <string name="orderdetail_select_status">Seleccione el estado</string>
+    <string name="orderdetail_order_cancelled">Pedido cancelado</string>
+    <string name="orderdetail_no_orders_found">No se han encontrado pedidos</string>
+    <!--Buyer status-->
+    <string name="orderdetail_order_in_progress">Pedido en curso</string>
+    <string name="orderdetail_return_initiated">Devolución iniciada</string>
+    <string name="orderdetail_delivery_confirmed">Entrega confirmada</string>
+    <string name="orderdetail_out_for_delivery">En espera de la entrega</string>
+    <string name="orderdetail_shipped">Enviado</string>
+    <string name="orderdetail_order_status_incomplete">Estado del pedido incompleto</string>
+    <string name="orderdetail_order_placed">Pedido realizado</string>
+    <string name="orderdetail_cancelled">Cancelado</string>
+
+    <!--Seller status-->
+    <string name="orderdetail_undelivered_returned">No entregado Devuelto</string>
+    <string name="orderdetail_undelivered_return_confirmed">Devolución confirmada no entregada</string>
+    <string name="orderdetail_order_delivered">Pedido entregado</string>
+    <string name="orderdetail_return_pickedup">Recogida de la devolución</string>
+    <string name="orderdetail_ready_for_pickup">Listo para ser recogido</string>
+    <string name="orderdetail_unreachable">Cliente inalcanzable</string>
+    <string name="orderdetail_order_return_confirmed">Devolución de pedido confirmada</string>
+    <string name="orderdetail_order_return_disputed">Devolución del pedido impugnado</string>
+    <!--endregion-->
+
+    <!--region EDIT PROFILE SCREEN-->
+    <string name="editprofile_email">correo electrónico</string>
+    <string name="editprofile_mobile">Número de móvil</string>
+    <string name="editprofile_first_name">Nombre</string>
+    <string name="editprofile_last_name">Apellido</string>
+    <string name="editprofile_invalid_email">Correo electrónico no válido</string>
+    <string name="editprofile_profile_updated_message">perfil actualizado con éxito</string>
+    <string name="editprofile_alert_message_select_country">Selecciona un país</string>
+    <!--endregion-->
+
+    <!--region GROUP SCREEN-->
+    <string name="group">Groups</string>
+    <string name="group_invalid_email">Invalid Email</string>
+    <string name="group_required">Required</string>
+    <string name="group_location">Location</string>
+    <string name="group_join">Join</string>
+    <string name="group_add_your_group_photo">Add your Group photo</string>
+    <string name="group_you_have_not_following_groups">You haven\'t joined to any groups</string>
+    <string name="group_tap_to_join">Tap to Join</string>
+    <string name="group_header_title">Add Group</string>
+    <string name="group_type">Group Type</string>
+    <string name="group_name">Group Name</string>
+    <string name="group_about">About</string>
+    <string name="group_added_successfully">Group has been added successfully</string>
+    <string name="group_could_not_load_group">Couldn\'t able to load group.Try again</string>
+    <string name="group_could_not_add_group">Couldn\'t add group at a moment.Try again later</string>
+    <string name="group_add_tag_group">Add Tags to group</string>
+    <string name="group_joined">Joined</string>
+    <string name="group_select_cover_photo">Select Cover Photo</string>
+    <string name="group_add">Add Group</string>
+    <string name="group_select_type">Select Group Type</string>
+    <string name="group_following_count">%s Followers</string>
+    <string name="group_members">%s members</string>
+    <string name="group_information">Group Information</string>
+    <string name="group_members_data">Members(%s)</string>
+    <string name="market_place">Marketplace</string>
+    <string name="discussion">Discussions</string>
+    <string name="group_to_join">Groups to Join</string>
+    <string name="groups_no_available">No Groups available</string>
+    <!--endregion-->
+
+    <!--region CHAT DETAIL SCREEN-->
+    <string name="chatdetail_type_message">Escribe aquí</string>
+    <string name="chatdetail_send">Enviar</string>
+    <string name="chatdetail_file">Archivo</string>
+    <string name="chatdetail_photo">Imagen</string>
+    <string name="chatdetail_video">Video</string>
+    <string name="chatdetail_audio">Audio</string>
+    <string name="chatdetail_product">Producto</string>
+    <string name="chatdetail_no_messages">Ningún mensaje</string>
+    <string name="chatdetail_offer_requested">You requested an offer</string> <!--SKIP NEW FR-->
+    <string name="chatdetail_accept">Accept</string> <!--SKIP NEW FR-->
+    <string name="chatdetail_make_offer">Make Offer</string> <!--SKIP NEW FR-->
+    <string name="chatdetail_decline">Disminución</string>
+    <string name="chatdetail_ratings">%s calificaciones</string>
+    <!--endregion-->
+
+    <!--region ADD STORE SCREEN-->
+    <string name="addstore_required">Requerido</string>
+    <string name="addstore_category">Categoría</string>
+    <string name="addstore_address">Dirección</string>
+    <string name="addstore_add_your_store_photo">Añade la foto de tu tienda</string>
+    <string name="addstore_header_title">Crear su tienda</string>
+    <string name="addstore_alert_message_choose_shipment">Elección para el envío</string>
+    <string name="addstore_use_comma_to_add_value"><font size="12">Utilizar comas para añadir valores</font></string>
+    <string name="addstore_store_name">Nombre de la tienda</string>
+    <string name="addstore_store_web_address">Dirección web de la tienda</string>
+    <string name="addstore_store_description">Descripción de la tienda</string>
+    <string name="addstore_store_url">URL de la tienda</string>
+    <string name="addstore_alert_please_select_address">Por favor, seleccione la dirección</string>
+    <string name="addstore_edit_store">Editar la tienda</string>
+    <string name="addstore_select_cover_photo">Seleccionar foto de portada</string>
+    <string name="addstore_invalid_url">URL invalida</string>
+    <string name="addstore_alert_message_store_link_alias">El nombre ya está ocupado</string> <!--NT-->
+    <string name="addstore_store_created_successfully">La tienda se ha creado con éxito</string>
+    <string name="addstore_store_updated_successfully">La tienda se ha actualizado correctamente</string>
+    <!--endregion-->
+
+    <!--region MAP SCREEN-->
+    <string name="map_location">Localización</string>
+    <string name="map_change">Cambiar</string>
+    <string name="map_select_location">Seleccionar ubicación</string>
+    <!--endregion-->
+
+    <!--region PRODUCT DETAIL SCREEN-->
+    <string name="product_location">Localización</string>
+    <string name="product_follow">Seguir</string>
+    <string name="product_following">Siguiendo</string>
+    <string name="product_add_to_cart">Añadir a la cesta</string>
+    <string name="product_adding_to_cart">Añadir a la cesta</string>
+    <string name="product_chat">Chat</string>
+    <string name="product_directions">Direcciones</string>
+    <string name="product_book_now">Reservar ahora</string>
+    <string name="product_go_to_cart">Ir a la cesta</string>
+    <string name="product_no_reviews_found">No se han encontrado opiniones</string>
+    <string name="product_description">Descripción</string>
+    <string name="product_sold_out">Agotado</string>
+    <string name="product_mark_as_sold">Marcar como vendido</string>
+    <string name="product_tags">Etiquetas</string>
+    <string name="product_details">Detalles</string>
+    <string name="shipping_charge">Gastos de envío</string>
+    <string name="product_select_variant">Seleccionar variante</string>
+    <string name="product_edit">Editar</string>
+    <string name="product_waiting_for_approval">a la espera de la aprobación</string>
+    <string name="product_rejected">Rechazado</string>
+    <string name="product_delete">Borrar</string>
+    <string name="product_error_alert_product_delete">No se pudo eliminar un producto en un momento. Vuelve a intentarlo más tarde.</string>
+    <string name="product_delete_product">Eliminar producto</string>
+    <string name="product_alert_success_product_delete">Producto eliminado correctamente</string>
+    <string name="product_alert_product_delete">¿Estás seguro de que deseas eliminar este producto?</string>
+    <string name="product_combination_not_exist">Esta combinación no existe</string>
+    <string name="product_added_successfully">El artículo se ha agregado correctamente</string>
+    <string name="product_updated_successfully">El artículo se ha actualizado correctamente</string>
+    <string name="product_go_to_store">Ir a la tienda</string>
+    <string name="product_clear_cart">Carro de la compra claro</string>
+    <string name="product_alert_message_cart_clear_failed">No se puede borrar el carro en este momento. Inténtelo de nuevo</string>
+    <string name="product_clear_cart_info">Hay artículos en su cesta de otro vendedor. Quieres borrar tu cesta y añadir este artículo?</string>
+    <string name="product_choose_category">Elige estado</string>
+    <string name="product_buy_now">Compra ahora</string>
+    <string name="product_negotiate">Negociar</string>
+    <string name="product_negotiated">Negociado</string>
+    <string name="product_share">Cuota</string>
+    <string name="product_whatsapp">WhatsApp</string>
+    <string name="product_copy_link">Copiar link</string>
+    <string name="product_link_copied">Enlace copiado</string>
+    <string name="product_similar_product_title">Te puede gustar esto</string>
+
+    <!--endregion-->
+
+    <!--region ADD PRODUCT -->
+    <string name="addproduct_product_title">Título del producto</string>
+    <string name="addproduct_header_title">Detalles del producto</string>
+    <string name="addproduct_price">Precio</string>
+    <string name="addproduct_location">Place</string>
+    <string name="addproduct_alert_image_select_add_product">Seleccione al menos 1 imagen del producto</string>
+    <string name="addproduct_alert_message_add_product_failed">No se ha podido añadir el producto en este momento.</string>
+    <string name="addproduct_upload_image">Carga de la imagen&#8230;</string>
+    <string name="addproduct_upload_listing">Cargar lista&#8230;</string>
+    <string name="addproduct_sub_category">Subcategoría</string>
+    <string name="addproduct_description">Descripción</string>
+    <string name="addproduct_address">Dirección</string>
+    <string name="addproduct_add_product">Anexar producto</string>
+    <string name="addproduct_max_qty">Cantidad Máxima</string>
+    <string name="addproduct_price_offer">Oferta de precios (en porcentaje)</string>
+    <string name="addproduct_add_products">Anexar productos</string>
+    <string name="addproduct_save">Guardar</string>
+    <string name="addproduct_go_to_myorders">Ir a Mis pedidos</string>
+    <string name="addproduct_your_product">Etiquete su producto (opcional)</string>
+    <string name="addproduct_alert_message_upload_file_failed">No se puede cargar el archivo en este momento</string>
+    <string name="addproduct_alert_no_subscription">No se le permite agregar productos, consulte su correo electrónico para obtener más detalles</string>
+    <string name="makeoffer_enter_amount">Ingrese la cantidad</string>
+    <string name="makeoffer_alert_less_amount">El precio negociado no debe ser menor que el precio del producto %s%s</string>
+    <string name="addproduct_category">Categoría</string>
+    <string name="addproduct_min_price_error">El precio debe ser al menos %s</string>
+    <string name="addproduct_go_to_home">Vete a casa</string>
+    <string name="addproduct_alert_message_max_atleast_one">La cantidad máxima debe ser mayor que cero</string>
+    <string name="addproduct_stock">Existencias</string>
+    <string name="addproduct_ticket">Billete</string>
+    <string name="addproduct_required">Requerido</string>
+
+    <!--endregion-->
+
+    <!--region FEEDBACK SCREEN-->
+    <string name="feedback_location">localización</string>
+    <string name="feedback_header_title">Comentarios</string>
+    <string name="feedback_reaction_title">¿Qué te parece nuestra aplicación?</string>
+    <string name="feedback_title">¿Qué le gustaría compartir con nosotros?</string>
+    <string name="feedback_contactInfo_title">¿Podemos ponernos en contacto con usted para obtener más información?</string>
+    <string name="feedback_tell_us_about_it">Díganoslo</string>
+    <string name="feedback_email_mobileNo">Correo electrónico o número de teléfono</string>
+    <string name="feedback_additional_information">Información adicional</string>
+    <string name="feedback_attachment">Adjunto</string>
+    <string name="feedback_attachments">Archivos adjuntos(%s)</string>
+    <string name="feedback_sending_feedback">Envío de comentarios</string>
+    <string name="feedback_max_attachment_message">No se pueden seleccionar más de 4 archivos</string>
+    <string name="feedback_sent_successfully">Comentarios enviados con éxito</string>
+    <string name="feedback_upload_attachment">Carga de archivos adjuntos</string>
+    <string name="feedback_alert_message_feedback_failed">Se produjo un error al enviar comentarios</string>
+    <string name="feedback_email">Correo electrónico</string>
+    <string name="feedback_mobileno">Número de teléfono</string>
+    <!--endregion-->
+
+    <!-- region GENERAL-->
+    <string name="general" translatable="false">General</string>
+    <string name="empty"></string>
+    <string name="gallery">Galería</string>
+    <string name="camera">Cámara</string>
+    <string name="document">Documento</string>
+    <string name="share">Compartir</string>
+    <string name="done">OK</string>
+    <string name="save">Guardar</string>
+    <string name="off_data">%s%% oferta</string>
+    <string name="media_failed_msg">No se puede cargar el archivo en este momento</string>
+    <string name="app_permission_gallery">La aplicación necesita permiso para acceder al almacenamiento externo</string>
+    <string name="app_permission_camera">La aplicación necesita el permiso de la cámara para capturar la imagen</string>
+    <string name="app_need_location_permission">La aplicación necesita permiso para acceder a la ubicación</string>
+    <string name="update_tradly">Actualización de la aplicación</string>
+    <string name="powered_by_tradly_platform">Desarrollado por \n <b>Tradly Platform</b></string>
+    <string name="update">Actualizar</string>
+    <string name="add_photo">Añadir foto</string>
+    <string name="take_photo">Toma una foto</string>
+    <string name="required">Requerido</string>
+    <string name="select_from_gellery">Seleccionar de la galería</string>
+    <string name="check_data_connection">Verifique su conexión de datos o su conexión puede ser lenta. Intentar otra vez.</string>
+    <string name="dial_code_country">(+%s) %s</string>
+    <string name="dialCodeConcat">+%s</string>
+    <string name="logging_in">iniciando sesión&#8230;</string>
+    <string name="logging_out">cerrando sesión&#8230;</string>
+    <string name="please_wait">Espere por favor&#8230;</string>
+    <string name="no_internet">Sin internet</string>
+    <string name="authFailed">Autenticación fallida</string>
+    <string name="choose">Escoger&#160;</string>
+    <string name="currency">Divisa</string>
+    <string name="two_data">%s%s</string>
+    <string name="invalid_no">Número invalido</string>
+    <string name="invalid_price">El valor debe ser superior a 0 / Precio inválido</string>
+    <string name="edit_photo">Editar foto</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="available">Disponible %s</string>
+    <string name="two_data_seperator">%s,%s</string>
+    <string name="hast_tag">#%s</string>
+    <string name="timeout_message">No se puede conectar a la red, inténtelo de nuevo.</string><!--NT-->
+    <string name="browser_not_found">Su dispositivo no tiene una aplicación de navegador.</string><!--NT-->
+    <string name="app_not_found">Su dispositivo no tiene una aplicación elegida para abrir.</string>
+    <string name="near_by_store_title">Descubra las tiendas cercanas</string>
+    <string name="rate_our_app">Califica la aplicación</string><!--NT-->
+    <string name="support">Apoyo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="from">De</string><!--NT-->
+    <string name="to">A</string><!--NT-->
+    <string name="install_now">Instalar en pc</string>
+    <string name="app_migration_message">We have made tremendous improvement to our TradlySocial App. Promosing a new feature every month from now. This app will be unavailable from play store from 1st September, 2020.  To avail this, download the new app </string>
+    <string name="date_month_placeholder">dd/mm/yy - hh:mm</string> <!--NT-->
+    <string name="near_by_store_desc">Comparta su ubicación para encontrar tiendas cercanas de su comunidad. Usamos su ubicación solo cuando usa la aplicación.</string>
+    <string name="something_went_wrong">Algo salió mal. Vuelve a intentarlo más tarde.</string>
+    <string name="no_internet_warning_message">Parece que tu conexión a Internet está desactivada. Enciéndalo y vuelva a intentarlo.</string>
+    <string name="version_update_msg">Nuestra aplicación ha mejorado aún más. Actualiza la app ahora para aprovechar las últimas mejoras y características.</string>
+    <!--endregion-->
+
+    <!--region TAG SCREEN-->
+    <string name="tag_header_title">Anexar tag</string>
+    <string name="tag_use_comma_to_add_tag"><font size="12">Use comas para agregar la etiqueta</font></string>
+    <!--endregion-->
+
+    <!--region REVIEW SCREEN-->
+    <string name="review_read_all_reviews">Leer todos los comentarios</string>
+    <string name="product_all_reviews">Leer todos los comentarios</string>
+    <string name="review_rating_count">%s clasificaciones</string>
+    <string name="review_reviews_count">%s comentarios</string>
+    <string name="review_helpful">Útil</string>
+    <string name="addreview_what_you_rate">¿Qué valoras?</string>
+    <string name="addreview_share_opinion">Por favor, comparta su opinión sobre el producto</string>
+    <string name="addreview_write_your_review_note">Escriba su nota de agradecimiento&#8230;</string>
+    <string name="addreview_send_review">Enviar revisión</string>
+    <string name="addreview_review_success_message">Revisión presentada con éxito</string>
+    <string name="addreview_review_error_message">SAlgo ha ido mal al enviar la reseña, inténtelo de nuevo más tarde</string>
+    <string name="addreview_please_provide_rating">Por favor, seleccione la clasificación</string>
+    <string name="addreview_opinion_one">Excelente servicio</string>
+    <string name="addreview_opinion_two">Gran producto</string>
+    <string name="addreview_opinion_three">Buen embalaje</string>
+    <string name="addreview_opinion_four">Respuesta rápida</string>
+    <string name="review_rate_this_store">Valora esta tienda</string>
+    <string name="review_write_review">Escriba un comentario</string>
+    <string name="review_with_photo">Con foto</string>
+    <string name="review_tell_others_think">Diga a los demás lo que piensa</string>
+    <!--endregion-->
+
+    <!--regionPREFERENCE SCREEN-->
+    <string name="preference_open_shop">Open Shop</string>
+    <string name="preference_buy_item">Buy Items</string>
+    <string name="preference_what_your_preference">What your Preference?</string>
+    <!--endregion-->
+
+    <!--region LANGUAGE SCREEN-->
+    <string name="language_select">Seleccione el idioma</string>
+    <string name="language_choose">Seleccione el idioma</string>
+    <string name="language_alert_message_choose_your_language">Por favor elija su idioma</string> <!--NT-->
+    <!--endregion-->
+
+    <!-- region INVITE SCREEN-->
+    <string name="invite_tradly">Invita tus amigos a %s</string>
+    <string name="invite_friends">Invita a tus amigas a comprar y vender.</string>
+    <string name="invite_your_friends_products">Invita a tus amigos a comprar y vender productos en  %s</string>
+    <string name="invite_now">Invitar ahora</string>
+    <!--endregion-->
+
+    <!--region DEEPLINK-->
+    <string name="link_listing_desc">Echa un vistazo a este listado en %s.Compre, venda, chatee para obtener lo que desea. </string>
+    <string name="link_store_desc">Eche un vistazo a esta tienda en %s.Compre, venda, chatee para obtener lo que desea.</string>
+    <!--endregion-->
+
+    <!--region APP STATIC URL-->
+    <string name="google_play_url">https://play.google.com/store/apps/details?id=%s</string>
+    <!--endregion-->
+
+    <string name="sales">Ventas</string>
+    <string name="sales_cancelled">Ventas canceladas</string>
+    <string name="commision_created">Creación de la Comisión</string>
+    <string name="commision_canceled">Comisión anulada</string>
+    <string name="transfer_created">Transferencia creada</string>
+    <string name="transfer_canceled">Transferencia cancelada</string>
+    <string name="payout_sent">Pago enviado</string>
+    <string name="subscription_fee">Cuota de suscripción</string>
+    <string name="processing_fee">Tasa de tramitación</string>
+    <string name="processing_fee_canceled">Tasa de tramitación anulada</string>
+
+    <!-- subscription-->
+    <string name="purchases">Compras</string>
+    <string name="important_message">Mensaje importante</string>
+    <string name="membership_management_not_supported">La gestión de las afiliaciones no es compatible con esta aplicación.</string>
+    <string name="membership_since">Afiliación desde:</string>
+    <string name="membership">Afiliación:</string>
+    <string name="appname_subscription">%s suscripción</string>
+    <string name="membership_subscription">Afiliación: %s suscripción</string>
+    <string name="billing_status">Estado de la facturación</string>
+    <string name="billing_charging_date">On %s, cobrará un mes por %s</string>
+    <string name="subscription_mail_sent">El correo enviado con éxito</string>
+    <string name="alert_message_cancel_order_failed">Se produjo un error al cancelar el pedido. Vuelve a intentarlo más tarde.</string>
+    <string name="alert_message_order_cancelled_successfully">Pedido cancelado con éxito</string>
+    <string name="subscription_allow_listings_exhausted_message">Has alcanzado el número máximo de anuncios.</string>
+    <string name="subscription_already_purchased_message">Ya te suscribiste a un plan diferente. Anule la suscripción del plan actual</string>
+    <string name="upgrade_now">actualizar ahora</string>
+    <string name="okay">Ok</string>
+
+    <string name="explore_filter_apply">Solicitar</string>
+    <string name="explore_filter_sort_by">Clasificar</string>
+    <string name="explore_filter_clear_filters">Limpiar filtros</string>
+    <string name="explore_event_filters">Filtros</string>
+
+
+
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="180dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0.2dp"
+    android:background="?attr/selectableItemBackground"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="15dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/parentLayout"
+    android:paddingBottom="10dp"
+    android:orientation="vertical">
+
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/imageOne"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/txtOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:siShape="@drawable/bg_rounded_corner_img"
+        app:siSquare="false"/>
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:theme="@style/TextViewRTL"
+        android:textStyle="bold"
+        android:textColor="@color/colorCustomBlack"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintLeft_toLeftOf="@id/imageOne"
+        app:layout_constraintStart_toStartOf="@id/imageOne"
+        app:layout_constraintTop_toBottomOf="@id/imageOne"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/txtOne"
+        app:layout_constraintStart_toStartOf="@id/txtOne"
+        app:layout_constraintTop_toBottomOf="@id/txtOne"
+        android:layout_marginTop="10dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgTwo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="gone"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            app:borderWidth="0dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            >
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/txtTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:theme="@style/TextViewRTL"
+            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/imgTwo"
+            android:layout_toRightOf="@id/imgTwo"
+            android:layout_toStartOf="@id/actionBtn"
+            android:layout_toLeftOf="@id/actionBtn"
+            />
+
+        <FrameLayout
+            android:id="@+id/actionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/buttonGradientBg"
+            android:layout_marginRight="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            >
+
+            <TextView
+                android:id="@+id/txtActionBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/storelist_follow"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"/>
+        </FrameLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

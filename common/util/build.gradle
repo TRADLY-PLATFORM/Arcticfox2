@@ -1,0 +1,11 @@
+import tradly.Dependencies
+import tradly.Modules
+
+apply from: "$rootDir/common-android-library.gradle"
+
+dependencies {
+    implementation project(Modules.persistance)
+    implementation project(Modules.domain)
+    implementation project(Modules.resources)
+    implementation Dependencies.Moshi.moshi_kotlin
+}

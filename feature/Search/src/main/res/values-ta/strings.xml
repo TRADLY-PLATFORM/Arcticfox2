@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_products">தயாரிப்புகள்</string>
+    <string name="search_stores">கடைகள்</string>
+    <string name="search_sort">வகைபடுத்து</string>
+    <string name="search_filter">பில்டர்</string>
+    <string name="search_done">முடிந்தது</string>
+</resources>

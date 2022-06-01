@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="tradly.social.common.resources.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="rating"
+            type="Float" />
+
+        <variable
+            name="ratingAvg"
+            type="Float" />
+
+        <variable
+            name="ratingCount"
+            type="String" />
+
+        <variable
+            name="price"
+            type="String" />
+
+        <variable
+            name="offerPercent"
+            type="String" />
+
+        <variable
+            name="imagePlaceholder"
+            type="Integer" />
+
+        <variable
+            name="imageError"
+            type="Integer" />
+
+        <variable
+            name="quantity"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/clEventCardInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:viewBindingIgnore="true">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/ivEventImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            app:error="@{imageError}"
+            app:imageUrl="@{imageUrl}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholder="@{imagePlaceholder}"
+            app:siBorderAlpha="0.0"
+            app:siBorderType="fill"
+            app:siBorderWidth="0dp"
+            app:siRadius="8dp"
+            app:siStrokeJoin="round"
+            tools:src="@drawable/placeholder_image"
+            tools:visibility="visible" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventName"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/colorTextBlack"
+            android:textStyle="bold"
+            android:text="@{title}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivEventImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="0dp"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:numStars="5"
+            android:rating="@{rating}"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBarYellow"
+            app:layout_constraintStart_toEndOf="@id/ivEventImage"
+            app:layout_constraintTop_toBottomOf="@id/tvEventName"
+            app:layout_goneMarginStart="0dp" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/ratingGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{rating!=null?View.VISIBLE:View.GONE}"
+            app:constraint_referenced_ids="ratingBar,tvRatingAverage,horZDiv,tvRatingCount"
+            tools:visibility="visible" />
+
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvRatingAverage"
+            style="@style/TextView.captain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@{String.valueOf(ratingAvg)}"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+            app:layout_constraintStart_toEndOf="@id/ratingBar"
+            app:layout_constraintTop_toTopOf="@id/ratingBar"
+            tools:text="4.3" />
+
+        <View
+            android:id="@+id/horZDiv"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorDarkGrey"
+            app:layout_constraintBottom_toBottomOf="@id/tvRatingAverage"
+            app:layout_constraintStart_toEndOf="@id/tvRatingAverage"
+            app:layout_constraintTop_toTopOf="@id/tvRatingAverage" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvRatingCount"
+            style="@style/TextView.captain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{@string/review_rating_count(ratingCount)}"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toBottomOf="@id/horZDiv"
+            app:layout_constraintStart_toEndOf="@id/horZDiv"
+            app:layout_constraintTop_toTopOf="@id/horZDiv"
+            tools:text="216 ratings" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventPrice"
+            style="@style/TextView.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@{price}"
+            android:textColor="@color/colorTextBlack"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivEventImage"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar"
+            app:layout_goneMarginStart="0dp"
+            tools:text="$200" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvVarianceOffer"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@{@string/off_data(offerPercent)}"
+            android:textColor="@color/colorGreenOffer"
+            app:layout_constraintBottom_toBottomOf="@id/tvEventPrice"
+            app:layout_constraintStart_toEndOf="@id/tvEventPrice"
+            app:layout_constraintTop_toTopOf="@id/tvEventPrice"
+            tools:text="50% off" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvVarianceQuantity"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:visibility="@{(quantity!=null &amp;&amp; !quantity.isEmpty)?View.VISIBLE:View.GONE}"
+            android:text="@{@string/event_detail_tickets_left(quantity)}"
+            app:layout_constraintStart_toEndOf="@id/ivEventImage"
+            app:layout_constraintTop_toBottomOf="@id/tvEventPrice"
+            app:layout_goneMarginStart="0dp"
+            tools:text="Only 5 Tickets left"
+            tools:textColor="@color/colorGreen" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="tradly.social.domain.entities.Variant" />
+
+        <import type="tradly.social.common.base.GenericAdapter.OnClickItemListListener" />
+
+        <import type="tradly.social.common.resources.R" />
+
+        <variable
+            name="listItem"
+            type="Variant" />
+
+        <variable
+            name="selectedVariantValue"
+            type="String" />
+
+        <variable
+            name="onClickItemListListener"
+            type="OnClickItemListListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/clListItemParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp"
+        android:onClick="@{(view)->onClickItemListListener.onClick(listItem,view)}"
+        tools:viewBindingIgnore="true">
+
+
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvVarianceTitle"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{listItem.variantName}"
+            app:layout_constraintEnd_toStartOf="@id/radioBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvVarianceQuantity"
+            tools:text="Test"
+            tools:textColor="@color/colorTextBlack" />
+
+        <RadioButton
+            android:id="@+id/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{listItem.selected}"
+            android:minWidth="0dp"
+            android:clickable="false"
+            android:minHeight="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvVarianceQuantity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvVarianceQuantity" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvVarianceDesc"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{listItem.variantDescription}"
+            app:layout_constraintEnd_toStartOf="@id/radioBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvVarianceTitle"
+            tools:text="Our Power Ac Servicing Our Power Ac Servicing  ensures better cooling Our Power Ac Servicing  ensures better cooling ensures better cooling" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvSelectedVariant"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{selectedVariantValue}"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvVarianceDesc"
+            tools:text="Red/6GB/2GHZ" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvVariancePrice"
+            style="@style/TextView.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{listItem.offerDisplayPrice}"
+            android:textColor="@color/colorTextBlack"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSelectedVariant"
+            tools:text="$250" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvVarianceOffer"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@{@string/off_data(listItem.offerPercent)}"
+            android:textColor="@color/colorGreenOffer"
+            app:layout_constraintBottom_toBottomOf="@id/tvVariancePrice"
+            app:layout_constraintStart_toEndOf="@id/tvVariancePrice"
+            app:layout_constraintTop_toTopOf="@id/tvVariancePrice"
+            tools:text="50% off" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvVarianceQuantity"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{@string/event_detail_tickets_left(String.valueOf(listItem.quantity))}"
+            tools:text="5 Tickets left"
+            tools:textColor="@color/colorGreen" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

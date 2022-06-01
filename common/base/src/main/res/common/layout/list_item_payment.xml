@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="tradly.social.domain.entities.Payment" />
+        <import type="tradly.social.common.base.GenericAdapter.OnClickItemListListener"/>
+
+        <variable
+            name="payment"
+            type="Payment" />
+        <variable
+            name="onClickItemListListener"
+            type="OnClickItemListListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listItemParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view)->onClickItemListListener.onClick(payment,view)}"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:button="?attr/checkBox"
+                android:clickable="false"
+                android:checked="@{payment.selected}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:useMaterialThemeColors="false" />
+
+            <TextView
+                android:id="@+id/paymentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:text="Cash On Delivery"
+                android:text="@{payment.name}"
+                android:theme="@style/TextViewRTL"
+                app:layout_constraintBottom_toBottomOf="@id/checkbox"
+                app:layout_constraintLeft_toRightOf="@id/checkbox"
+                app:layout_constraintStart_toEndOf="@id/checkbox"
+                app:layout_constraintTop_toTopOf="@id/checkbox" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

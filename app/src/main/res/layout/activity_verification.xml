@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView android:id="@+id/backNav"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:tint="@android:color/white"
+            android:layout_gravity="start|top"
+            app:srcCompat="@drawable/ic_back"
+            android:layout_margin="16dp"/>
+        <TextView
+            android:id="@+id/txtVerification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/otp_email_verification"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtEnterOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            />
+
+        <LinearLayout
+            android:id="@+id/otpLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edCodeOne"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="?attr/otpTextColor"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textStyle="bold"
+
+                android:theme="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edCodeTwo"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="?attr/otpTextColor"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textStyle="bold"
+                android:theme="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edCodeThree"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="?attr/otpTextColor"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textStyle="bold"
+                android:theme="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edCodeFour"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="?attr/otpTextColor"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textStyle="bold"
+                android:theme="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edCodeFive"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="?attr/otpTextColor"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textStyle="bold"
+                android:theme="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edCodeSix"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="?attr/otpTextColor"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textStyle="bold"
+                android:theme="@style/EditTextStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtdidNotRcvOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/otp_did_not_receive_code"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/txtResendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/otp_resend_code"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            />
+
+        <FrameLayout
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/bg_button_white"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/otp_verify"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="18sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

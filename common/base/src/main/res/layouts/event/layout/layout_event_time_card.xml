@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="tradly.social.common.base.CustomOnClickListener"/>
+        <variable
+            name="onClickListener"
+            type="CustomOnClickListener" />
+        <variable
+            name="startMillis"
+            type="Long" />
+        <variable
+            name="endMillis"
+            type="Long" />
+
+        <variable
+            name="timeFormat"
+            type="String" />
+        <variable
+            name="dateFormat"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSelectedDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:viewBindingIgnore="true"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvSelectDateHint"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorCustomBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/add_event_time_selected_hint"
+            tools:text="Selected Date and time" />
+
+        <View
+            android:id="@+id/viewCircle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.3"
+            android:background="@drawable/bg_rounded_circle_fill"
+            android:backgroundTint="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvSelectDateHint"
+            app:layout_constraintTop_toBottomOf="@id/tvSelectDateHint" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/viewCircle"
+            app:layout_constraintEnd_toEndOf="@id/viewCircle"
+            app:layout_constraintStart_toStartOf="@id/viewCircle"
+            app:layout_constraintTop_toTopOf="@id/viewCircle"
+            app:srcCompat="@drawable/ic_calender"
+            app:tint="@color/colorBlack" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvSelectedDate"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/colorTextBlack"
+            app:milliseconds="@{startMillis}"
+            setDateFormat="@{dateFormat}"
+            app:layout_constraintBottom_toTopOf="@id/tvSelectedTime"
+            app:layout_constraintStart_toEndOf="@id/viewCircle"
+            app:layout_constraintTop_toTopOf="@id/viewCircle"
+            tools:text="Wed,May 12, 2021" />
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:onClick="@{(view)->onClickListener.onClick(view)}"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@id/tvSelectedDate"
+            app:layout_constraintStart_toEndOf="@id/tvSelectedDate"
+            app:layout_constraintTop_toTopOf="@id/tvSelectedDate"
+            app:srcCompat="@drawable/ic_mode_edit_black_24dp"
+            app:tint="?attr/colorPrimary" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvSelectedTime"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:setDateFormat="@{timeFormat}"
+            app:endDate="@{endMillis}"
+            app:startDate="@{startMillis}"
+            app:layout_constraintBottom_toBottomOf="@id/viewCircle"
+            app:layout_constraintStart_toStartOf="@id/tvSelectedDate"
+            app:layout_constraintTop_toBottomOf="@id/tvSelectedDate"
+            tools:text="10:00AM - 12:00PM" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:onClick="@{(view)->onClickListener.onClick(view)}"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@id/tvSelectDateHint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSelectDateHint"
+            app:srcCompat="@drawable/ic_delete_black_24dp"
+            app:tint="@color/colorMediumGrey" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

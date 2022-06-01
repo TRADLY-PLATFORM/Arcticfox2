@@ -1,0 +1,61 @@
+import tradly.Config
+import tradly.Dependencies
+import tradly.Modules
+
+apply from: "$rootDir/common-android-library.gradle"
+apply plugin: 'kotlin-android'
+
+android {
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/main/res/common', 'src/main/res/layouts/event', 'src/main/res/filter', 'src/main/res/subscription'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation project(Modules.views)
+    implementation project(Modules.domain)
+    implementation project(Modules.resources)
+    implementation project(Modules.cache)
+    implementation project(Modules.persistance)
+    implementation project(Modules.network)
+    implementation project(Modules.util)
+    implementation project(Modules.navigation)
+    implementation Dependencies.Navigation.navigation_fragment
+    implementation Dependencies.Navigation.navigation_ui
+    implementation Dependencies.Billing.google_play_billing
+    implementation Dependencies.Kotlin.kotlin_stdlib_jdk7
+    implementation Dependencies.appcompat
+    implementation Dependencies.legacy_support_v4
+    implementation Dependencies.android_material_design
+    implementation Dependencies.core_ktx
+    implementation Dependencies.PlayServices.locations
+    //implementation Dependencies.PlayServices.ad_mob
+    implementation Dependencies.ViewModel.view_model
+    implementation Dependencies.LiveData.livedata
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt Dependencies.ArchLifeCycle.arch_lifecycle_compiler
+    implementation Dependencies.ArchLifeCycle.androidx_lifecycle_extension
+    implementation Dependencies.Coroutine.kotlinx_coroutines_core
+    implementation Dependencies.Coroutine.kotlinx_coroutines_android
+    implementation Dependencies.Analytics.firebase
+    implementation Dependencies.Analytics.moengage
+    implementation Dependencies.Analytics.io_branch
+    implementation Dependencies.Analytics.roll_bar
+    implementation Dependencies.Crashlytics.sentry
+    implementation Dependencies.Firebase.firebase_messaging
+    implementation Dependencies.ImageView.shape_imageview
+    implementation Dependencies.Glide.glide
+    implementation Dependencies.CropCompress.uCrop
+    implementation Dependencies.CropCompress.compressor
+    kapt Dependencies.Glide.glide_compiler
+    implementation Dependencies.Facebook.facebook_android_sdk
+    implementation("androidx.multidex:multidex:2.0.1")
+}

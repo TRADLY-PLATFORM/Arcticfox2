@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <import type="tradly.social.domain.entities.Event" />
+
+        <import type="tradly.social.common.base.GenericAdapter.OnClickItemListListener" />
+
+        <import type="tradly.social.common.resources.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listItem"
+            type="Event" />
+
+        <variable
+            name="onClickItemListListener"
+            type="OnClickItemListListener" />
+
+        <variable
+            name="dateFormat"
+            type="String" />
+    </data>
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="360dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_height="150dp"
+        android:id="@+id/listItemParent"
+        android:onClick="@{(view)->onClickItemListListener.onClick(listItem,view)}"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0.5dp"
+        tools:theme="@style/AppTheme">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/ivEvent"
+                android:layout_width="64dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:alpha="0.9"
+                app:siBorderAlpha="0.0"
+                app:siBorderType="fill"
+                app:error="@{R.drawable.placeholder_image}"
+                app:imageUrl="@{listItem.images[0]}"
+                app:placeholder="@{R.drawable.placeholder_image}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:siBorderWidth="0dp"
+                app:siRadius="6dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="2dp"
+                android:src="@{listItem.isLiked?R.drawable.ic_favorite_black_24dp:R.drawable.ic_favorite_border_black_24dp}"
+                app:tint="?attr/colorPrimary"
+                tools:src="R.drawable.ic_favorite_black_24dp"
+                app:fabCustomSize="40dp"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@id/tvEventTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="@{(view)->onClickItemListListener.onClick(listItem,view)}"
+                app:layout_constraintTop_toTopOf="@id/tvEventTime" />
+
+
+            <ImageView
+                android:id="@+id/ivTime"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toEndOf="@id/ivEvent"
+                app:layout_constraintTop_toTopOf="@id/ivEvent"
+                app:srcCompat="@drawable/ic_time_explore"
+                app:tint="@color/colorDarkGrey" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvEventTime"
+                style="@style/TextView.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorTextBlack"
+                android:textStyle="bold"
+                app:setDateFormat="@{dateFormat}"
+                app:endDate="@{listItem.endAt}"
+                app:startDate="@{listItem.startAt}"
+                app:layout_constraintBottom_toBottomOf="@id/ivTime"
+                app:layout_constraintEnd_toStartOf="@id/fabLike"
+                app:layout_constraintStart_toEndOf="@id/ivTime"
+                app:layout_constraintTop_toTopOf="@id/ivTime"
+                tools:text="3:00AM-8:00PM" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvEventTitle"
+                style="@style/TextView.Subtitle1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@{listItem.title}"
+                android:layout_marginEnd="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorTextBlack"
+                app:layout_constraintEnd_toStartOf="@id/fabLike"
+                app:layout_constraintStart_toEndOf="@id/ivEvent"
+                app:layout_constraintTop_toBottomOf="@id/ivTime"
+                tools:text="Plank Practice" />
+
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvEventDesc"
+                style="@style/TextView.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:visibility="@{listItem.description.empty?View.GONE:View.VISIBLE}"
+                android:text="@{listItem.description}"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintEnd_toStartOf="@id/fabLike"
+                app:layout_constraintStart_toEndOf="@id/ivEvent"
+                app:layout_constraintTop_toBottomOf="@id/tvEventTitle"
+                tools:text="Burn Fat Exercise" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/ratingGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{listItem.rating!=null?View.VISIBLE:View.GONE}"
+                app:constraint_referenced_ids="ivStar,divRatingStar,tvRatingAvg,tvRating" />
+
+
+            <ImageView
+                android:id="@+id/ivStar"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                app:layout_goneMarginTop="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toEndOf="@id/ivEvent"
+                app:layout_constraintTop_toBottomOf="@id/tvEventDesc"
+                app:srcCompat="@drawable/ic_star_filled"
+                app:tint="@color/colorYellowOrange" />
+
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvRatingAvg"
+                style="@style/TextView.captain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{listItem.rating!=null?(String.valueOf(listItem.rating.ratingAverage)):null}"
+                android:textColor="@color/colorTextBlack"
+                app:layout_constraintBottom_toBottomOf="@id/ivStar"
+                app:layout_constraintStart_toEndOf="@id/ivStar"
+                app:layout_constraintTop_toTopOf="@id/ivStar"
+                tools:text="4.0" />
+
+            <View
+                android:id="@+id/divRatingStar"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorMediumGrey"
+                app:layout_constraintBottom_toBottomOf="@id/tvRatingAvg"
+                app:layout_constraintStart_toEndOf="@id/tvRatingAvg"
+                app:layout_constraintTop_toTopOf="@id/tvRatingAvg" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvRating"
+                style="@style/TextView.captain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{@plurals/ratings(listItem.rating.ratingCount,listItem.rating.ratingCount)}"
+                android:textColor="@color/colorTextBlack"
+                app:layout_constraintBottom_toBottomOf="@id/divRatingStar"
+                app:layout_constraintStart_toEndOf="@id/divRatingStar"
+                app:layout_constraintTop_toTopOf="@id/divRatingStar"
+                tools:text="200 ratings" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                style="@style/TextView.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_goneMarginTop="12dp"
+                android:text="@{listItem.offerPrice.displayCurrency}"
+                android:textColor="@color/colorTextBlack"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivEvent"
+                app:layout_constraintTop_toBottomOf="@id/ivStar"
+                tools:text="$200" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

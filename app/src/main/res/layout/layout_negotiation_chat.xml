@@ -1,0 +1,266 @@
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/productImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@id/productName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:siBorderAlpha="0.0"
+        app:siBorderType="fill"
+        app:siBorderWidth="0dp"
+        app:siRadius="8dp"
+        app:siSquare="true"
+        app:siStrokeJoin="round"
+        tools:src="@drawable/placeholder_image"/>
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/productName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/productImage"
+        app:layout_constraintTop_toTopOf="@id/productImage"
+        tools:text="Pixel 4a"
+        tools:textColor="@color/colorTextBlack"
+        tools:textSize="16sp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/ratingInfoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ratingBar,rating_divider,tvRatingCount,txtRatingValue"/>
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="20dp"
+        android:minHeight="20dp"
+        android:numStars="5"
+        android:paddingTop="5dp"
+        android:rating="0.0"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:stepSize="0.5"
+        android:theme="@style/RatingBarYellow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/productName"
+        app:layout_constraintTop_toBottomOf="@id/productName" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/txtRatingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+        app:layout_constraintStart_toEndOf="@id/ratingBar"
+        app:layout_constraintTop_toTopOf="@id/ratingBar"
+        tools:text="5.0" />
+
+    <View
+        android:id="@+id/rating_divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorMediumGrey"
+        app:layout_constraintBottom_toBottomOf="@id/txtRatingValue"
+        app:layout_constraintStart_toEndOf="@id/txtRatingValue"
+        app:layout_constraintTop_toTopOf="@id/txtRatingValue" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/tvRatingCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/rating_divider"
+        app:layout_constraintStart_toEndOf="@id/rating_divider"
+        app:layout_constraintTop_toTopOf="@id/rating_divider"
+        tools:text="216 ratings" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        tools:text="Rs.200" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/horZ_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="productImage,productPrice" />
+
+    <View
+        android:id="@+id/horZ_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorMediumGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horZ_barrier" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/offerRequestedTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/chatdetail_offer_requested"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/productImage"
+        app:layout_constraintTop_toBottomOf="@id/horZ_divider" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/offerStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/requestedOfferValue"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@id/requestedOfferValue"
+        app:layout_constraintBottom_toBottomOf="@id/requestedOfferValue"
+        tools:background="@drawable/soldout_corner_bg"
+        tools:text="Offer Accepted"
+        android:visibility="gone"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/white"/>
+
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/requestedOfferValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/offerRequestedTxt"
+        app:layout_constraintTop_toBottomOf="@id/offerRequestedTxt"
+        tools:text="Rs.250" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/chat_time_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="requestedOfferValue,btnAccept,btnDecline,offerExpireTime" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/negotiationChatTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorDarkGrey"
+        android:textSize="10sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/negotiationIconDeliveryStatus"
+        app:layout_constraintTop_toBottomOf="@+id/chat_time_barrier"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="10:30pm" />
+
+    <ImageView
+        android:id="@+id/negotiationIconDeliveryStatus"
+        android:layout_width="14dp"
+        android:layout_height="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/negotiationChatTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toTopOf="@+id/negotiationChatTime"
+        tools:src="@drawable/ic_icon_sent"
+        tools:tint="@color/colorChatStatusDelivered" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAccept"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:text="@string/chatdetail_accept"
+        android:textColor="@color/white"
+        app:elevation="0dp"
+        android:textAllCaps="false"
+        app:cornerRadius="4dp"
+        android:visibility="visible"
+        android:layout_marginEnd="2dp"
+        app:layout_goneMarginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/btnDecline"
+        app:layout_constraintStart_toStartOf="@id/productImage"
+        app:layout_constraintTop_toBottomOf="@id/requestedOfferValue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDecline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:text="@string/chatdetail_decline"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:cornerRadius="4dp"
+        app:elevation="0dp"
+        android:visibility="visible"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAccept"
+        app:layout_constraintTop_toTopOf="@id/btnAccept"
+        app:layout_constraintBottom_toBottomOf="@id/btnAccept"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="2dp" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/offerExpireTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnAccept"
+        app:layout_constraintStart_toStartOf="@id/btnAccept"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/colorPrimary"
+        tools:text="Expire in 4hrs"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

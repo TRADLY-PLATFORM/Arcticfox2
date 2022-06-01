@@ -1,0 +1,189 @@
+import org.json.JSONObject
+import tradly.Config
+import tradly.Dependencies
+
+apply from: "$rootDir/common-android-library.gradle"
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        if (gradle.gradleVersion.split("\\.")[0].toInteger() >= 2) {
+            classpath 'org.apache.ivy:ivy:2.3.0'
+        }
+    }
+}
+
+task getConfig(type: Download) {
+    src 'https://sample-resource-url.com'
+    dest new File("$buildDir/automation","config.json")
+    header 'Authorization', Config.ADMIN_KEY
+    overwrite true
+}
+
+task parseConfigs(dependsOn: getConfig) {
+    doLast{
+        JSONObject config = parseJsonConfig(getConfig.dest)
+        if(config.has("status")){
+            JSONObject data = config.getJSONObject("data")
+            JSONObject configs = data.getJSONObject("configs")
+            android.defaultConfig.resValue "string", "branch_test_key",configs.optString("branch_key","")
+            android.defaultConfig.resValue "string", "branch_live_key",configs.optString("branch_key","")
+            android.defaultConfig.resValue "string", "map_key", configs.optString("google_map_api_key","")
+            android.defaultConfig.resValue "string", "facebook_app_id", configs.optString("facebook_app_id","")
+            android.defaultConfig.resValue "string", "google_client_id", configs.optString("google_client_id","")
+            android.defaultConfig.resValue "string", "admob_appid", configs.optString("admob_appid","")
+            android.defaultConfig.resValue "string", "app_name", configs.optString("app_name","")
+            android.defaultConfig.resValue "string", "sell_icon_name", configs.optString("sell_icon_text","")
+            def appLabel =  configs.optString("app_name","")
+            android.defaultConfig.resValue "string", "app_home_title", configs.optString("app_title_home",appLabel)
+            android.defaultConfig.resValue "string", "app_label", appLabel
+            android.defaultConfig.resValue "string", "uri_scheme", configs.optString("uri_scheme","")
+            android.defaultConfig.resValue "string", "uri_host", configs.optString("branch_link_domain","")
+            createColorRes(configs)
+            android.defaultConfig.buildConfigField "String", "APP_THEME", "\"theme_green\""
+            android.defaultConfig.buildConfigField "String", "TENANT_ID", "\"${Config.Tenant.CLIENT}\""
+            android.defaultConfig.buildConfigField "String", "APP_NAME", "\"${configs.optString("app_name","")}\""
+            android.defaultConfig.buildConfigField "String", "TERMS_URL", "\"${configs.optString("terms_url","")}\""
+            android.defaultConfig.buildConfigField "String", "PRIVACY_URL", "\"${configs.optString("privacy_policy_url","")}\""
+            android.defaultConfig.buildConfigField "String", "FAQ", "\"${configs.optString("faq_url","")}\""
+        }
+    }
+}
+
+
+task downloadRes(dependsOn: parseConfigs){
+    doLast{
+        JSONObject data = parseJsonConfig(new File("$buildDir/automation/config.json"))
+        if(data.has("status")){
+            JSONObject configs = data.getJSONObject("data").getJSONObject("configs")
+            task downloadGoogeService(){
+                def url = configs.optString("android_app_google_json","")
+                if (!url.isEmpty()){
+                   download{
+                       src url
+                       dest new File("$buildDir/automation","google-services.json")
+                       overwrite true
+                   }
+               }
+            }
+
+            task downloadSplashIcon(dependsOn:downloadGoogeService){
+                def url = configs.optString("splash_image","")
+                if (!url.isEmpty()){
+                    download{
+                        src url
+                        dest new File("$buildDir/automation","splash_logo.png")
+                        overwrite true
+                    }
+                }
+            }
+
+            task downloadSellIcon(dependsOn:downloadSplashIcon){
+                def url = configs.optString("sell_icon","")
+                if (!url.isEmpty()){
+                    download{
+                        src url
+                        dest new File("$buildDir/automation","ic_sell_icon.png")
+                        overwrite true
+                    }
+                }
+            }
+
+            task downloadNotificationIcon(dependsOn:downloadSellIcon){
+                def url = configs.optString("notification_icon","")
+                if (!url.isEmpty()){
+                    download{
+                        src url
+                        dest new File("$buildDir/automation","notification_icon.png")
+                        overwrite true
+                    }
+                }
+            }
+
+            task downloadLauncher(dependsOn:downloadNotificationIcon ){
+                def url = configs.optString("app_icon_android","")
+                if (!url.isEmpty()){
+                    download{
+                        src url
+                        dest new File("$buildDir/automation","ic_launcher.zip")
+                        overwrite true
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+task downloadAndUnzipFile(dependsOn: downloadRes, type: org.gradle.api.tasks.Copy) {
+    from zipTree("$buildDir/automation/ic_launcher.zip")
+    into "$buildDir/automation"
+}
+
+task copyLauncher(dependsOn: downloadAndUnzipFile, type: org.gradle.api.tasks.Copy){
+    from "$buildDir/automation/res"
+    into "$projectDir.path/src/main/res"
+}
+
+task copySellIcon(dependsOn:copyLauncher,type: org.gradle.api.tasks.Copy){
+    from "$buildDir/automation/ic_sell_icon.png"
+    into "$projectDir.path/src/main/res/drawable"
+}
+
+task copySplashIcon(dependsOn:copySellIcon,type: org.gradle.api.tasks.Copy){
+    from "$buildDir/automation/splash_logo.png"
+    into "$projectDir.path/src/main/res/drawable"
+}
+
+task copyNotificationIcon(dependsOn:copySplashIcon,type: org.gradle.api.tasks.Copy){
+    from "$buildDir/automation/notification_icon.png"
+    into "$projectDir.path/src/main/res/drawable"
+}
+
+task copyGoogeService(dependsOn:copyNotificationIcon,type: org.gradle.api.tasks.Copy){
+    from "$buildDir/automation/google-services.json"
+    into  "$rootDir.path/app/src/client"
+}
+
+private  createColorRes(JSONObject configs){
+    String colorPrimaryHex = configs.optString("app_color_primary","#09b58d")
+    String colorS1 = colorPrimaryHex.substring(0,1)
+    String colorS2 = colorPrimaryHex.substring(1,colorPrimaryHex.length())
+    android.defaultConfig.resValue "color", "colorPrimaryDark",configs.optString("app_color_secondary",colorPrimaryHex)
+    android.defaultConfig.resValue "color", "colorPrimary",colorPrimaryHex
+    android.defaultConfig.resValue "color", "colorPrimary90",getAlphaColor(colorS1,colorS2,"E6")
+    android.defaultConfig.resValue "color", "colorPrimary85",getAlphaColor(colorS1,colorS2,"D9")
+
+
+}
+
+private static String getAlphaColor(String colorS1,String colorS2,String alphaHex){
+    return colorS1+alphaHex+colorS2
+}
+
+private static JSONObject parseJsonConfig(File destFile){
+    StringBuffer output = new StringBuffer();
+    try{
+        FileReader fileReader = new FileReader(destFile.absolutePath);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        String line = "";
+        while((line=bufferedReader.readLine())!=null){
+            output.append(line+"\n");
+        }
+        bufferedReader.close();
+    }
+    catch (Exception ex){}
+    return new JSONObject(output.toString());
+}
+
+/*Uncomment this to download project resources*/
+
+//preBuild.dependsOn copyGoogeService
+
+dependencies {
+    implementation Dependencies.appcompat
+    implementation Dependencies.legacy_support_v4
+    implementation Dependencies.android_material_design
+}

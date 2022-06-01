@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="tradly.social.domain.entities.Variant" />
+
+        <import type="tradly.social.common.resources.R" />
+
+        <import type="tradly.social.common.base.GenericAdapter.OnClickItemListListener" />
+
+        <variable
+            name="onClickItemListListener"
+            type="OnClickItemListListener" />
+
+        <variable
+            name="listItem"
+            type="Variant" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cvVariantItemParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="1dp"
+        android:onClick="@{(view)-> onClickItemListListener.onClick(listItem,view)}"
+        tools:theme="@style/AppTheme"
+        tools:viewBindingIgnore="true">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/ivVariantImage"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:alpha="0.90"
+                android:scaleType="fitCenter"
+                app:error="@{R.drawable.placeholder_image}"
+                app:imageUrl="@{listItem.images[0]}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholder="@{R.drawable.placeholder_image}"
+                app:siBorderAlpha="0.0"
+                app:siBorderType="fill"
+                app:siBorderWidth="0dp"
+                app:siRadius="0dp"
+                app:siStrokeJoin="round" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvVarianceTitle"
+                style="@style/TextView.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{listItem.variantName}"
+                android:textColor="@color/colorTextBlack"
+                app:layout_constraintStart_toEndOf="@id/ivVariantImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Plank Yoga" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvVarianceDesc"
+                style="@style/TextView.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                app:layout_constraintEnd_toStartOf="@id/ivRightIcon"
+                android:layout_marginEnd="12dp"
+                android:text="@{listItem.variantDescription}"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="@id/tvVarianceTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvVarianceTitle"
+                tools:text="Plank Yoga description" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvVarianceValues"
+                style="@style/TextView.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                app:layout_constraintEnd_toStartOf="@id/ivRightIcon"
+                android:layout_marginEnd="12dp"
+                android:text="@{listItem.getCombinedVariantValue}"
+                android:textColor="@color/colorTextBlack"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tvVarianceTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvVarianceDesc"
+                tools:text="Red/XL" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvVariancePrice"
+                style="@style/TextView.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{listItem.offerDisplayPrice}"
+                android:textColor="@color/colorTextBlack"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvVarianceTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvVarianceValues"
+                tools:text="$200" />
+
+            <ImageView
+                android:id="@+id/ivRightIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_right_chevron"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="tradly.social.domain.entities.EventBooking"/>
+        <import type="tradly.social.common.resources.R" />
+        <import type="tradly.social.common.base.GenericAdapter.OnClickItemListListener"/>
+        <variable
+            name="onClickItemListListener"
+            type="OnClickItemListListener" />
+        <import type="android.view.View"/>
+        <variable
+            name="eventBooking"
+            type="EventBooking" />
+
+        <variable
+            name="dateFormat"
+            type="String" />
+        <variable
+            name="timeFormat"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/listItemParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{(view)->onClickItemListListener.onClick(eventBooking,view)}"
+        android:background="@color/white">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/ivImage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="16dp"
+            app:error="@{R.drawable.placeholder_image}"
+            app:placeholder="@{R.drawable.placeholder_image}"
+            app:imageUrl="@{eventBooking.event.images[0]}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:siBorderAlpha="0.0"
+            app:siBorderType="fill"
+            app:siBorderWidth="0dp" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventTitle"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/colorTextBlack"
+            android:textStyle="bold"
+            android:text="@{eventBooking.event.title}"
+            app:layout_constraintStart_toEndOf="@id/ivImage"
+            app:layout_constraintTop_toTopOf="@id/ivImage"
+            tools:text="Class Yoga" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventDesc"
+            style="@style/TextView.captain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@{eventBooking.event.description}"
+            android:visibility="@{eventBooking.event.description.empty?View.GONE:View.VISIBLE}"
+            android:textColor="@color/colorDarkGrey"
+            app:layout_constraintStart_toEndOf="@id/ivImage"
+            app:layout_constraintTop_toBottomOf="@id/tvEventTitle"
+            tools:text="Plank Exercise" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventDate"
+            style="@style/TextView.captain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            app:setDateFormat="@{dateFormat}"
+            app:milliseconds="@{eventBooking.event.startAt}"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintStart_toEndOf="@id/ivImage"
+            app:layout_constraintTop_toBottomOf="@id/tvEventDesc"
+            tools:text="Mon,2021" />
+
+        <View
+            android:id="@+id/div"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorMediumGrey"
+            app:layout_constraintBottom_toBottomOf="@id/tvEventDate"
+            app:layout_constraintStart_toEndOf="@id/tvEventDate"
+            app:layout_constraintTop_toTopOf="@id/tvEventDate" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventPrice"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/colorTextBlack"
+            android:textStyle="bold"
+            android:text="@{eventBooking.offerPrice.displayCurrency}"
+            app:layout_constraintBottom_toBottomOf="@id/tvEventTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvEventTitle"
+            tools:text="$250" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventTime"
+            style="@style/TextView.captain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:setDateFormat="@{timeFormat}"
+            app:startDate="@{eventBooking.event.startAt}"
+            app:endDate="@{eventBooking.event.endAt}"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toBottomOf="@id/div"
+            app:layout_constraintStart_toEndOf="@id/div"
+            app:layout_constraintTop_toTopOf="@id/div"
+            tools:text="3:00pm" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

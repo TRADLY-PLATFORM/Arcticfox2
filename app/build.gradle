@@ -1,0 +1,212 @@
+import tradly.Config
+import tradly.Dependencies
+import tradly.Modules
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply from: "$rootDir/common-defaultconfig.gradle"
+
+//APP INFO
+def appId = ''
+def tenantID = Config.Tenant.TRADLY_SOCIAL
+def keyStoreProperties = new Properties()
+def appProperties = new Properties()
+def keyStorePropertyFile = file('keystore.properties')
+def apiKeyProperties = file('../app/src/main/assets/app.properties')
+keyStoreProperties.load(new FileInputStream(keyStorePropertyFile))
+appProperties.load(new FileInputStream(apiKeyProperties))
+
+
+android {
+    compileSdkVersion Config.compileSDK
+
+    with commonDefaultConfig
+
+    defaultConfig{
+        resValue "string", 'sentry_dsn', Config.sentryDSN
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding = true
+    }
+
+    aaptOptions {
+        ignoreAssetsPattern "!app.properties"
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        abortOnError false
+        disable "Instantiatable"
+        checkReleaseBuilds false
+    }
+
+    buildTypes {
+        release {
+            if (Config.BuildTypes.enableReleaseDebug){
+                initWith(buildTypes.debug)
+                minifyEnabled Config.BuildTypes.Debug.MINIFY_ENABLED
+                useProguard Config.BuildTypes.Debug.USE_PROGUARD
+                shrinkResources Config.BuildTypes.Debug.SHRINK_RES
+                crunchPngs Config.BuildTypes.Debug.CRUNCH_PNGS
+            }
+            else{
+                minifyEnabled Config.BuildTypes.Release.MINIFY_ENABLED
+                useProguard Config.BuildTypes.Release.USE_PROGUARD
+                shrinkResources Config.BuildTypes.Release.SHRINK_RES
+                crunchPngs Config.BuildTypes.Release.CRUNCH_PNGS
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.PRODUCTION\"")
+        }
+
+        debug {
+            minifyEnabled Config.BuildTypes.Debug.MINIFY_ENABLED
+            useProguard Config.BuildTypes.Debug.USE_PROGUARD
+            shrinkResources Config.BuildTypes.Debug.SHRINK_RES
+            crunchPngs Config.BuildTypes.Debug.CRUNCH_PNGS
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.DEBUG\"")
+        }
+
+        sandBox {
+            initWith(buildTypes.debug)
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.SANDBOX\"")
+        }
+
+        sandBoxRelease {
+            initWith(buildTypes.debug)
+            buildConfigField("String", "BASE_URL", "\"$Config.BaseUrl.SANDBOX\"")
+        }
+    }
+
+    flavorDimensions("default")
+
+    productFlavors{
+        tradlySocial{
+            applicationId = Config.Package.TRADLY_SOCIAL
+            appId = "tradly.social"
+            versionCode = Config.Version.TradlySocial.VERSION_CODE
+            versionName = Config.Version.TradlySocial.VERSION_NAME
+            buildConfigField "boolean", "SHOW_SPLASH_LOGO_NAME", "false"
+            buildConfigField "boolean", "IS_THEME_ENABLED", "false"
+            dimension "default"
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/metadata.kotlin_module'
+        exclude 'META-INF/metadata.jvm.kotlin_module'
+    }
+// To inline the bytecode built with JVM target 1.8 into
+// bytecode that is being built with JVM target 1.6. (e.g. navArgs)
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    variantFilter { variant -> // these variants are not needed
+        if(
+        variant.name == "tradlySocialSandBoxRelease"
+        )
+        {
+            setIgnore(true)
+        }
+    }
+
+    dynamicFeatures = [":feature:event:explore",
+                       ':feature:event:eventbooking',
+                       ':feature:event:addEvent',
+                       ':feature:Search']
+}
+
+dependencies {
+
+    implementation project(Modules.domain)
+    implementation project(Modules.navigation)
+    implementation project(Modules.views)
+    implementation project(Modules.resources)
+    implementation project(Modules.persistance)
+    implementation project(Modules.network)
+    implementation project(Modules.util)
+    implementation project(Modules.cache)
+    implementation project(Modules.base)
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation Dependencies.appcompat
+    implementation Dependencies.core_ktx
+    implementation Dependencies.legacy_support_v4
+    implementation Dependencies.android_material_design
+    implementation Dependencies.androidx_constraint_layout
+    implementation Dependencies.android_support_multidex
+    implementation Dependencies.Firebase.firebase_auth
+    implementation Dependencies.Firebase.firebase_messaging
+    implementation Dependencies.Firebase.firebase_database
+    implementation Dependencies.Kotlin.kotlin_stdlib_jdk7
+    implementation Dependencies.Kotlin.kotlinx_coroutines_play_services
+    implementation Dependencies.Retrofit.square_retrofit2
+    implementation Dependencies.Retrofit.square_retrofit2_converter_gson
+    implementation Dependencies.Retrofit.retrofit2_kotlin_coroutines_adapter
+    implementation Dependencies.Moshi.square_retrofit2_converter_moshi
+    implementation Dependencies.Moshi.square_moshi
+    implementation Dependencies.Moshi.moshi_kotlin
+    kapt Dependencies.Moshi.moshi_kotlin_codegen
+    implementation Dependencies.OkHttp3.okhttp3_logging_interceptor
+    implementation Dependencies.Coroutine.kotlinx_coroutines_android
+    implementation Dependencies.Coroutine.kotlinx_coroutines_core
+    kapt Dependencies.ArchLifeCycle.arch_lifecycle_compiler
+    implementation Dependencies.ArchLifeCycle.androidx_lifecycle_extension
+    implementation Dependencies.PlayServices.maps
+    implementation Dependencies.PlayServices.locations
+    implementation Dependencies.PlayServices.auth
+    //implementation Dependencies.PlayServices.ad_mob
+    implementation Dependencies.Crashlytics.firebase
+    implementation Dependencies.Crashlytics.sentry
+    implementation Dependencies.Analytics.firebase
+    implementation Dependencies.Analytics.moengage
+    implementation Dependencies.Analytics.io_branch
+    implementation Dependencies.Analytics.roll_bar
+    implementation Dependencies.ImageView.shape_imageview
+    implementation Dependencies.ImageView.circular_imageview
+    implementation Dependencies.ImageView.photoView
+    implementation Dependencies.MaterialChips.material_chips_input
+    implementation Dependencies.MaterialChips.nachos
+    implementation Dependencies.MaterialChips.chips_input_layout
+    implementation Dependencies.CropCompress.uCrop
+    implementation Dependencies.Crypto.scytale
+    implementation Dependencies.viewpager_dots
+    implementation Dependencies.Payment.stripe
+    implementation Dependencies.Facebook.facebook_android_sdk
+    implementation Dependencies.Facebook.facebook_share
+    implementation Dependencies.support_annotation
+    testImplementation Dependencies.Test.junit
+    androidTestImplementation Dependencies.Test.ext_junit
+    androidTestImplementation Dependencies.Test.espresso_core
+
+    //parse
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.19.0"
+    implementation "com.github.parse-community.Parse-SDK-Android:ktx:1.19.0"
+    implementation 'com.github.parse-community:ParseLiveQuery-Android:1.1.0'
+
+}

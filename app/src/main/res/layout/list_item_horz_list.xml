@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="5dp"
+    android:foreground="@drawable/bg_ripple"
+    app:elevation="0.5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:layout_margin="16dp"
+            app:siRadius="8dp"
+            app:siBorderWidth="0dp"
+            app:siBorderColor="@color/colorWhiteLight"
+            app:siBorderType="fill"
+            app:siStrokeJoin="round"
+            app:siBorderAlpha="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/actionLayout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iconAction"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@id/txtProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/actionLayout"
+            app:layout_constraintLeft_toRightOf="@id/imgProduct"
+            app:layout_constraintRight_toLeftOf="@+id/actionLayout"
+            app:layout_constraintStart_toEndOf="@id/imgProduct"
+            app:layout_constraintTop_toTopOf="@id/imgProduct" />
+
+        <ImageView
+            android:id="@+id/iconServiceTime"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toStartOf="@id/txtProductName"
+            app:layout_constraintTop_toBottomOf="@id/txtProductName"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/ic_time"
+            android:visibility="gone"
+            app:tint="@color/colorMediumGrey"/>
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/txtServiceTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/colorMediumGrey"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/iconServiceTime"
+            app:layout_constraintBottom_toBottomOf="@id/iconServiceTime"
+            tools:text="40mins"
+            app:layout_constraintStart_toEndOf="@id/iconServiceTime"
+            app:layout_constraintTop_toBottomOf="@id/txtProductName"/>
+
+        <TextView
+            android:id="@+id/txtFinalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/TextViewRTL"
+            app:layout_constraintLeft_toLeftOf="@id/txtProductName"
+            app:layout_constraintStart_toStartOf="@id/txtProductName"
+            app:layout_constraintTop_toBottomOf="@id/txtProductName"
+            tools:text="Rs 2000"/>
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            tools:text="Rs.1000"
+            android:theme="@style/TextViewRTL"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@id/txtProductName"
+            app:layout_constraintStart_toStartOf="@id/txtProductName"
+            app:layout_constraintTop_toBottomOf="@id/txtFinalPrice" />
+
+        <TextView
+            android:id="@+id/txtOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            tools:text="25%"
+            android:theme="@style/TextViewRTL"
+            android:textColor="@color/colorGreenOffer"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/txtPrice"
+            app:layout_constraintLeft_toRightOf="@id/txtPrice"
+            app:layout_constraintStart_toEndOf="@id/txtPrice"
+            app:layout_constraintTop_toTopOf="@id/txtPrice" />
+
+        <TextView
+            android:id="@+id/txtSoldOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="2"
+            android:visibility="gone"
+            android:text="@string/product_sold_out"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorRed"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@id/txtProductName"
+            app:layout_constraintStart_toStartOf="@id/txtProductName"
+            app:layout_constraintTop_toBottomOf="@id/txtPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

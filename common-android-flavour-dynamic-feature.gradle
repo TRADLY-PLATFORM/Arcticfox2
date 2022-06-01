@@ -1,0 +1,14 @@
+import tradly.Config
+
+ext.flavours = {
+
+    flavorDimensions("default")
+
+    productFlavors{
+        tradlySocial{
+            applicationId = Config.Package.TRADLY_SOCIAL
+            buildConfigField "String", "TENANT_ID", "\"$Config.Tenant.TRADLY_SOCIAL\""
+            dimension "default"
+        }
+    }
+}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="tradly.social.domain.entities.GeoPoint"/>
+        <import type="android.view.View"/>
+        <import type="android.text.TextUtils"/>
+        <import type="tradly.social.common.base.CustomOnClickListener"/>
+        <variable
+            name="landMark"
+            type="String" />
+        <variable
+            name="formattedAddress"
+            type="String" />
+        <variable
+            name="dateFormat"
+            type="String" />
+        <variable
+            name="timeFormat"
+            type="String" />
+        <variable
+            name="startMillis"
+            type="Long" />
+        <variable
+            name="endMillis"
+            type="Long" />
+        <variable
+            name="geoPoint"
+            type="GeoPoint" />
+        <variable
+            name="onClickListener"
+            type="CustomOnClickListener" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEventPriceLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:viewBindingIgnore="true"
+        tools:theme="@style/AppTheme"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivCalender"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp"
+            app:tint="@color/colorMediumGrey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_calender" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventDate"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:setDateFormat="@{dateFormat}"
+            app:milliseconds="@{startMillis}"
+            app:layout_constraintEnd_toStartOf="@id/tvViewSchedules"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintStart_toEndOf="@id/ivCalender"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Mon,Mat 12" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/tvViewSchedules"
+            android:layout_marginEnd="12dp"
+            app:setDateFormat="@{timeFormat}"
+            app:startDate="@{startMillis}"
+            app:endDate="@{endMillis}"
+            app:layout_constraintStart_toStartOf="@id/tvEventDate"
+            app:layout_constraintTop_toBottomOf="@id/tvEventDate"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorDarkGrey"
+            style="@style/TextView.captain"
+            tools:text="3:00PM - 4:00AM"/>
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvViewSchedules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvEventDate"
+            app:layout_constraintBottom_toBottomOf="@id/tvEventTime"
+            android:layout_marginEnd="12dp"
+            tools:text="View Shedules"
+            android:visibility="gone"
+            style="@style/TextView.captain"
+            android:textColor="?attr/colorPrimary"/>
+
+
+        <ImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="@{(landMark.empty &amp;&amp; formattedAddress.empty)?View.GONE:View.VISIBLE}"
+            app:tint="@color/colorMediumGrey"
+            app:srcCompat="@drawable/ic_location_outline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEventTime"
+            app:layout_goneMarginTop="0dp"
+            android:layout_marginTop="12dp"/>
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventLocationTitle"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="@{landMark}"
+            android:textColor="@color/colorTextBlack"
+            android:visibility="@{landMark.empty?View.GONE:View.VISIBLE}"
+            app:layout_constraintEnd_toStartOf="@id/ivDirection"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/ivLocation"
+            app:layout_constraintTop_toTopOf="@id/ivLocation"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="gone" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvEventLocationDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintStart_toEndOf="@id/ivLocation"
+            app:layout_constraintTop_toBottomOf="@id/tvEventLocationTitle"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp"
+            android:text="@{formattedAddress}"
+            android:visibility="@{formattedAddress.empty?View.GONE:View.VISIBLE}"
+            android:textColor="@color/colorDarkGrey"
+            style="@style/TextView.captain"
+            app:layout_constraintEnd_toStartOf="@id/ivDirection"
+            tools:text="25, 25, Inglewood Blvds, Lamanda Street Inglewood Blvds, Lamanda Street 25, Inglewood Blvds, Lamanda Street25, Inglewood Blvds, Lamanda Street25, Inglewood Blvds, Lamanda Street,Chennai, 605007, India"/>
+
+        <ImageView
+            android:id="@+id/ivDirection"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="12dp"
+            android:onClick="@{(view)->onClickListener.onClick(view)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvEventLocationTitle"
+            app:layout_constraintBottom_toBottomOf="@id/tvEventLocationDetail"
+            android:src="@drawable/ic_baseline_directions_24"
+            app:tint="?attr/colorPrimary"/>
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvDirectionHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextView.captain1"
+            app:layout_constraintStart_toStartOf="@id/ivDirection"
+            app:layout_constraintEnd_toEndOf="@id/ivDirection"
+            app:layout_constraintTop_toBottomOf="@id/ivDirection"
+            android:text="@string/event_confirm_bookings_direction"
+            android:textColor="?attr/colorPrimary"
+            />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="ivCalender,tvEventDate,tvEventTime"
+            android:visibility="@{startMillis!=0L?View.VISIBLE:View.GONE}"
+            tools:visibility="visible"/>
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/locationIconGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{geoPoint.latitude!=0.0?View.VISIBLE:View.GONE}"
+            app:constraint_referenced_ids="tvDirectionHint,ivDirection"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

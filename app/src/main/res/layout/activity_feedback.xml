@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="tradly.social.ui.feedback.FeedbackActivity">
+
+    <include
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:layout_margin="16dp">
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/feedback_mood_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextViewRTL"
+                android:text="@string/feedback_reaction_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/emoji_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feedback_mood_title">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mood1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="4dp"
+                        android:onClick="onClickEmoji"
+                        android:src="@drawable/ic_emoji_angry"
+                        app:civ_border_color="?attr/colorPrimary"
+                        app:civ_border_width="0dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mood2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:onClick="onClickEmoji"
+                        android:src="@drawable/ic_emoji_sad"
+                        app:civ_border_color="?attr/colorPrimary"
+                        app:civ_border_width="0dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mood3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:onClick="onClickEmoji"
+                        android:src="@drawable/ic_emoji_confused"
+                        app:civ_border_color="?attr/colorPrimary"
+                        app:civ_border_width="0dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mood4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:onClick="onClickEmoji"
+                        android:src="@drawable/ic_emoji_happy"
+                        app:civ_border_color="?attr/colorPrimary"
+                        app:civ_border_width="0dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mood5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:onClick="onClickEmoji"
+                        android:src="@drawable/ic_emoji_love"
+                        app:civ_border_color="?attr/colorPrimary"
+                        app:civ_border_width="0dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/feedback_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="5dp"
+                android:theme="@style/TextViewRTL"
+                android:text="@string/feedback_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emoji_scroll_view" />
+
+            <EditText
+                android:id="@+id/ed_feedback_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:theme="@style/EditTextRTL"
+                android:hint="@string/feedback_tell_us_about_it"
+                android:minHeight="50dp"
+                android:textColor="@color/colorTextBlack"
+                app:layout_constraintTop_toBottomOf="@id/feedback_title" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/feedback_email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="5dp"
+                android:theme="@style/TextViewRTL"
+                android:text="@string/feedback_contactInfo_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ed_feedback_title" />
+
+            <EditText
+                android:id="@+id/ed_feedback_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:theme="@style/EditTextRTL"
+                android:hint="@string/feedback_email_mobileNo"
+                android:inputType="text"
+                android:minHeight="50dp"
+                android:textColor="@color/colorTextBlack"
+                app:layout_constraintTop_toBottomOf="@id/feedback_email_text" />
+
+            <RelativeLayout
+                android:id="@+id/feedback_category_spinner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ed_feedback_email">
+
+                <TextView
+                    android:id="@+id/categoryTypeHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/feedback_location"
+                    android:theme="@style/TextViewRTL"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtCategoryType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/categoryTypeHint"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:theme="@style/TextViewRTL"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/colorMediumBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@color/colorMediumGrey" />
+
+                <Spinner
+                    android:id="@+id/categoryTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignParentBottom="true"
+                    android:alpha="0"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/feedback_additional_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/feedback_additional_information"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                android:theme="@style/TextViewRTL"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/feedback_category_spinner_layout" />
+
+            <EditText
+                android:id="@+id/ed_feedback_additional_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:minHeight="50dp"
+                android:visibility="gone"
+                android:theme="@style/EditTextRTL"
+                android:textColor="@color/colorTextBlack"
+                app:layout_constraintTop_toBottomOf="@id/feedback_additional_info" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/feedback_attachment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/feedback_attachment"
+                android:theme="@style/TextViewRTL"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ed_feedback_additional_info" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/attachment_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feedback_attachment_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

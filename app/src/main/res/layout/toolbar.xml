@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/toolbarBackground"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeLocationLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/icon_location"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_location_on_black_24dp"
+                app:tint="@color/white"
+                tools:tint="@color/colorMediumBlack"/>
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/txtHomeLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/icon_location"
+                app:layout_constraintTop_toTopOf="@id/icon_location"
+                app:layout_constraintBottom_toBottomOf="@id/icon_location"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Chennai"
+                tools:textSize="12sp"
+                tools:textStyle="bold"
+                tools:textColor="@color/colorMediumBlack"/>
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_drop_down_black"
+                app:tint="@color/white"
+                app:layout_constraintStart_toEndOf="@id/txtHomeLocation"
+                app:layout_constraintTop_toTopOf="@id/txtHomeLocation"
+                app:layout_constraintBottom_toBottomOf="@id/txtHomeLocation"
+                android:layout_marginStart="8dp"
+                tools:tint="@color/colorMediumBlack"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+</layout>

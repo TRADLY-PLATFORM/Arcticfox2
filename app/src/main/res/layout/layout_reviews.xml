@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:viewBindingIgnore="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/storeRatingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/txtRateThisStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/review_rate_this_store"
+            android:theme="@style/TextViewRTL"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/txtRateStoreInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:theme="@style/TextViewRTL"
+            android:text="@string/review_tell_others_think"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@id/txtRateThisStore"
+            app:layout_constraintTop_toBottomOf="@id/txtRateThisStore" />
+
+        <ImageView
+            android:id="@+id/iconStarOne"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_star_outline"
+            app:layout_constraintEnd_toStartOf="@+id/iconStarTwo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRateStoreInfo" />
+
+        <ImageView
+            android:id="@+id/iconStarTwo"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_star_outline"
+            app:layout_constraintBottom_toBottomOf="@id/iconStarOne"
+            app:layout_constraintEnd_toStartOf="@+id/iconStarThree"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/iconStarOne"
+            app:layout_constraintTop_toBottomOf="@id/txtRateStoreInfo"
+            app:layout_constraintTop_toTopOf="@id/iconStarOne" />
+
+        <ImageView
+            android:id="@+id/iconStarThree"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_star_outline"
+            app:layout_constraintBottom_toBottomOf="@id/iconStarTwo"
+            app:layout_constraintEnd_toStartOf="@+id/iconStarFour"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/iconStarTwo"
+            app:layout_constraintTop_toBottomOf="@id/txtRateStoreInfo"
+            app:layout_constraintTop_toTopOf="@id/iconStarTwo" />
+
+        <ImageView
+            android:id="@+id/iconStarFour"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_star_outline"
+            app:layout_constraintBottom_toBottomOf="@id/iconStarThree"
+            app:layout_constraintEnd_toStartOf="@+id/iconStarFive"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/iconStarThree"
+            app:layout_constraintTop_toBottomOf="@id/txtRateStoreInfo"
+            app:layout_constraintTop_toTopOf="@id/iconStarThree" />
+
+        <ImageView
+            android:id="@+id/iconStarFive"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_star_outline"
+            app:layout_constraintBottom_toBottomOf="@id/iconStarFour"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/iconStarFour"
+            app:layout_constraintTop_toBottomOf="@id/txtRateStoreInfo"
+            app:layout_constraintTop_toTopOf="@id/iconStarFour" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/txtWriteReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/review_write_review"
+            android:theme="@style/TextViewRTL"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtRateStoreInfo"
+            app:layout_constraintTop_toBottomOf="@id/iconStarOne" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ratingCountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/storeRatingLayout">
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/ratingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="4.3" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/ratingCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorMediumGrey"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/ratingTxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@id/ratingTxt"
+            app:layout_constraintRight_toRightOf="@id/ratingTxt"
+            app:layout_constraintStart_toStartOf="@+id/ratingTxt"
+            app:layout_constraintTop_toBottomOf="@id/ratingTxt"
+            tools:text="10 ratings" />
+
+        <RatingBar
+            android:id="@+id/ratingBar5"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:numStars="5"
+            android:rating="5"
+            android:rotation="180"
+            android:scaleX="0.8"
+            android:scaleY="-0.8"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toEndOf="@id/ratingCountTxt"
+            app:layout_constraintTop_toTopOf="@id/ratingTxt" />
+
+        <ProgressBar
+            android:id="@+id/progressValue5"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="08dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="24dp"
+            android:progress="100"
+            android:progressDrawable="@drawable/bg_progress_bar"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar5"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
+            app:layout_constraintStart_toEndOf="@id/ratingBar5"
+            app:layout_constraintTop_toTopOf="@id/ratingBar5" />
+
+        <RatingBar
+            android:id="@+id/ratingBar4"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:numStars="5"
+            android:rating="4"
+            android:rotation="180"
+            android:scaleX="0.8"
+            android:scaleY="-0.8"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toEndOf="@id/ratingCountTxt"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar5" />
+
+        <RatingBar
+            android:id="@+id/ratingBar3"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:numStars="5"
+            android:rating="3"
+            android:rotation="180"
+            android:scaleX="0.8"
+            android:scaleY="-0.8"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toEndOf="@id/ratingCountTxt"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar4" />
+
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:numStars="5"
+            android:rating="2"
+            android:rotation="180"
+            android:scaleX="0.8"
+            android:scaleY="-0.8"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toEndOf="@id/ratingCountTxt"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar3" />
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:numStars="5"
+            android:rating="1"
+            android:rotation="180"
+            android:scaleX="0.8"
+            android:scaleY="-0.8"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@id/horZ_barrier"
+            app:layout_constraintStart_toEndOf="@id/ratingCountTxt"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar2" />
+
+        <ProgressBar
+            android:id="@+id/progressValue4"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="08dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="24dp"
+            android:progress="80"
+            android:progressDrawable="@drawable/bg_progress_bar"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar4"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
+            app:layout_constraintStart_toEndOf="@id/ratingBar4"
+            app:layout_constraintTop_toTopOf="@id/ratingBar4" />
+
+        <ProgressBar
+            android:id="@+id/progressValue3"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="08dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="24dp"
+            android:progress="60"
+            android:progressDrawable="@drawable/bg_progress_bar"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar3"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
+            app:layout_constraintStart_toEndOf="@id/ratingBar3"
+            app:layout_constraintTop_toTopOf="@id/ratingBar3" />
+
+        <ProgressBar
+            android:id="@+id/progressValue2"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="08dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="24dp"
+            android:progress="40"
+            android:progressDrawable="@drawable/bg_progress_bar"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar2"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
+            app:layout_constraintStart_toEndOf="@id/ratingBar2"
+            app:layout_constraintTop_toTopOf="@id/ratingBar2" />
+
+        <ProgressBar
+            android:id="@+id/progressValue1"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="08dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="24dp"
+            android:progress="20"
+            android:progressDrawable="@drawable/bg_progress_bar"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar1"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
+            app:layout_constraintStart_toEndOf="@id/ratingBar1"
+            app:layout_constraintTop_toTopOf="@id/ratingBar1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="60dp" />
+
+        <TextView
+            android:id="@+id/ratingCountTxt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toBottomOf="@id/progressValue1"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideLine"
+            app:layout_constraintTop_toTopOf="@id/progressValue1"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/ratingCountTxt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toBottomOf="@id/progressValue2"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideLine"
+            app:layout_constraintTop_toTopOf="@id/progressValue2"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/ratingCountTxt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toBottomOf="@id/progressValue3"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideLine"
+            app:layout_constraintTop_toTopOf="@id/progressValue3"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/ratingCountTxt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toBottomOf="@id/progressValue4"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideLine"
+            app:layout_constraintTop_toTopOf="@id/progressValue4"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/ratingCountTxt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toBottomOf="@id/progressValue5"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideLine"
+            app:layout_constraintTop_toTopOf="@id/progressValue5"
+            tools:text="10" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/horZ_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="ratingBar1"/>
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/reviewsTxtCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:theme="@style/TextViewRTL"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/ratingCountTxt"
+            app:layout_constraintTop_toBottomOf="@id/horZ_barrier"
+            tools:text="23 reviews" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/reviewPhotoCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="@string/review_with_photo"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/reviewsTxtCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/reviewsTxtCount" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reviewList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewsTxtCount" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/readAllReviewsBtn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="@string/review_read_all_reviews"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:cornerRadius="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reviewList"
+            app:strokeColor="?attr/colorPrimary" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

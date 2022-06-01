@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Base" parent="@style/AppTheme">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Base.Tradly" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="toolbarBackground">@color/colorPrimary</item>
+        <item name="colorPrimary90">@color/colorPrimary90</item>
+        <item name="homeTopViewItemBg">@drawable/bg_home_top_view_item</item>
+        <item name="homeCategoryImageTwo">@drawable/bg_item_category_image</item>
+        <item name="defaultRipple">@color/defaultRipple</item>
+        <item name="buttonOutlineCorner">@drawable/bg_button_outline</item>
+        <item name="buttonGradientBg">@drawable/bg_button_gradient</item>
+        <item name="buttonPressColor">@color/colorPrimary</item>
+        <item name="buttonPressedStateColor">@color/colorPrimary85</item>
+        <item name="cursorColor">@color/colorWhite</item>
+        <item name="otpTextColor">@color/colorWhite</item>
+        <item name="colorRightChat">@color/colorLightSpaceGrey</item>
+        <item name="colorChatDocBgRight">@color/colorLightSpaceGrey</item>
+        <item name="fullScreenDialogStyle">@style/FullScreenDialog</item>
+        <item name="reviewRatingStyle">@style/RatingBarOutline</item>
+        <item name="checkBox">@drawable/bg_check_box</item>
+        <item name="checkBoxIcon">@drawable/checkbox_state_pressed</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="orderTabColor">@color/colorLightSpaceGrey</item>
+        <item name="materialButtonStyle">@style/MaterialButtonGreen</item>
+    </style>
+
+    <style name="AppTheme.Base.Green" >
+        <item name="colorPrimary">@color/colorPrimaryGreen</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkGreen</item>
+        <item name="colorAccent">@color/colorPrimaryGreen</item>
+        <item name="toolbarBackground">@color/colorPrimaryGreen</item>
+        <item name="colorPrimary90">@color/colorHomeViewTop</item>
+        <item name="homeTopViewItemBg">@drawable/bg_home_top_view_item</item>
+        <item name="homeCategoryImageTwo">@drawable/bg_item_category_image</item>
+        <item name="defaultRipple">@color/defaultRippleGreen</item>
+        <item name="buttonOutlineCorner">@drawable/bg_button_outline</item>
+        <item name="buttonGradientBg">@drawable/bg_button_gradient</item>
+        <item name="buttonPressColor">@color/colorGreenBtnNotPressed</item>
+        <item name="buttonPressedStateColor">@color/colorGreenBtnPressed</item>
+        <item name="cursorColor">@color/colorWhite</item>
+        <item name="otpTextColor">@color/colorWhite</item>
+        <item name="colorRightChat">@color/colorChatRight</item>
+        <item name="colorChatDocBgRight">@color/colorChatDocBgRight</item>
+        <item name="fullScreenDialogStyle">@style/FullScreenDialog</item>
+        <item name="reviewRatingStyle">@style/RatingBarOutlineGreen</item>
+        <item name="checkBox">@drawable/bg_check_box</item>
+        <item name="checkBoxIcon">@drawable/checkbox_state_pressed</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="orderTabColor">@color/colorGreenSoapBlue</item>
+        <item name="materialButtonStyle">@style/MaterialButtonGreen</item>
+        <item name="bottomSheetDialogIsFloat">@style/BottomSheetDialogTheme.BottomSheetDialogGreen</item>
+    </style>
+
+    <style name="AppTheme.Base.Blue" >
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBlue</item>
+        <item name="colorAccent">@color/colorPrimaryBlue</item>
+        <item name="toolbarBackground">@color/colorPrimaryBlue</item>
+        <item name="colorPrimary90">@color/colorHomeViewTopBlue</item>
+        <item name="homeTopViewItemBg">@drawable/bg_home_top_view_item</item>
+        <item name="homeCategoryImageTwo">@drawable/bg_item_category_image</item>
+        <item name="defaultRipple">@color/defaultRippleBlue</item>
+        <item name="buttonOutlineCorner">@drawable/bg_button_outline</item>
+        <item name="buttonGradientBg">@drawable/bg_button_gradient</item>
+        <item name="buttonPressColor">@color/colorBlueBtnNotPressed</item>
+        <item name="buttonPressedStateColor">@color/colorBlueBtnPressed</item>
+        <item name="cursorColor">@color/colorWhite</item>
+        <item name="otpTextColor">@color/colorWhite</item>
+        <item name="colorRightChat">@color/colorChatRightBlue</item>
+        <item name="colorChatDocBgRight">@color/colorChatDocBgRightBlue</item>
+        <item name="fullScreenDialogStyle">@style/FullScreenDialog</item>
+        <item name="reviewRatingStyle">@style/RatingBarOutlineBlue</item>
+        <item name="checkBox">@drawable/bg_check_box</item>
+        <item name="checkBoxIcon">@drawable/checkbox_state_pressed</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="orderTabColor">@color/colorBlueSoapBlue</item>
+        <item name="bottomSheetDialogIsFloat">@style/BottomSheetDialogTheme.BottomSheetDialogBlue</item>
+    </style>
+
+    <style name="AppTheme.Base.Red" >
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkRed</item>
+        <item name="colorAccent">@color/colorPrimaryRed</item>
+        <item name="toolbarBackground">@color/colorPrimaryRed</item>
+        <item name="colorPrimary90">@color/colorHomeViewTopRed</item>
+        <item name="homeTopViewItemBg">@drawable/bg_home_top_view_item</item>
+        <item name="homeCategoryImageTwo">@drawable/bg_item_category_image</item>
+        <item name="defaultRipple">@color/defaultRippleRed</item>
+        <item name="buttonOutlineCorner">@drawable/bg_button_outline</item>
+        <item name="buttonGradientBg">@drawable/bg_button_gradient</item>
+        <item name="buttonPressColor">@color/colorRedBtnNotPressed</item>
+        <item name="buttonPressedStateColor">@color/colorRedBtnPressed</item>
+        <item name="cursorColor">@color/colorWhite</item>
+        <item name="otpTextColor">@color/colorWhite</item>
+        <item name="colorRightChat">@color/colorChatRightRed</item>
+        <item name="colorChatDocBgRight">@color/colorChatDocBgRightRed</item>
+        <item name="fullScreenDialogStyle">@style/FullScreenDialog</item>
+        <item name="reviewRatingStyle">@style/RatingBarOutlineRed</item>
+        <item name="checkBox">@drawable/bg_check_box</item>
+        <item name="checkBoxIcon">@drawable/checkbox_state_pressed</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="orderTabColor">@color/colorRedSoapBlue</item>
+        <item name="bottomSheetDialogIsFloat">@style/BottomSheetDialogTheme.BottomSheetDialogRed</item>
+    </style>
+
+    <style name="AppTheme.Base.PersianGreen" >
+        <item name="colorPrimary">@color/colorPrimaryPersianGreen</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkPersianGreen</item>
+        <item name="colorAccent">@color/colorPrimaryPersianGreen</item>
+        <item name="toolbarBackground">@color/colorPrimaryPersianGreen</item>
+        <item name="colorPrimary90">@color/colorHomeViewTopPersianGreen</item>
+        <item name="homeTopViewItemBg">@drawable/bg_home_top_view_item</item>
+        <item name="homeCategoryImageTwo">@drawable/bg_item_category_image</item>
+        <item name="defaultRipple">@color/defaultRipplePersianGreen</item>
+        <item name="buttonOutlineCorner">@drawable/bg_button_outline</item>
+        <item name="buttonGradientBg">@drawable/bg_button_gradient</item>
+        <item name="buttonPressColor">@color/colorPersianGreenBtnNotPressed</item>
+        <item name="buttonPressedStateColor">@color/colorPersianGreenBtnPressed</item>
+        <item name="cursorColor">@color/colorWhite</item>
+        <item name="otpTextColor">@color/colorWhite</item>
+        <item name="colorRightChat">@color/colorChatRightPersianGreen</item>
+        <item name="colorChatDocBgRight">@color/colorChatDocBgRightPersianGreen</item>
+        <item name="fullScreenDialogStyle">@style/FullScreenDialog</item>
+        <item name="reviewRatingStyle">@style/RatingBarOutlinePersianGreen</item>
+        <item name="checkBox">@drawable/bg_check_box</item>
+        <item name="checkBoxIcon">@drawable/checkbox_state_pressed</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="orderTabColor">@color/colorPersianGreenSoapBlue</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogIsFloat">@style/BottomSheetDialogTheme.BottomSheetDialogPersianGreen</item>
+    </style>
+
+    <style name="AppTheme.Base.BRGreen" >
+        <item name="colorPrimary">@color/colorPrimaryGreenBR</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBRGreen</item>
+        <item name="colorAccent">@color/colorPrimaryGreenBR</item>
+        <item name="toolbarBackground">@color/colorPrimaryGreenBR</item>
+        <item name="colorPrimary90">@color/colorHomeViewTopBRGreen</item>
+        <item name="homeTopViewItemBg">@drawable/bg_home_top_view_item</item>
+        <item name="homeCategoryImageTwo">@drawable/bg_item_category_image</item>
+        <item name="defaultRipple">@color/defaultRipplePersianGreen</item>
+        <item name="buttonOutlineCorner">@drawable/bg_button_outline</item>
+        <item name="buttonGradientBg">@drawable/bg_button_gradient</item>
+        <item name="buttonPressColor">@color/colorBRGreenBtnNotPressed</item>
+        <item name="buttonPressedStateColor">@color/colorBRnGreenBtnPressed</item>
+        <item name="cursorColor">@color/colorWhite</item>
+        <item name="otpTextColor">@color/colorWhite</item>
+        <item name="colorRightChat">@color/colorChatRightBRGreen</item>
+        <item name="colorChatDocBgRight">@color/colorChatDocBgRightBRGreen</item>
+        <item name="fullScreenDialogStyle">@style/FullScreenDialog</item>
+        <item name="reviewRatingStyle">@style/RatingBarOutlineBrGreen</item>
+        <item name="checkBox">@drawable/bg_check_box</item>
+        <item name="checkBoxIcon">@drawable/checkbox_state_pressed</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="orderTabColor">@color/colorPersianGreenSoapBlue</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogIsFloat">@style/BottomSheetDialogTheme.BottomSheetDialogBrGreen</item>
+    </style>
+
+    <style name="AppTheme.Base.BrickOrange" >
+        <item name="colorPrimary">@color/colorPrimaryBrickOrange</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBrickOrange</item>
+        <item name="colorAccent">@color/colorPrimaryBrickOrange</item>
+        <item name="toolbarBackground">@color/colorPrimaryBrickOrange</item>
+        <item name="homeTopViewItemBg">@drawable/bg_home_top_view_item</item>
+        <item name="homeCategoryImageTwo">@drawable/bg_item_category_image</item>
+        <item name="defaultRipple">@color/defaultRippleBrickOrange</item>
+        <item name="buttonOutlineCorner">@drawable/bg_button_outline</item>
+        <item name="buttonGradientBg">@drawable/bg_button_gradient</item>
+        <item name="buttonPressColor">@color/colorBrickOrangeBtnNotPressed</item>
+        <item name="buttonPressedStateColor">@color/colorBrickOrangeBtnPressed</item>
+        <item name="cursorColor">@color/colorWhite</item>
+        <item name="otpTextColor">@color/colorWhite</item>
+        <item name="colorRightChat">@color/colorChatRightBrickOrange</item>
+        <item name="colorChatDocBgRight">@color/colorChatDocBgRightBrickOrange</item>
+        <item name="fullScreenDialogStyle">@style/FullScreenDialog</item>
+        <item name="reviewRatingStyle">@style/RatingBarOutlineBrickOrange</item>
+        <item name="checkBox">@drawable/bg_check_box</item>
+        <item name="checkBoxIcon">@drawable/checkbox_state_pressed</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="orderTabColor">@color/colorBrickOrangeSoapBlue</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogIsFloat">@style/BottomSheetDialogTheme.BottomSheetDialogBrickOrange</item>
+    </style>
+
+    <style name="AppTheme.Base.LSGreen" >
+        <item name="colorPrimary">@color/colorPrimaryLSGreen</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkLSGreen</item>
+        <item name="colorAccent">@color/colorPrimaryLSGreen</item>
+        <item name="toolbarBackground">@color/colorPrimaryLSGreen</item>
+        <item name="colorPrimary90">@color/colorHomeViewTopLSGreen</item>
+        <item name="homeTopViewItemBg">@drawable/bg_home_top_view_item</item>
+        <item name="homeCategoryImageTwo">@drawable/bg_item_category_image</item>
+        <item name="defaultRipple">@color/defaultRippleBrickOrange</item>
+        <item name="buttonOutlineCorner">@drawable/bg_button_outline</item>
+        <item name="buttonGradientBg">@drawable/bg_button_gradient</item>
+        <item name="buttonPressColor">@color/colorLSGreenBtnNotPressed</item>
+        <item name="buttonPressedStateColor">@color/colorLSGreenBtnPressed</item>
+        <item name="cursorColor">@color/colorWhite</item>
+        <item name="otpTextColor">@color/colorWhite</item>
+        <item name="colorRightChat">@color/colorChatRightLSGreen</item>
+        <item name="colorChatDocBgRight">@color/colorChatDocBgRightLSGreen</item>
+        <item name="fullScreenDialogStyle">@style/FullScreenDialog</item>
+        <item name="reviewRatingStyle">@style/RatingBarOutlineBrickOrange</item>
+        <item name="checkBox">@drawable/bg_check_box</item>
+        <item name="checkBoxIcon">@drawable/checkbox_state_pressed</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="orderTabColor">@color/colorLSGreenSoapBlue</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogIsFloat">@style/BottomSheetDialogTheme.BottomSheetDialogGreen</item>
+
+    </style>
+</resources>

@@ -1,0 +1,25 @@
+import tradly.Dependencies
+import tradly.Modules
+
+apply from: "$rootDir/common-android-library.gradle"
+
+dependencies {
+    implementation Dependencies.appcompat
+    implementation project(Modules.cache)
+    implementation project(Modules.domain)
+    implementation project(Modules.util)
+    implementation project(Modules.resources)
+    implementation Dependencies.Crashlytics.sentry
+    implementation Dependencies.Analytics.roll_bar
+    implementation Dependencies.Retrofit.square_retrofit2
+    implementation Dependencies.OkHttp3.okhttp3_logging_interceptor
+    implementation Dependencies.Moshi.moshi_kotlin
+    implementation Dependencies.Moshi.square_retrofit2_converter_moshi
+    kapt Dependencies.Moshi.moshi_kotlin_codegen
+    implementation Dependencies.Retrofit.retrofit2_kotlin_coroutines_adapter
+    implementation Dependencies.support_annotation
+
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.19.0"
+    implementation "com.github.parse-community.Parse-SDK-Android:ktx:1.19.0"
+    implementation 'com.github.parse-community:ParseLiveQuery-Android:1.1.0'
+}

@@ -1,0 +1,10 @@
+<resources>
+    <string name="subscription_title" translatable="false">Upgrade</string>
+    <string name="subscription_connection_error_title" translatable="false">Something went wrong</string>
+    <string name="subscription_connection_error_desc" translatable="false">Couldn\'t able to connect. Please try again later</string>
+    <string name="subscription_connection_try_again" translatable="false">Try again</string>
+    <string name="subscription_see_more" translatable="false">See More</string>
+    <string name="subscription_validity_days" translatable="false">%s days validity</string>
+    <string name="subscription_upgraded_successfully" translatable="false">Subscription upgraded successfully</string>
+    <string name="subscription_ok" translatable="false">Ok</string>
+</resources>

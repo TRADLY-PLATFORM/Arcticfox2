@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorCustomBlack</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar"></style>
+    <!-- Customize your theme here. -->
+
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/colorWhite</item>
+    </style>
+
+    <style name="TabStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Toolbar.Home" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/superior_title_trial_bold</item>
+        <item name="android:textColor">@color/colorYellow</item>
+    </style>
+
+    <style name="Toolbar.Home_Regular" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TermsCheckBoxStyle" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorControlNormal">@color/white</item>
+        <item name="android:colorControlActivated">@color/white</item>
+        <item name="android:colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">@color/colorWhite</item>
+        <item name="colorControlNormal">@color/colorWhite</item>
+    </style>
+
+    <style name="EditTextRTL" parent="Widget.AppCompat.EditText">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorAccent">@android:color/transparent</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="colorControlActivated">@color/colorYellowOrange</item>
+    </style>
+
+    <style name="RatingBarYellow" parent="Theme.AppCompat">
+        <item name="colorAccent">@android:color/transparent</item>
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+        <item name="colorControlActivated">@color/colorYellowOrange</item>
+    </style>
+
+    <style name="RatingBarOutline" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+    </style>
+
+    <style name="RatingBarOutlineGreen" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimaryGreen</item>
+        <item name="colorPrimary">@color/colorPrimaryGreen</item>
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+    </style>
+
+    <style name="RatingBarOutlineBlue" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimaryBlue</item>
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+    </style>
+
+    <style name="RatingBarOutlineRed" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimaryRed</item>
+        <item name="colorPrimary">@color/colorPrimaryRed</item>
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+    </style>
+
+    <style name="RatingBarOutlinePersianGreen" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimaryPersianGreen</item>
+        <item name="colorPrimary">@color/colorPrimaryPersianGreen</item>
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+    </style>
+
+    <style name="RatingBarOutlineBrGreen" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimaryGreenBR</item>
+        <item name="colorPrimary">@color/colorPrimaryGreenBR</item>
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+    </style>
+
+    <style name="RatingBarOutlineBrickOrange" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimaryBrickOrange</item>
+        <item name="colorPrimary">@color/colorPrimaryBrickOrange</item>
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme.BottomSheetDialogGreen">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme.BottomSheetDialogRed">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimaryRed</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme.BottomSheetDialogBlue">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme.BottomSheetDialogPersianGreen">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorAccent">@color/colorPrimaryPersianGreen</item>
+        <item name="colorPrimary">@color/colorPrimaryPersianGreen</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme.BottomSheetDialogBrickOrange">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorAccent">@color/colorPrimaryBrickOrange</item>
+        <item name="colorPrimary">@color/colorPrimaryBrickOrange</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme.BottomSheetDialogBrGreen">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorAccent">@color/colorPrimaryGreenBR</item>
+        <item name="colorPrimary">@color/colorPrimaryGreenBR</item>
+    </style>
+
+
+    <style name="MaterialButtonGreen" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CollapsingToolbarLayoutExpandedTextStyleHidden" parent="AppTheme">
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textSize">0sp</item>
+    </style>
+
+
+    <style name="TextView.Headline6" parent="TextViewRTL">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextView.Subtitle1" parent="TextViewRTL">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextView.Subtitle2" parent="TextViewRTL">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.captain" parent="TextViewRTL">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.captain1" parent="TextViewRTL">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextViewRTL" parent="Widget.AppCompat.TextView">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:theme">@style/AppTheme</item>
+    </style>
+
+    <style name="DefaultNumberPickerTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorMediumGrey</item>
+    </style>
+
+</resources>

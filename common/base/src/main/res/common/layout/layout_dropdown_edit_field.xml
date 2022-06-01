@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="DropDownEditFieldBinding">
+        <import type="tradly.social.common.base.CustomOnClickListener" />
+        <import type="android.view.View.OnFocusChangeListener"/>
+
+        <variable
+            name="selectedSpinnerValue"
+            type="String" />
+        <variable
+            name="edValue"
+            type="String" />
+        <variable
+            name="onClickListener"
+            type="CustomOnClickListener" />
+        <variable
+            name="onFocusChangeListener"
+            type="OnFocusChangeListener" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:viewBindingIgnore="true"
+        tools:theme="@style/AppTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:onClick="@{(view)->onClickListener.onClick(view)}"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@id/textInputEdDropDown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textInputEdDropDown"
+            >
+
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvSpinnerValue"
+                style="@style/TextView.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:layout_marginStart="2dp"
+                android:textStyle="bold"
+                android:text="@{selectedSpinnerValue}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="USD" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_drop_down_black"
+                app:layout_constraintBottom_toBottomOf="@id/tvSpinnerValue"
+                app:layout_constraintStart_toEndOf="@id/tvSpinnerValue"
+                app:layout_constraintTop_toTopOf="@id/tvSpinnerValue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEdDropDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextInputLayout.FilledBox.Padding"
+            android:layout_marginStart="12dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidthFocused="0dp"
+           app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/clSpinner">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                tools:text="0"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                app:onFocusListener="@{onFocusChangeListener}"
+                android:text="@{edValue}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:spinnerMode="dropdown"
+            app:layout_constraintTop_toBottomOf="@id/textInputEdDropDown"/>
+        <View
+            android:id="@+id/textInputLayoutDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputEdDropDown"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

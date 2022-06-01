@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="100"
+        android:title="@string/search_search"
+        android:icon="@drawable/ic_icon_search"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_wish_list"
+        android:orderInCategory="100"
+        android:title="@string/wishlist_header_title"
+        app:iconTint="@color/colorWhite"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_notification"
+        android:orderInCategory="100"
+        android:title="@string/notification_header_title"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_my_cart"
+        android:orderInCategory="100"
+        android:title="@string/cart_header_title"
+        app:iconTint="@color/colorWhite"
+        android:icon="@drawable/ic_shopping_cart"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="100"
+        android:title="@string/save"
+        android:icon="@drawable/ic_tick"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_group"
+        android:orderInCategory="100"
+        android:title="@string/group_header_title"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="@string/share"
+        android:iconTint="@color/colorWhite"
+        android:icon="@drawable/ic_share_circle_transparent"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share_One"
+        android:orderInCategory="100"
+        android:title="@string/share"
+        android:iconTint="@color/colorWhite"
+        android:icon="@drawable/ic_share_circle"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_edit"
+        android:orderInCategory="100"
+        android:title="@string/product_edit"
+        app:iconTint="@color/colorWhite"
+        android:icon="@drawable/ic_mode_edit_black_24dp"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_delete"
+        android:orderInCategory="100"
+        android:title="@string/product_delete"
+        app:iconTint="@color/colorWhite"
+        android:icon="@drawable/ic_delete_black_24dp"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_block"
+        android:title="@string/storedetail_block"
+        android:visible="false"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/action_unblock"
+        android:title="@string/storedetail_unblock"
+        android:visible="false"
+        app:showAsAction="never"
+        />
+
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_icon_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_attachment"
+        android:orderInCategory="100"
+        android:title="@string/feedback_attachment"
+        app:iconTint="@color/colorWhite"
+        android:icon="@drawable/ic_baseline_attach_file_24"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_send"
+        android:orderInCategory="100"
+        android:title="@string/chatdetail_send"
+        app:iconTint="@color/colorWhite"
+        android:icon="@drawable/ic_baseline_send_24"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+</menu>

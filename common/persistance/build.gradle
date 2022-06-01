@@ -1,0 +1,14 @@
+import tradly.Dependencies
+
+apply from: "$rootDir/common-android-library.gradle"
+
+dependencies {
+    implementation Dependencies.appcompat
+    implementation Dependencies.legacy_support_v4
+    implementation Dependencies.Crypto.scytale
+    implementation Dependencies.Kotlin.kotlin_stdlib_jdk7
+   /* implementation Dependencies.Room.room_runtime
+    annotationProcessor Dependencies.Room.room_compiler
+    kapt Dependencies.Room.room_compiler
+    implementation Dependencies.Room.room_ktx*/
+}

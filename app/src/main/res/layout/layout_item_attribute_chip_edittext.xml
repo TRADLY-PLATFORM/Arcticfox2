@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/edOpenValuesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:theme="@style/TextViewRTL"
+        android:textColor="@color/colorDarkGrey"
+        android:textSize="14sp"
+         />
+
+    <com.hootsuite.nachos.NachoTextView
+        android:id="@+id/edOpenValues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:chipBackground="@color/chip_background"
+        app:chipTextColor="@color/colorTextBlack"
+        android:hint="@string/addstore_use_comma_to_add_value"
+        app:chipTextSize="14dp" />
+</LinearLayout>

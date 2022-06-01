@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data class="EventBookingDetailsFragmentBinding">
+
+        <import type="tradly.social.domain.entities.Event" />
+
+        <import type="tradly.social.common.resources.R" />
+
+        <variable
+            name="event"
+            type="Event" />
+
+        <variable
+            name="dateFormat"
+            type="String" />
+
+        <variable
+            name="timeFormat"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightGrey">
+
+        <include
+            android:id="@+id/clEventCardInfo"
+            layout="@layout/layout_event_detail_price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:imageError="@{R.drawable.placeholder_image}"
+            bind:imagePlaceholder="@{R.drawable.placeholder_image}"
+            bind:imageUrl="@{event.images[0]}"
+            bind:offerPercent="@{String.valueOf(event.offerPercent)}"
+            bind:title="@{event.title}"
+            bind:price="@{event.offerPrice.displayCurrency}"
+            bind:rating="@{(float)event.rating.ratingAverage}"
+            bind:ratingAvg="@{(float)event.rating.ratingAverage}"
+            bind:ratingCount="@{String.valueOf(event.rating.ratingCount)}" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clEventOwner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clEventCardInfo">
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/ivEventOwnerImage"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="16dp"
+                app:imageUrl="@{event.store.storePic}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:siBorderAlpha="0.0"
+                app:siBorderType="fill"
+                app:siBorderWidth="0dp"
+                app:siRadius="8dp"
+                app:siStrokeJoin="round"
+                tools:src="@drawable/placeholder_image" />
+
+            <tradly.social.common.views.custom.CustomTextView
+                style="@style/TextView.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@{event.store.storeName}"
+                android:textColor="@color/colorTextBlack"
+                app:layout_constraintBottom_toBottomOf="@id/ivEventOwnerImage"
+                app:layout_constraintStart_toEndOf="@id/ivEventOwnerImage"
+                app:layout_constraintTop_toTopOf="@id/ivEventOwnerImage"
+                tools:text="Class hubs" />
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:textAllCaps="false"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivEventOwnerImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivEventOwnerImage"
+                app:stringRes="@{event.store.followed?R.string.storelist_following:R.string.storelist_follow}"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="0.5dp"
+                tools:text="Following" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            layout="@layout/layout_event_time_location_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clEventOwner"
+            bind:dateFormat="@{dateFormat}"
+            bind:endMillis="@{event.endAt}"
+            bind:formattedAddress="@{event.address.formattedAddress}"
+            bind:landMark="@{event.address.city}"
+            bind:startMillis="@{event.startAt}"
+            bind:timeFormat="@{timeFormat}" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="56dp"
+            android:text="@string/confirm_booking_cancel_booking"
+            android:textAllCaps="false"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="0.5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

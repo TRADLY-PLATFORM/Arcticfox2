@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfile"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_user_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/reviewerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/reviewTitle"
+        app:layout_constraintStart_toEndOf="@id/userProfile"
+        app:layout_constraintTop_toTopOf="@id/userProfile"
+        tools:text="Anees Ahamed Soft fabric . Light weight . Not transparent. Colour looks e" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/reviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:theme="@style/TextViewRTL"
+        android:textColor="@color/colorDarkGrey"
+        app:layout_constraintStart_toEndOf="@id/userProfile"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/reviewerName"
+        tools:text="Great Product"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxHeight="20dp"
+        android:minHeight="20dp"
+        android:numStars="5"
+        android:paddingTop="5dp"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:stepSize="0.5"
+        android:theme="@style/RatingBarYellow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/userProfile"
+        app:layout_constraintTop_toBottomOf="@id/userProfile"
+        tools:rating="4"/>
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/reviewedTimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/colorDarkGrey"
+        android:textSize="12sp"
+        android:theme="@style/TextViewRTL"
+        app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+        app:layout_constraintStart_toEndOf="@id/ratingBar"
+        app:layout_constraintTop_toTopOf="@id/ratingBar"
+        tools:text="June 5,2020" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/reviewContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorTextBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        tools:text="It's very nice . Soft fabric . Light weight . Not transparent. Colour looks elegant . I haven't washed yet . Very nice fit Neck is perfect not very deep . Only minus... View More" />
+
+    <HorizontalScrollView
+        android:id="@+id/reviewedPhotoScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/reviewContent"
+        app:layout_constraintTop_toBottomOf="@id/reviewContent">
+        <LinearLayout
+            android:id="@+id/reviewedPhotoContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/iconReviewLike"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="center"
+        app:layout_goneMarginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomDivider"
+        app:layout_constraintTop_toBottomOf="@id/reviewedPhotoScrollView"
+        app:layout_goneMarginTop="12dp"
+        app:srcCompat="@drawable/ic_baseline_thumb_up_24"
+        app:tint="@color/colorMediumGrey" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:text="@string/review_helpful"
+        android:textSize="10sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorMediumGrey"
+        app:layout_constraintBottom_toBottomOf="@id/iconReviewLike"
+        app:layout_constraintEnd_toStartOf="@id/iconReviewLike"
+        app:layout_constraintTop_toTopOf="@id/iconReviewLike"
+        tools:text="Helpful" />
+
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        android:background="@color/colorLightMediumGrey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconReviewLike"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

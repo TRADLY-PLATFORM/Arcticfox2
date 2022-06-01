@@ -1,0 +1,23 @@
+import tradly.Dependencies
+import tradly.Modules
+
+apply from: "$rootDir/common-android-dynamic-feature.gradle"
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation project(Modules.app)
+    implementation project(Modules.base)
+    implementation project(Modules.network)
+    implementation project(Modules.resources)
+    implementation project(Modules.views)
+    implementation project(Modules.util)
+    implementation project(Modules.domain)
+    implementation project(Modules.cache)
+    implementation Dependencies.ViewModel.view_model
+    implementation Dependencies.appcompat
+    implementation Dependencies.legacy_support_v4
+    implementation Dependencies.android_material_design
+    implementation Dependencies.core_ktx
+    implementation Dependencies.androidx_constraint_layout
+    implementation Dependencies.Kotlin.kotlin_stdlib_jdk7
+}

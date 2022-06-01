@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="Tradly.app" target="11" />
+      <module name="Tradly.buildSrc" target="11" />
+      <module name="Tradly.buildSrc.main" target="11" />
+      <module name="Tradly.buildSrc.test" target="11" />
+      <module name="Tradly.common.base" target="11" />
+      <module name="Tradly.common.cache" target="11" />
+      <module name="Tradly.common.navigation" target="11" />
+      <module name="Tradly.common.network" target="11" />
+      <module name="Tradly.common.persistance" target="11" />
+      <module name="Tradly.common.resources" target="11" />
+      <module name="Tradly.common.util" target="11" />
+      <module name="Tradly.common.views" target="11" />
+      <module name="Tradly.feature.event.addEvent" target="11" />
+      <module name="Tradly.feature.event.eventbooking" target="11" />
+      <module name="Tradly.feature.event.explore" target="11" />
+      <module name="Tradly.feature.Search" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

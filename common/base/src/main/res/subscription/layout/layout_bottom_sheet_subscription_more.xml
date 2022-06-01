@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data class="SubscriptionMoreBinding">
+
+        <import type="android.text.TextUtils" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="subscriptionProduct"
+            type="tradly.social.domain.entities.SubscriptionProduct" />
+
+        <variable
+            name="currency"
+            type="tradly.social.domain.entities.Currency" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet_corner"
+        android:paddingStart="20dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp">
+
+        <View
+            android:id="@+id/viewNotch"
+            android:layout_width="80dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_bottom_sheet_top_notch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvTitle"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{subscriptionProduct.title}"
+            android:textColor="@color/colorTextBlack"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewNotch"
+            tools:text="Stock Management" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvPrice"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{currency.symbol+String.valueOf(subscriptionProduct.price)}"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="$200" />
+
+        <ImageView
+            android:id="@+id/ivExpiry"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_success"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvExpiryInfo"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@{@string/subscription_validity_days(String.valueOf(subscriptionProduct.expiryDays))}"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintStart_toEndOf="@id/ivExpiry"
+            app:layout_constraintTop_toTopOf="@id/ivExpiry"
+            tools:text="Expiry Days 30" />
+
+        <ImageView
+            android:id="@+id/ivDesc"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_success"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivExpiry" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvDesc"
+            style="@style/TextView.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/colorTextBlack"
+            android:text="@{subscriptionProduct.description}"
+            app:layout_constraintStart_toEndOf="@id/ivDesc"
+            app:layout_constraintTop_toTopOf="@id/ivDesc"
+            tools:text="Unlimited Listings \n\n- Featured Account \n\n- Lower Commission Rate \n" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="AddVariantBinding">
+        <import type="tradly.social.common.base.CustomOnClickListener"/>
+        <variable
+            name="onClickListsner"
+            type="CustomOnClickListener" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorLightGrey"
+        tools:theme="@style/AppTheme"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context=".ui.variant.addVariant.AddVariantFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAddVariantTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="16dp">
+            <tradly.social.common.views.custom.CustomTextView
+                android:id="@+id/tvVariantTypeHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Variant Type"
+                android:text="@string/add_variant_variant_type"
+                style="@style/TextView.Subtitle1"
+                android:textColor="@color/colorTextBlack"/>
+
+            <Spinner
+                android:id="@+id/spinnerVariantTypes"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/tvVariantTypeHint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:spinnerMode="dropdown"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:layout_constraintStart_toStartOf="@id/spinnerVariantTypes"
+                app:layout_constraintEnd_toEndOf="@id/spinnerVariantTypes"
+                app:layout_constraintTop_toBottomOf="@id/spinnerVariantTypes"
+                android:background="@color/colorMediumGrey"/>
+
+            <Spinner
+                android:id="@+id/spinnerVariantValues"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/spinnerVariantTypes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:spinnerMode="dropdown"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:layout_constraintStart_toStartOf="@id/spinnerVariantValues"
+                app:layout_constraintEnd_toEndOf="@id/spinnerVariantValues"
+                app:layout_constraintTop_toBottomOf="@id/spinnerVariantValues"
+                android:background="@color/colorMediumGrey"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddVariant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerVariantValues"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:text="@string/add_variant_button_title"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:onClick="@{(view)->onClickListsner.onClick(view)}"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupSelectedVariant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:singleSelection="true"
+            app:selectionRequired="false"
+            app:chipSpacingHorizontal="4dp"
+            app:chipSpacingVertical="4dp"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clAddVariantTypes"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

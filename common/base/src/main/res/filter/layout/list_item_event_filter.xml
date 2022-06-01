@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="tradly.social.domain.entities.Filter" />
+
+        <import type="android.view.View" />
+
+        <import type="tradly.social.common.base.GenericAdapter.OnClickItemListener" />
+
+        <variable
+            name="onClickItemListener"
+            type="OnClickItemListener" />
+
+        <variable
+            name="adapterPosition"
+            type="Integer" />
+
+        <variable
+            name="listItem"
+            type="Filter" />
+
+        <variable
+            name="showDivider"
+            type="Boolean" />
+
+        <variable
+            name="showRatingBar"
+            type="Boolean" />
+        <variable
+            name="showFilterValue"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/clEventFilterListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{(view)->onClickItemListener.onClick(listItem,view,adapterPosition)}">
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvFilterName"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp"
+            android:text="@{listItem.filterName}"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Price Range" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/tvFilterValue"
+            style="@style/TextView.captain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{listItem.selectedValue}"
+            android:textColor="@color/colorTextBlack"
+            android:visibility="@{(showFilterValue &amp;&amp; !listItem.selectedValue.isEmpty)?View.VISIBLE:View.GONE}"
+            app:layout_constraintStart_toStartOf="@id/tvFilterName"
+            app:layout_constraintTop_toBottomOf="@id/tvFilterName"
+            tools:text="3:00 - 4:00PM"
+            tools:visibility="visible" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:numStars="5"
+            android:rating="@{showRatingBar?Float.valueOf(listItem.selectedValue):0f}"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar"
+            android:visibility="@{showRatingBar?View.VISIBLE:View.GONE}"
+            app:layout_constraintStart_toStartOf="@id/tvFilterName"
+            app:layout_constraintTop_toBottomOf="@id/tvFilterName"
+            app:layout_goneMarginStart="0dp"
+            tools:visibility="gone" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvFilterName,tvFilterValue,ratingBar"/>
+
+        <View
+            android:id="@+id/viewDiv"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorVeryLightBlack"
+            android:visibility="@{showDivider?View.VISIBLE:View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier"
+            app:layout_goneMarginTop="12dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

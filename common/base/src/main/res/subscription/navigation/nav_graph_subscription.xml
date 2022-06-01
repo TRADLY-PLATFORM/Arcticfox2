@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_subscription"
+    app:startDestination="@id/subscriptionProductListFragment">
+
+    <fragment
+        android:id="@+id/subscriptionProductListFragment"
+        android:name="tradly.social.common.subscription.SubscriptionProductListFragment"/>
+
+    <action
+        android:id="@+id/subscription_product_list_info_sheet"
+        app:destination="@id/SubscriptionInfoSheet"/>
+    <dialog
+        android:id="@+id/SubscriptionInfoSheet"
+        android:name="tradly.social.common.subscription.SubscriptionMoreBottomSheet"/>
+
+</navigation>

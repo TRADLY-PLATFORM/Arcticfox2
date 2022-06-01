@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="tradly.social.common.base.CustomOnClickListener"/>
+        <variable
+            name="onClickListener"
+            type="CustomOnClickListener" />
+        <variable
+            name="title"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        tools:theme="@style/AppTheme.Base"
+        android:background="?attr/colorPrimary"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_back"
+            android:onClick="@{(view)->onClickListener.onClick(view)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/searchCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivBack">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_icon_search"
+                    app:tint="@color/colorDarkBlack" />
+
+                <TextView
+                    android:id="@+id/tvSearchHint"
+                    style="@style/TextView.Subtitle2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:onClick="@{(view)->onClickListener.onClick(view)}"
+                    android:text="@string/exlpore_event_search"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/viewDiv"
+                    app:layout_constraintStart_toEndOf="@id/ivSearch" />
+
+                <EditText
+                    android:id="@+id/edSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:background="@null"
+                    android:hint="@string/exlpore_event_search"
+                    android:textSize="14sp"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/viewDiv"
+                    app:layout_constraintStart_toEndOf="@id/ivSearch" />
+
+                <View
+                    android:id="@+id/viewDiv"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="@color/colorMediumGrey"
+                    app:layout_constraintEnd_toStartOf="@id/ivCurrentLocation" />
+
+                <ImageView
+                    android:id="@+id/ivCurrentLocation"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="?attr/selectableItemBackground"
+                    android:onClick="@{(view)->onClickListener.onClick(view)}"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_my_location_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorPrimary" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/currentLocationGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="viewDiv,ivCurrentLocation"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/toolbarTitle"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:text="@{title}"
+            app:layout_constraintBottom_toBottomOf="@+id/searchCard"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            app:layout_constraintTop_toTopOf="@+id/searchCard"
+            tools:text="Filters" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

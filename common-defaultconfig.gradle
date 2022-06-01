@@ -1,0 +1,26 @@
+import tradly.Config
+
+ext.commonDefaultConfig = {
+    defaultConfig {
+        minSdkVersion Config.minSDK
+        targetSdkVersion Config.targetSDK
+        multiDexEnabled Config.enableMultiDex
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary Config.useSupportLibrary
+        }
+        buildConfigField("String", "MOENGAGE_APP_ID", "\"$Config.MO_ENGAGE\"")
+        buildConfigField "String", "CONFIGURE_PAYOUT", '"configure_payouts"'
+        buildConfigField "String", "MANAGE_SUBSCRIPTION", '"subscription_manage"'
+        buildConfigField "String", "SUBSCRIPTION", '"subscription_home"'
+        buildConfigField "String", "APP_NAME", '"TradlySocial"'
+        buildConfigField "String", "ORDER_PAYMENT", '"order_payment"'
+        buildConfigField "String", "APP_THEME", "\"theme_green\""
+        buildConfigField "String", "TENANT_ID", '""'
+        buildConfigField "String", "APP_NAME", '""'
+        buildConfigField "String", "TERMS_URL", '""'
+        buildConfigField "String", "PRIVACY_URL", '""'
+        buildConfigField "String", "FAQ", '""'
+        resValue "string", 'rollbar_access_token',""  /*Set RollBar Access token here*/
+    }
+}

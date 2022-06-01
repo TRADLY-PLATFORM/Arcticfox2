@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet_corner">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/productDetailHeader"
+            layout="@layout/list_item_my_order_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_user_placeholder"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toTopOf="@+id/image"
+            tools:text="Saravanan Fashion Store" />
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorTextBlack"
+            android:visibility="gone"
+            android:gravity="start|center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:text="In addition this " />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/horZ_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="productDetailHeader,image,description,title"/>
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/txtRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/addreview_what_you_rate"
+            android:textColor="@color/colorDarkBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horZ_barrier" />
+
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/colorMediumGrey"
+            android:progressTint="?attr/colorPrimary"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:secondaryProgressTint="@color/colorMediumGrey"
+            android:stepSize="1"
+            android:theme="?attr/reviewRatingStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRating" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorMediumGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+        <tradly.social.common.views.custom.CustomTextView
+            android:id="@+id/txtShareOpinion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/addreview_share_opinion"
+            android:textColor="@color/colorDarkBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/opinion1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="4dp"
+            android:text="Excellent Service"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextBlack"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipStrokeColor="@color/colorMediumGrey"
+            app:chipStrokeWidth="1dp"
+            app:layout_constraintEnd_toStartOf="@id/opinion2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtShareOpinion" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/opinion2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="30dp"
+            android:text="Great Product"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextBlack"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipStrokeColor="@color/colorMediumGrey"
+            app:chipStrokeWidth="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/opinion1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/opinion1"
+            app:layout_constraintTop_toTopOf="@id/opinion1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/opinion3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="Good Packaging"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextBlack"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipStrokeColor="@color/colorMediumGrey"
+            app:chipStrokeWidth="1dp"
+            app:layout_constraintEnd_toStartOf="@id/opinion4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/opinion1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/opinion4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="30dp"
+            android:text="Fast Response"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextBlack"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipStrokeColor="@color/colorMediumGrey"
+            app:chipStrokeWidth="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/opinion3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/opinion3"
+            app:layout_constraintTop_toTopOf="@id/opinion3" />
+
+
+        <EditText
+            android:id="@+id/edReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:theme="@style/EditTextRTL"
+            android:hint="@string/addreview_write_your_review_note"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/opinion4" />
+
+        <LinearLayout
+            android:id="@+id/reviewPhotoLayout"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            app:layout_constraintEnd_toEndOf="@id/edReview"
+            app:layout_constraintStart_toStartOf="@id/edReview"
+            app:layout_constraintTop_toBottomOf="@id/edReview">
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/btnSendReview"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="?attr/buttonGradientBg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reviewPhotoLayout">
+
+            <TextView
+                android:id="@+id/btnTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/addreview_send_review"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

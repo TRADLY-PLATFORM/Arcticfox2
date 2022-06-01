@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:background="@color/white"
+    android:elevation="0.5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAccountProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="25dp"
+        app:civ_border_width="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_intro_three" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/tvAccountName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/tvAccountCategory"
+        app:layout_constraintEnd_toStartOf="@id/btnBlock"
+        app:layout_constraintStart_toEndOf="@id/ivAccountProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Pixel Stores" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/tvAccountCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:textColor="@color/colorCustomBlack"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/ivLocationIcon"
+        app:layout_constraintEnd_toStartOf="@id/btnBlock"
+        app:layout_constraintStart_toEndOf="@id/ivAccountProfile"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountName"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Mobile Shop" />
+
+    <ImageView
+        android:id="@+id/ivLocationIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivAccountProfile"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountCategory"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_location_on_black_24dp"
+        app:tint="?attr/colorPrimary" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/tvAccountAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:ellipsize="end"
+        android:maxWidth="100dp"
+        android:maxLines="1"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivLocationIcon"
+        app:layout_constraintEnd_toStartOf="@id/tvViewLocation"
+        app:layout_constraintStart_toEndOf="@+id/ivLocationIcon"
+        app:layout_constraintTop_toTopOf="@id/ivLocationIcon" />
+
+    <tradly.social.common.views.custom.CustomTextView
+        android:id="@+id/tvViewLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:text="@string/storedetail_view_location"
+        android:textAlignment="viewStart"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivLocationIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvAccountAddress"
+        app:layout_constraintTop_toTopOf="@id/ivLocationIcon" />
+
+    <FrameLayout
+        android:id="@+id/btnBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="40dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvAccountName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvAccountName"
+        app:layout_constraintTop_toTopOf="@id/tvAccountName">
+
+        <TextView
+            android:id="@+id/tvBtnLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/storedetail_unblock"
+            android:textColor="@color/colorPrimary" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

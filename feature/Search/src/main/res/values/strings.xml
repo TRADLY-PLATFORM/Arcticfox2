@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_products">Products</string>
+    <string name="search_stores">Stores</string>
+    <string name="search_sort">Sort</string>
+    <string name="search_filter">Filter</string>
+    <string name="search_done">Done</string>
+</resources>

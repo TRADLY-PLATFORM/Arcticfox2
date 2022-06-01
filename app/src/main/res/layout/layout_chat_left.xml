@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="100dp"
+    android:layout_marginTop="20dp">
+
+    <LinearLayout
+        android:id="@+id/llMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_chat_left_bubble">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start">
+
+            <RelativeLayout
+                android:id="@+id/productLayout"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/bg_chat_doc_outline_right">
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/imgProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:layout_margin="4dp"
+                    app:siSquare="true"
+                    app:siBorderWidth="0.2dp"
+                    app:siBorderColor="@color/colorWhiteLight"
+                    app:siBorderType="fill"
+                    app:siStrokeJoin="round"
+                    app:siBorderAlpha="0.0"
+                    app:siRadius="8dp"/>
+
+                <TextView
+                    android:id="@+id/txtProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="JBL I45"
+                    android:theme="@style/TextViewRTL"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/imgProduct"/>
+                <TextView
+                    android:id="@+id/txtFinalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    android:theme="@style/TextViewRTL"
+                    android:layout_below="@id/txtProductName"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:text="Rs.10000"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                />
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@id/txtFinalPrice"
+                    android:textColor="@color/colorDarkGrey"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="13sp"
+                    tools:text="Rs.1222"
+                    android:theme="@style/TextViewRTL"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                />
+
+                <TextView
+                    android:id="@+id/txtOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_below="@id/txtFinalPrice"
+                    android:layout_toEndOf="@id/txtPrice"
+                    android:layout_toRightOf="@id/txtPrice"
+                    android:textSize="13sp"
+                    tools:text="47%off"
+                    android:theme="@style/TextViewRTL"
+                    android:layout_alignBaseline="@id/txtPrice"
+                    android:textColor="@color/colorGreenOffer"/>
+            </RelativeLayout>
+            <!-- doc layout-->
+            <LinearLayout
+                android:id="@+id/documentLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:background="@drawable/bg_chat_doc_outline">
+
+                <ImageView
+                    android:id="@+id/documentPlaceholder"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                />
+                <TextView
+                    android:id="@+id/documentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="10dp"
+                    android:theme="@style/TextViewRTL"
+                    android:textColor="@color/colorTextBlack"
+                />
+            </LinearLayout>
+
+            <!-- video/image layout-->
+            <RelativeLayout
+                android:id="@+id/videoImageLayout"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:visibility="gone"
+                android:background="@android:color/black">
+
+                <ImageView
+                    android:id="@+id/imagePlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/actionPlay"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                   />
+
+            </RelativeLayout>
+
+            <!--chat Text-->
+            <TextView
+                android:id="@+id/chatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorTextBlack"
+                tools:text="hello anees"
+                android:theme="@style/TextViewRTL"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="12sp"
+            android:theme="@style/TextViewRTL"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:text="10:30pm"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_negotiation_chat_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"/>
+</RelativeLayout>

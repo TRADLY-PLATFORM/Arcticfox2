@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="tradly.social.common.resources.R" />
+
+        <import type="tradly.social.common.base.GenericAdapter.OnClickItemListener"/>
+
+        <import type="android.view.View"/>
+
+        <import type="tradly.social.domain.entities.ImageFeed"/>
+
+        <variable
+            name="imageFeed"
+            type="ImageFeed" />
+
+        <variable
+            name="closeIconVisible"
+            type="Boolean" />
+
+        <variable
+            name="onClickItemListener"
+            type="OnClickItemListener" />
+
+        <variable
+            name="adapterPosition"
+            type="Integer" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cvImageParent"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        tools:viewBindingIgnore="true"
+        android:onClick="@{(view)->onClickItemListener.onClick(imageFeed,view,adapterPosition)}"
+        app:cardCornerRadius="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="@{imageFeed.isAddItem?View.VISIBLE : View.GONE}">
+                <ImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_add_circle_outline_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/colorMediumGrey" />
+
+                <tradly.social.common.views.custom.CustomTextView
+                    android:id="@+id/tvAdd"
+                    style="@style/TextView.captain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivAdd"
+                    android:text="@string/add_variant_add_image"
+                    tools:text="Add Images" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/ivVariantImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.90"
+                android:scaleType="fitCenter"
+                app:error="@{R.drawable.placeholder_image}"
+                app:imageUrl="@{imageFeed.filePath}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="@{imageFeed.isAddItem?View.GONE : View.VISIBLE}"
+                app:placeholder="@{R.drawable.placeholder_image}"
+                android:onClick="@{(view)->onClickItemListener.onClick(imageFeed,view,adapterPosition)}"
+                app:siBorderAlpha="0.0"
+                app:siBorderType="fill"
+                app:siBorderWidth="0dp"
+                app:siRadius="6dp"
+                app:siStrokeJoin="round"
+                tools:src="@drawable/placeholder_image" />
+            <ImageView
+                android:id="@+id/ivCancel"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:visibility="@{closeIconVisible?View.VISIBLE:View.GONE}"
+                android:onClick="@{(view)->onClickItemListener.onClick(imageFeed,view,adapterPosition)}"
+                android:src="@drawable/ic_cancel_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

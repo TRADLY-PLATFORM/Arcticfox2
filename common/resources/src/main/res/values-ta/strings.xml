@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--region INTRO SCREEN-->
+    <string name="intro_next">அடுத்தது</string>
+    <string name="intro_get_started">தொடங்கவும்</string>
+    <!--endregion-->
+
+    <!-- region LOGIN SCREEN-->
+    <string name="login_welcome_to_app">%s க்கு வரவேற்கிறோம்</string>
+    <string name="login_login">உள்நுழைக</string>
+    <string name="login_login_to_your_account">உங்கள் கணக்கில் உள்நுழையக</string>
+    <string name="login_email">மின்னஞ்சல்</string>
+    <string name="login_mobile">கைபேசி எண்</string>
+    <string name="login_forgot_your_password">உங்கள் கடவுச்சொல்லை மறந்து விட்டீர்களா?</string>
+    <string name="login_dont_have_an_account">கணக்கு இல்லையா?</string>
+    <string name="login_sign_up">பதிவுபெறுக</string>
+    <string name="login_password">கடவுச்சொல்</string>
+    <string name="login_required">தேவை</string>
+    <string name="login_to_continue">பின்தொடர உள்நுழையவும்</string>
+    <string name="login_no_user_found">பயனர்/யூசர் இல்லை</string>
+    <string name="login_invalid_credentials">உங்கள் உள்நுழையும் விவரத்தை சரி பார்க்கவும்</string>
+    <string name="login_alert_message_select_country">நாட்டைத் தேர்ந்தெடுக்கவும்</string>
+    <!--endregion-->
+
+    <!--region SIGNUP SCREEN-->
+    <string name="signup_welcome_to_message">%s க்கு வரவேற்கிறோம்</string>
+    <string name="signup_mobile">கைபேசி எண்</string>
+    <string name="signup_password">கடவுச்சொல்</string>
+    <string name="signup_already_have_an_account">ஏற்கனவே ஒரு கணக்கு உள்ளதா?</string>
+    <string name="signup_create">உருவாக்கவும்</string>
+    <string name="signup_first_name">முதல் பெயர்</string>
+    <string name="signup_last_name">கடைசி பெயர்</string>
+    <string name="signup_email">மின்னஞ்சல்</string>
+    <string name="signup_re_enter_password">கடவு சொல்லை திருப்பி உள்ளிடவும்</string>
+    <string name="signup_agree_terms_and_conditions">ீங்கள் <b>விதிமுறைகளையும் நிபந்தனைகளையும்</b> ஒப்புக்கொள்கிறீர்களா?</string>
+    <string name="signup_create_your_account">உங்கள் கணக்கை உருவாக்கு</string>
+    <string name="signup_required">தேவை</string>
+    <string name="signup_invalid_email">தவறான மின்னஞ்சல்</string>
+    <string name="signup_password_mismatch">கடவுச்சொல் பொருத்தமில்லை</string>
+    <string name="signup_min_password_validation">கடவுச்சொல் 5 எழுத்து குறைந்தது இருக்க வேண்டும்</string>
+    <string name="signup_user_already_registered">பயனர்/யூசர் முன்பே பதிவு செய்யப்பட்டது.</string>
+    <string name="signup_alert_message_select_country">நாட்டைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="signup_accept_terms_condition">விதிமுறைகளையும் நிபந்தனையையும் ஏற்கவும</string>
+    <!--endregion-->
+
+    <!--region OTP SCREEN-->
+    <string name="otp_email_verification">மின்னஞ்சல் சரிபார்ப்பு</string>
+    <string name="otp_phone_verification">தொலைபேசி சரிபார்ப்பு</string>
+    <string name="otp_enter_verification_code_here">இங்கே சரிபார்த்தல் குறியீட்டை உள்ளிடவும்</string>
+    <string name="otp_did_not_receive_code">நீங்கள் எந்த குறியீடும் பெறவில்லையா?</string>
+    <string name="otp_resend_code">குறியீட்டை மீண்டும் அனுப்பு</string>
+    <string name="otp_verify">சரிபார்க்கவும்</string>
+    <string name="otp_otp_verifying">OTP சரிபார்க்கிறது</string>
+    <string name="otp_please_enter_otp">OTP உள்ளிடவும்</string>
+    <string name="otp_sent_to">+%s %s</string>
+    <string name="otp_invalid_otp">தவறான OTP குறியீடு</string>
+    <string name="otp_expired">OTP காலாவதியானது</string>
+    <string name="otp_resend_message">OTP குறியீடு வெற்றிகரமாக அனுப்பப்பட்டுள்ளது</string>
+    <string name="opt_could_not_set_password">ஏதோ தவறு நடந்துவிட்டது. இந்த நேரத்தில் கடவுச்சொல்லை அமைக்க முடியவில்லை. பின்னர் மீண்டும் முயற்சிக்கவும்</string>
+    <string name="otp_password_changed_success_msg">கடவுச்சொல் வெற்றிகரமாக மாற்றப்பட்டுள்ளது</string>
+    <string name="otp_otp_send_info">தயவுசெய்து இங்கே OTP ஐ உள்ளிடவும், நாங்கள் சரிபார்ப்புக் குறியீட்டை அனுப்பியுள்ளோம் %s</string>
+    <!--endregion-->
+
+    <!--region SPLASH SCREEN-->
+    <string name="splash_welcome_to_message">%s க்கு வரவேற்கிறோம்</string>
+    <string name="splash_required">தேவை</string>
+    <string name="splash_enter_your_tenantId">Enter your Tenant ID</string>
+    <string name="splash_submit">Submit</string>
+    <string name="splash_tenant_id">Tenant ID</string>
+    <string name="splash_change_tenant">Change Tenant</string>
+    <string name="splash_invalid_tenant_id">Invalid Tenant ID</string>
+    <!--endregion-->
+
+    <!--region FORGOT PASSWORD SCREEN-->
+    <string name="forgotpassword_email">மின்னஞ்சல்</string>
+    <string name="forgotpassword_mobile">கைபேசி எண்</string>
+    <string name="forgotpassword_alert_message_select_country">நாட்டைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="forgotpassword_forgot_your_password">உங்கள் கடவுச்சொல்லை மறந்து விட்டீர்களா?</string>
+    <string name="forgotpassword_enter_your_mobile_number">கைபேசி எண் உள்ளிடவும்</string>
+    <string name="forgotpassword_enter_your_email">மின்னஞ்சல் உள்ளிடவும்</string>
+    <string name="forgotpassword_password_mismatch">கடவுச்சொல் பொருத்தமில்லை</string>
+    <string name="forgotpassword_invalid_email">தவறான மின்னஞ்சல்</string>
+    <string name="forgotpassword_required">தேவை</string>
+    <string name="forgotpassword_verification_password">சரிபார்ப்புக் குறியீடு</string>
+    <string name="forgotpassword_verify">சரிபார்ப்பு</string>
+    <string name="forgotpassword_otp_send_info">தயவுசெய்து இங்கே OTP ஐ உள்ளிடவும், நாங்கள் சரிபார்ப்புக் குறியீட்டை அனுப்பியுள்ளோம் %s</string>
+    <string name="forgotpassword_new_password">புதிய கடவுச்சொல்</string>
+    <string name="forgotpassword_confirm_new_password">புதிய கடவுச்சொல் உறுதிசெய்</string>
+    <!--endregion-->
+
+    <!--region SEARCH SCREEN-->
+    <string name="search_search">தேடவும்</string>
+    <string name="search_stores">கடைகள்</string>
+    <string name="search_header_title">நீங்கள் என்ன தேடுகிறீர்கள்?</string>
+    <string name="search_type_to_search">தேடவும்</string>
+    <string name="search_sort_by">வகைபடுத்து</string>
+    <string name="search_search_by">தேடவும்</string>
+    <string name="search_filter_by_distace">தூரத்தை வைத்து  ஃபில்டர் செய்யவும்</string>
+    <string name="search_location">இருப்பிடம்</string>
+    <string name="search_category">வகை</string>
+    <string name="search_search_a_product">தயாரிப்புகளைத் தேடவும்</string>
+    <string name="search_search_a_store">கடையைத் தேடவும்</string>
+    <string name="search_listings">தயாரிப்புகள்</string>
+    <string name="search_no_result_found">தேடல் இல்லை</string>
+    <string name="search_low_to_high">விலை - குறைந்த முதல் உயர் வரை</string>
+    <string name="search_high_to_low">விலை - உயர் முதல் குறைந்த வரை</string>
+    <string name="search_relevance">சமீப</string>
+    <!--endregion-->
+
+    <!--region NOTIFICATION CENTER ORDER STATUS-->
+    <string name="notification_header_title">அறிவிப்பு</string>
+    <string name="notification_no_notification_at_the_moment">தற்போது அறிவிப்புகள் இல்லை</string>
+    <string name="notification_order_placed_success">உங்கள் ஆர்டர் வெற்றிகரமாக உருவாக்கபட்டுள்ளது</string>
+    <string name="notification_order_cancelled">உங்கள் ஆர்டர் ரத்து செய்யப்பட்டது</string>
+    <string name="notification_order_return_initiated">உங்கள் ஆர்டர் திரும்பும் செயல்முறை தொடங்கப்பட்டது</string>
+    <string name="notification_order_is_in_progress">உங்கள் ஆர்டர் செயலில் உள்ளது</string>
+    <string name="notification_order_shipped">உங்கள் ஆர்டர் அனுப்பப்பட்டத</string>
+    <string name="notification_order_deliver_returned">ஆர்டர் டெலிவரி திரும்பியது</string>
+    <string name="notification_order_delivery_return_confrmed">ஆர்டர் டெலிவரி திரும்ப உறுதி செய்யப்பட்டது</string>
+    <string name="notification_order_order_delivered">உங்கள் ஆர்டர் வெற்றிகரமாகச் டெலிவரி செய்யப்பட்டது</string>
+    <string name="notification_order_picked_up">உங்கள் ஆர்டரை கூரியர் கூட்டாளர் எடுத்துள்ளார்</string>
+    <string name="notification_order_out_for_delivery">உங்கள் ஆர்டர் டெலிவரிக்கு அனுப்பப்பட்டது</string>
+    <string name="notification_order_customer_return_confirmed">ஆர்டர் திரும்ப உறுதிப்படுத்தப்பட்டது</string>
+    <string name="notification_order_customer_return_disputed">ஆர்டர் திரும்பயிது மறுக்கப்பட்டது</string>
+    <string name="notification_order_customer_unreachable">வாடிக்கையாளர் அணுக முடியவில்லை</string>
+    <string name="notification_started_following_your_account">%s உங்களை %s பின்பற்ற தொடங்கினார்</string>
+    <string name="notification_liked_your_listing">%s உங்கள் தயாரிப்பை லைக் செய்திருக்கிறார்.</string>
+    <!--endregion-->
+
+    <!--region NOTIFICATION-->
+    <string name="notification_chat_message_fallback">உங்களுக்கு ஒரு செய்தி அனுப்பினார்</string>
+    <string name="notification_chat_listing_fallback">உங்களுக்கு ஒரு பொருளை அனுப்பியுள்ளார்</string>
+    <string name="notification_chat_image_fallback">உங்களுக்கு ஒரு புகைப்படத்தை அனுப்பியுள்ளார</string>
+    <string name="notification_chat_file_fallback">உங்களுக்கு ஒரு பைல்  அனுப்பியுள்ளார்</string>
+    <string name="notification_notification_approved_fallback">உங்கள் சமீபத்திய உருப்படி அங்கீகரிக்கப்பட்டு விற்பனைக்கு தயாராக உள்ளது.</string>
+    <string name="notification_rejected_fallback">உங்கள் சமீபத்திய உருப்படி தரமான காரணங்களுக்காக நிராகரிக்கப்பட்டது.</string>
+    <string name="notification_liked_fallback">%s liked your listing</string>
+    <string name="notification_followed_fallback">%s following you</string>
+    <string name="notification_order_title">ஆர்டர்#&#160;%s</string>
+    <string name="notification_order_change_fallback">%s உங்கள் தயாரிப்பை லைக் செய்திருக்கிறார்.</string>
+    <string name="notification_new_order_fallback">உங்களுக்கு புதிய ஆர்டர் கிடைத்துள்ளது</string>
+    <!--endregion-->
+
+    <!--region CART SCREEN-->
+    <string name="cart_required">தேவை</string>
+    <string name="cart_header_title">எனது ஷாப்பிங் பட்டியல்</string>
+    <string name="cart_remove">அகற்று</string>
+    <string name="cart_some_items_removed">உங்களின் சில உருப்படிகள் நீக்கப்பட்டன</string>
+    <string name="cart_cancel">ரத்து</string>
+    <string name="cart_item_removed_cart">பொருள் பட்டியலிலிருந்து நீக்கப்பட்டன</string>
+    <string name="cart_item_added_cart">பொருள் ஷாப்பிங் பட்டியலில் சேர்க்கப்பட்டது</string>
+    <string name="cart_max_quantity">அதிகபட்ச அளவு %s</string>
+    <string name="cart_apply">விண்ணப்பிக்கவும்</string>
+    <string name="cart_enter_quantity">அளவு சேர்க்கவும்</string>
+    <string name="cart_your_cart_is_empty">உங்கள் ஷாப்பிங் பட்டியல் காலியாக உள்ளது!</string>
+    <string name="cart_more">மேலும்</string>
+    <string name="cart_shipment">விநியோகம்</string>
+    <string name="cart_qty">அளவு:</string>
+    <string name="cart_shop_now">இப்பொழுது வாங்கு</string>
+    <string name="cart_alert_stock_not_available">தேர்ந்தெடுக்கப்பட்ட அளவுக்கு பங்குகள் கிடைக்கவில்லை</string>
+    <string name="cart_invalid_qty">தவறான அளவு</string>
+    <string name="cart_alert_message_cart_clear_failed">இந்த நேரத்தில் கார்ட் டை அழிக்க முடியவில்லை. மீண்டும் முயற்சி செய்க</string>
+    <string name="cart_alert_message_min_balance_checkout">இந்த ஆர்டரைத் தொடர உங்கள் மொத்த வண்டித் தொகை %s க்கும் அதிகமாக இருக்க வேண்டும்.</string>
+    <string name="cart_could_not_delete_cart_item">இந்த நேரத்தில் கார்ட் டை அழிக்க முடியவில்லை. மீண்டும் முயற்சி செய்க</string>
+    <string-array name="cart_qty_min">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>@string/cart_more</item>
+        <item>default</item>
+    </string-array>
+    <!--endregion-->
+
+    <!-- region WISH LIST-->
+    <string name="wishlist_header_title">எனது விருப்பப் பட்டியல்</string>
+    <string name="wishlist_continue_wish_list">ஷாப்பிங் தொடர</string>
+    <string name="wishlist_item_added_to_wish_list">ொருள் விருப்பப் பட்டியலில் சேர்க்கப்பட்டது</string>
+    <string name="wishlist_item_deleted_to_wish_list">பொருள் விருப்பப் பட்டியலில் இருந்து அகற்றப்பட்டது</string>
+    <string name="wishlist_login_to_continue">பின்தொடர உள்நுழையவும</string>
+    <!--endregion-->
+
+    <!--region PAYMENT-->
+    <string name="payment_continue_shopping">ஷாப்பிங் தொடர</string>
+    <string name="payment_price_details">விலை விவரங்கள்</string>
+    <string name="payment_price">விலை(%s பொருள்)</string>
+    <string name="payment_prices">விலை(%s பொருட்கள்)</string>
+    <string name="payment_total_amount">மொத்த தொகை</string>
+    <string name="payment_header_title">கட்டணம்</string>
+    <string name="payment_order">ஆர்டெர்</string>
+    <string name="payment_not_able_to_checkout_msg">மன்னிக்கவும். இந்த நேரத்தில் ஆர்டர் செய்ய முடியவில்லை. பிறகு முயற்சிக்கவும்</string>
+    <string name="payment_select_delivery_address">டெலிவரி முகவரியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="payment_select_payment">கட்டண முறையைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="payment_order_successfully_placed">உங்கள் ஆர்டர் வெற்றிகரமாக \n உருவாக்கபட்டுள்ளதது</string>
+    <string name="payment_event_successfully_booked">Event has been booked \n successfully</string>
+    <string name="payment_order_status_message">பணம் செலுத்தும் நுழைவாயில் பிரச்சினை காரணமாக இருக்கலாம்.</string>
+    <string name="payment_order_payment_failed">உங்கள் கட்டணம் தோல்வியடைந்தது</string>
+    <string name="payment_order_retry_payment">கட்டணத்தை மீண்டும் முயற்சிக்கவும்</string>
+
+    <!--endregion-->
+
+    <!--region SHIPMENT-->
+    <string name="shipment_header_title">விநியோகம்</string>
+    <string name="shipment_delivery_fee">விநியோக கட்டணம்</string>
+    <string name="shipment_delivery_address">விநியோக முகவரி</string>
+    <string name="shipment_address_data">%s,%s,%s - %s</string>
+    <string name="shipment_continue">தொடரவும்</string>
+    <string name="shipment_pickup_address">பிக்அப் முகவரி</string>
+    <string name="shipment_change">மாற்ற</string>
+    <string name="shipment_delivery_to">விநியோக முகவரி %s,%s</string>
+    <string name="shipment_alert_message_choose_shipment">தயவுசெய்து விருப்பமான ஷிப்பிங்கை தேர்வு செய்யவும்</string>
+    <!--endregion-->
+
+    <!--region ADDRESS SCREEN-->
+    <string name="address_my_address">என் முகவரி</string>
+    <string name="address_no_address_found">முகவரி இல்லை</string>
+    <string name="address_add_new_address">புதிய முகவரியைச் சேர்க்கவும்</string>
+    <string name="address_add_pickup_address">இடும் முகவரியைச் சேர்க்கவும்</string>
+    <string name="address_name">பெயர்</string>
+    <string name="address_phone">தொலைபேசி</string>
+    <string name="address_state">மாநிலம்</string>
+    <string name="address_city">நகரம்</string>
+    <string name="address_country">நாடு</string>
+    <string name="address_landmark">லேண்ட்மார்க்</string>
+    <string name="address_use_current_location">தற்போதைய இருப்பிடத்தைப் பயன்படுத்தவும்</string>
+    <string name="address_edit_address">முகவரியைத் திருத்தவும்</string>
+    <string name="address_edit_pickup_address">பிக்அப் முகவரியை திருத்தவும்</string>
+    <string name="address_address_added_successfully">முகவரி வெற்றிகரமாகச் சேர்க்கப்பட்டது</string>
+    <string name="address_address_updated_successfully">முகவரி வெற்றிகரமாக புதுப்பிக்கப்பட்டது</string>
+    <string name="address_zipcode">ஜிப்கோட்</string>
+    <string name="address_address_one">முகவரி 1</string>
+    <string name="address_address_two">முகவரி 2</string>
+    <string name="address_save">சேமி</string>
+    <string name="address_alert_message_add_pickup_address">பிக்அப் முகவரி கிடைக்கவில்லை. தயவுசெய்து பிக்அப் முகவரியைச் சேர்க்கவும்</string>
+    <string name="address_cant_fetch_location">ஒரு நேரத்தில் இருப்பிடத்தைப் பெற முடியவில்லை, மீண்டும் முயற்சிக்கவும்</string>
+    <!--endregion-->
+
+    <!--region CATEGORIES-->
+    <string name="category_header_title">அனைத்து வகைகள்</string>
+    <string name="category_alert_message_category_list_fetch_failed">வகையைப் பெறும்போது ஏதோ தவறாகிவிட்டது</string>
+
+    <!--endregion-->
+
+    <!--region STORE LIST-->
+    <string name="storelist_header_title">கடைகள்</string>
+    <string name="storelist_follow">பின்பற்றவும்</string>
+    <string name="storelist_following">தொடர்ந்து</string>
+    <string name="storelist_no_stores_found">கடைகள் இல்லை</string>
+    <string name="storelist_no_stores_blocked">கடைகள் எதுவும் தடுக்கப்படவில்லை</string>
+    <string name="storelist_no_stores_available">கடைகள் இல்லை</string>
+    <!--endregion-->
+
+    <!--region PRODUCT LIST-->
+    <string name="productlist_header_title">தயாரிப்புகள்</string>
+    <string name="productlist_no_products_found">பொருட்கள் இல்லை</string>
+    <string name="productlist_under_review">மதிப்பாய்வில் உள்ளது</string>
+
+    <!--endregion-->
+
+    <!--region SOCIAL FEED-->
+    <string name="socialfeed_trending">Trending</string>
+    <string name="socialfeed_latest_item">Latest Items</string>
+    <string name="socialfeed_most_followers">Most Followers</string>
+    <string name="socialfeed_no_feeds_found">No Feeds found</string>
+    <!--endregion-->
+
+    <!--region TIME AGO-->
+    <string name="justNow">இப்போது</string>
+    <string name="a_minute_ago">ஒரு நிமிடம் முன்பு</string>
+    <string name="minutesAgo">நிமிடங்கள் முன்பு</string>
+    <string name="an_hour_ago">ஒரு மணி நேரம் முன்பு</string>
+    <string name="hours_ago">மணி நேரத்திற்க்கு முன்பு</string>
+    <string name="yesterday">நேற்று</string>
+    <!--endregion-->
+
+    <!--region CHAT LIST SCREEN-->
+    <string name="chat_no_new_message">புதிய செய்திகள் இல்லை</string>
+    <string name="chat_fetch_error_msg">sஉங்கள் அரட்டைகளைப் பெறும்போது ஏதோ தவறு ஏற்பட்டது. பின்னர் மீண்டும் முயற்சிக்கவும்</string>
+    <string name="chat_offer">சலுகை</string>
+    <string name="chat_buy_now">இப்போது வாங்கவும்</string>
+    <string name="chat_accepted">Accepted</string>
+    <string name="chat_declined">மறுக்கப்பட்டது</string>
+    <string name="chat_requested_an_offer">சலுகை கோரியது</string>
+    <string name="chat_offer_accepted">சலுகை ஏற்றுக்கொள்ளப்பட்டது</string>
+    <string name="chat_offer_declined">சலுகை மறுக்கப்பட்டது</string>
+    <string name="chat_expired">காலாவதியான</string>
+    <plurals name="chat_expires">
+        <item quantity="one">%d மணி நேரத்தில் காலாவதியாகிறது</item>
+        <item quantity="other">%d மணி நேரத்தில் காலாவதியாகிறது</item>
+    </plurals>
+
+    <!--endregion-->
+
+    <!--region HOME SCREEN-->
+    <string name="home_Home">முகப்பு</string>
+    <string name="home_social_feed">டிரெண்டிங்</string>
+    <string name="home_chats">சாட்</string>
+    <string name="home_more">மேலும்</string>
+    <string name="home_sell">விற்க</string>
+    <string name="home_donate">நன்கொடை</string>
+    <string name="home_rent">Rent</string>
+    <string name="home_view_all">அனைத்தும்</string>
+    <string name="home_follow">பின்பற்றவும்</string>
+    <!--endregion-->
+
+    <!--region MORE SCREEN-->
+    <string name="more_exit_from">Exit from&#160;</string>
+    <string name="more_welcome">வரவேற்பு!</string>
+    <string name="more_my_orders">எனது ஆர்டர்கள்</string>
+    <string name="more_my_wish_list">என் விருப்பப்பட்டியல்</string>
+    <string name="more_my_store">என் கடை</string>
+    <string name="my_groups">My Groups</string>
+    <string name="more_my_cart">எனது ஷாப்பிங் பட்டியல்</string>
+    <string name="more_my_sales">எனது விற்பனை</string>
+    <string name="more_payments">பெமென்ட்</string>
+    <string name="more_language">மொழி</string>
+    <string name="more_settings">அமைப்புகள்</string>
+    <string name="more_faq">கேட்கப்படும் கேள்விகள்</string>
+    <string name="more_tell_a_friend">நண்பர்களிடம் சொல்லுங்கள்</string>
+    <string name="uploading_profile">சுயவிவரப் படத்தைப் பதிவேற்று</string>
+    <string name="more_terms_condition">விதிமுறைகள் மற்றும் நிபந்தனை</string>
+    <string name="more_privacy_policy">தனியுரிமைக் கொள்கை</string>
+    <string name="more_feedback">கருத்து</string>
+    <string name="more_signin_signup">உள்நுழையவும்/பதிவு செய்யவும்</string>
+    <string name="more_stores_i_follow">நான் பின்பற்றும் கடைகள்</string>
+    <string name="more_stored_i_blocked">நான் தடுத்த கடைகள்</string>
+    <string name="more_upgrade">மேம்படுத்தல்</string>
+    <string name="more_pro_account">கணக்கு</string>
+    <string name="more_upgrade_desc">திறக்கவும் மேலும் பல அம்சங்களைப் பயன்படுத்திக் கொள்ளவும்</string>
+    <string name="more_are_you_sure_change_tenant_id">Are you sure? Do you want to change tenant</string> <!--NT-->
+    <!--endregion-->
+
+    <!--region SETTINGS SCREEN-->
+    <string name="settings_header_title">அமைப்புகள்</string>
+    <string name="settings_email">மின்னஞ்சல்</string>
+    <string name="settings_fullname">முழு பெயர்</string>
+    <string name="settings_mobile">கைபேசி எண்</string>
+    <string name="settings_location">இடம்</string>
+    <string name="settings_welcome">வரவேற்பு!</string>
+    <string name="settings_language">மொழி</string>
+    <string name="settings_store">கடை</string>
+    <string name="settings_theme">தீம்</string>
+    <string name="settings_logout">வெளியேறு</string>
+    <string name="settings_app_settings">பயன்பாட்டு அமைப்புகள்</string>
+    <string name="settings_eg_email">eg.tradly.com</string>
+    <string name="settings_add_store">கடை சேர்க்கவும்</string>
+    <string name="settings_others">மற்றவைகள்</string>
+    <string name="settings_signin_signup">உள்நுழையவும்/பதிவு செய்யவும்</string>
+    <string name="settings_something_while_logging_out">வெளியேறும் போது ஏதோ தவறு ஏற்பட்டது. தயவுசெய்து பிறகு முயற்சிக்கவும்</string> <!--NT-->
+    <string name="settings_version">பதிப்பு&#160;</string>
+    <string name="settings_are_you_sure_logout">நீ சொல்வது உறுதியா. நீங்கள் வெளியேற வேண்டுமா?</string>
+    <string name="settings_profile_pic_updated_message">சுயவிவரப் படம் புதுப்பிக்கப்பட்டது</string>
+    <string name="settings_cant_upload_profile">தற்போது சுயவிவரத்தை பதிவேற்ற முடியாது, பிறகு முயற்சிக்கவும் </string>
+    <!--endregion-->
+
+    <!--region STORE DETAIL-->
+    <string name="storedetail_location">இடம்</string>
+    <string name="storedetail_listings">பட்டியல்கள்</string>
+    <string name="storedetail_store_not_available">கடை கிடைக்கவில்லை</string>
+    <string name="storedetail_header_title">ஸ்டோர் விவரம்</string>
+    <string name="storedetail_block">தடு</string>
+    <string name="storedetail_unblock">தடைநீக்கு</string>
+    <string name="storedetail_description">விளக்கம்</string>
+    <string name="storedetail_cannot_block_store">ஸ்டோரைத் தடுக்க முடியவில்லை. பிறகு முயற்சிக்கவும்</string>
+    <string name="storedetail_view_location">இருப்பிடத்தைக் காண்க</string>
+    <string name="storedetail_no_details_found">விவரங்கள் இல்லை</string>
+    <string name="storedetail_link_copied">இணைப்பு நகலெடுக்கப்பட்டது</string>
+    <string name="storedetail_active_inactive_your_store">கடையை %s விரும்புகிறீர்களா?</string>
+    <string name="storedetail_active_info">நீங்கள் உறுதியாக இருக்கிறீர்களா, உங்கள் கடையை தற்காலிகமாக %s விரும்புகிறீர்கள்!</string>
+    <string name="storedetail_set_days_time">Set Days &amp; Time</string>
+    <string name="storedetail_active">செயல்படுத்தவும்</string>
+    <string name="storedetail_activated">செயல்படுத்தப்பட்டது</string>
+    <string name="storedetail_inactive">செயலிழக்கச் செய்</string>
+    <string name="storedetail_inactivated">செயலிழக்கப்பட்டது</string>
+    <string name="storedetail_total_followers">மொத்த பின்பற்றுபவர்கள்</string>
+    <string name="storedetail_details">விவரங்கள்</string>
+    <string name="storedetail_about">பற்றி</string>
+    <string name="storedetail_total_products">மொத்த தயாரிப்புகள்</string>
+    <string name="storedetail_business_register_document">வணிக பதிவு ஆவணம்</string>
+    <string name="storedetail_upload_doc_limit_5mb">பதிவேற்ற கோப்பு ஆவண வரம்பு 5 எம்பி</string>
+    <string name="storedetail_store_currently_unavailable">இந்த கடை தற்போது கிடைக்கவில்லை</string>
+    <string name="storedetail_account_activated_successfully">உங்கள் கணக்கு %s வெற்றிகரமாக உள்ளது</string>
+    <string name="storedetail_alert_message_account_activate">உங்கள் கணக்கின் %s போது ஏதோ தவறாகிவிட்டது. பிறகு முயற்சிக்கவும்</string> <!--NT-->
+    <string name="storedetail_alert_message_store_rejected">தரமான காரணங்களால் உங்கள் கணக்கு நிராகரிக்கப்பட்டது. தயவுசெய்து உங்கள் கணக்கு விவரங்களைப் புதுப்பிக்கவும்.</string> <!--NT-->
+    <string name="storedetail_alert_message_store_waiting_for_approval">உங்கள் கணக்கு இன்னும் அங்கீகரிக்கப்படவில்லை. உங்கள் கணக்கு தொடர நிர்வாகி ஒப்புதல் அளிக்கும் வரை தயவுசெய்து காத்திருங்கள்.</string> <!--NT-->
+
+    <!--endregion-->
+
+    <!--region MY SALES-->
+    <string name="sales_transactions">பரிவர்த்தனைகள்</string>
+    <string name="sales_payouts">செலுத்துதல்</string>
+    <string name="sales_your_balance">உங்கள் இருப்பு</string>
+    <string name="sales_balance">இருப்பு</string>
+    <string name="sales_no_transaction">%S இல்லை</string>
+    <string name="sales_all_payouts">அனைத்து கொடுப்பனவுகளும்</string>
+    <string name="sales_see_payouts">செலுத்துதல் பார்க்கவும்</string>
+    <!--endregion-->
+
+    <!--region PAYOUTS-->
+    <string name="payouts_header_title">பணம் செலுத்துதலை உள்ளமைக்கவும்</string>
+    <string name="payments_setup_payout">பேமெண்ட்களைப் பெற \ n பேமெண்ட்களை அமைக்கவும்</string>
+    <string name="payments_connect_with_stripe">Connect with Stripe</string>
+    <string name="payments_stripe_connected">Stripe Connected</string>
+    <string name="payments_disconnect_stripe">Disconnect from Stripe</string>
+    <string name="payments_disconnect_stripe_warning">Are you sure you want to disconnect Stripe?</string>
+    <string name="payments_disconnect_stripe_info">Once you disconnect stripe from the below, you will not be able to see past payout history in app</string>
+    <string name="payments_redirected_to_stripe">You’ll be redirected to Stripe</string>
+    <string name="payment_set_up_info_link">In order to receive payments, follow this <a href="https://connect.stripe.com/register">link</a> to set-up or login to your Stripe Connect account, then come back to this page to authenticate</string>
+
+    <string name="payments_stripe_config_screen_connect_message_standard_fallback">In order to receive payments, click the below button to set-up or login into your Stripe Connect account. Once you finish the account linkage, you will be redirected to this page.</string>
+    <string name="payments_stripe_express_connect_message">Every user who creates a store has a Stripe Connect account automatically created under their email address. Click the below button to complete your account, so you can receive payments to the bank account of your choice!</string>
+    <string name="payments_stripe_config_screen_disconnect_message_standard_fallback">if you disconnect the account, you will no longer able to receive payments for future orders unless you connect stripe again.</string>
+    <string name="payments_stripe_config_screen_disconnect_message_express_fallback">if you delete the account, you will no longer able to receive payments for future orders unless you connect stripe again.</string>
+
+    <string name="payments_stripe_status_waiting_message">Waiting for stripe verification</string>
+    <string name="payments_stripe_status_connect">Connect to stripe payout to receive payments</string>
+    <string name="payments_stripe_status_verification_failed">Stripe verification failed</string>
+    <string name="payments_stripe_status_connection_success">Stripe verification success</string>
+    <string name="payments_view_dashboard">View Dashboard</string>
+
+    <string name="payments_stripe_express_connect_waiting">Your Stripe connect profile is under verification from Stripe.  If you want to change the information, view the dashboard to change.</string>
+    <string name="payments_stripe_express_connect_failed1">Verification failed due to&#160;</string>
+    <string name="payments_stripe_express_connect_failed2">&#160;Go to your dashboard and update the relevant details.</string>
+    <string name="payments_stripe_express_connect_success">Congratulations, your Stripe account has been connected successfully. Now you can receive payments to the bank account of your choice!</string>
+
+    <string name="payments_stripe_connect_error_msg">Something went wrong while configure Stripe. Try again later</string>
+    <string name="payments_stripe_disconnect_error_msg">Something went wrong while disconnecting Stripe. Try again later</string>
+    <string name="payments_stripe_disconnected_success">Stripe Disconnected Successfully</string>
+
+    <string name="payments_init_failed">Something went wrong while initiate %s. Try again later</string>
+    <string name="payments_failed">Payment failed. Try again later</string>
+    <string name="payments_alert_message_stripe_status_failed">Something went wrong, couldn\'t able to fetch Stripe details. Try again later</string> <!--NT-->
+
+    <!--endregion-->
+
+    <!--region MY ORDER LIST SCREEN-->
+    <string name="myorders_my_store_orders">என் ஸ்டோர் ஆர்டர்கள்</string>
+    <string name="myorders_all">அனைத்து</string>
+    <string name="myorders_week">வாரம்</string>
+    <string name="myorders_month">மாதம்</string>
+    <string name="myorders_year">ஆண்டு</string>
+    <string name="myorders.orders">ஆர்டர்கள்</string>
+    <string name="myorders_filter_by">வடிகட்டவும்:</string>
+    <string name="myorders_filter_by_cancelled_order">ரத்து செய்யப்பட்ட ஆர்டர்</string>
+    <string name="myorders_filter_by_order_delivered">ஆர்டர் வழங்கப்பட்டது</string>
+    <string name="myorders_filter_by_order_in_progress">ஆர்டர் நடந்து கொண்டிருக்கிறது</string>
+    <string name="myorders_filter_by_shipped">அனுப்பப்பட்டது</string>
+    <string name="myorders_no_orders_found">ஆர்டர்கள் இல்லை</string>
+    <string name="myorders_my_orders">என் ஆர்டர்கள்</string>
+    <!--endregion-->
+
+    <!--region ORDER DETAIL-->
+    <string name="orderdetail_change">மாற்றம்</string>
+    <string name="orderdetail_pickup_address">பிக்அப் முகவரி</string>
+    <string name="orderdetail_chat">சாட்</string>
+    <string name="orderdetail_order_detail">ஆர்டர் விவரம்</string>
+    <string name="orderdetail_review_all_product">அனைத்து தயாரிப்புகளையும் மதிப்பாய்வு செய்யவும்</string>
+    <string name="orderdetail_track_order">டிராக் ஆர்டர்</string>
+    <string name="orderdetail_amount">தொகை: </string>
+    <string name="orderdetail_order_id">ஆர்டர் அடையாளம் -&#160; </string>
+    <string name="_order_id">#ஆர்டர் அடையாளம்: %s</string>
+    <string name="orderdetail_delivery_address">விநியோக முகவரி</string>
+    <string name="orderdetail_address">முகவரி: </string>
+    <string name="orderdetail_name">பெயர்:</string>
+    <string name="orderdetail_mobile">கைபேசி: </string>
+    <string name="orderdetail_change_status">நிலையை மாற்றவும்</string>
+    <string name="orderdetail_review_product">தயாரிப்பு மதிப்பாய்வு</string>
+    <string name="orderdetail_units">அலகுகள்:</string>
+    <string name="orderdetail_select_status">நிலையை தேர்ந்தெடுக்கவும்</string>
+    <string name="orderdetail_order_cancelled">ஆர்டர் ரத்து செய்யப்பட்டது</string>
+    <string name="orderdetail_no_orders_found"> ஆர்டர் இல்லை</string>
+    <!--Buyer status-->
+    <string name="orderdetail_order_in_progress">ஆர்டர் நடந்து கொண்டிருக்கிறது</string>
+    <string name="orderdetail_return_initiated">திரும்பத் தொடங்கப்பட்டது</string>
+    <string name="orderdetail_delivery_confirmed">டெலிவரி உறுதி செய்யப்பட்டது</string>
+    <string name="orderdetail_out_for_delivery">வழங்கலுக்கு அனுப்பப்பட்டது</string>
+    <string name="orderdetail_shipped">அனுப்பப்பட்டது</string>
+    <string name="orderdetail_order_status_incomplete">ஆர்டர் நிலை முழுமையடையாது</string>
+    <string name="orderdetail_order_placed">ஆர்டர் வழங்கப்பட்டது</string>
+    <string name="orderdetail_cancelled">ரத்து செய்யப்பட்டது</string>
+
+    <!--Seller status-->
+    <string name="orderdetail_undelivered_returned">வழங்கப்படவில்லை</string>
+    <string name="orderdetail_undelivered_return_confirmed">வழங்கப்படாத வருமானம் உறுதி செய்யப்பட்டது</string>
+    <string name="orderdetail_order_delivered">ஆர்டர் வழங்கப்பட்டது</string>
+    <string name="orderdetail_return_pickedup">திரும்பப் பெறப்பட்டது</string>
+    <string name="orderdetail_ready_for_pickup">எடுப்பதற்கு தயாராக உள்ளது</string>
+    <string name="orderdetail_unreachable">வாடிக்கையாளரை அணுக முடியவில்லை</string>
+    <string name="orderdetail_order_return_confirmed">ஆர்டர் திரும்ப உறுதி செய்யப்பட்டது</string>
+    <string name="orderdetail_order_return_disputed">ஆர்டர் திரும்பப் பெறுவது சர்ச்சைக்குரியது</string>
+    <!--endregion-->
+
+    <!--region EDIT PROFILE SCREEN-->
+    <string name="editprofile_email">மின்னஞ்சல்</string>
+    <string name="editprofile_mobile">கைபேசி எண்</string>
+    <string name="editprofile_first_name">முதல் பெயர்</string>
+    <string name="editprofile_last_name">கடைசி பெயர்</string>
+    <string name="editprofile_invalid_email">தவறான மின்னஞ்சல்</string>
+    <string name="editprofile_profile_updated_message">சுயவிவரம் வெற்றிகரமாகப் புதுப்பிக்கப்பட்டது</string>
+    <string name="editprofile_alert_message_select_country">Please select country</string>
+    <!--endregion-->
+
+    <!--region GROUP SCREEN-->
+    <string name="group">Groups</string>
+    <string name="group_invalid_email">Invalid Email</string>
+    <string name="group_required">Required</string>
+    <string name="group_location">Location</string>
+    <string name="group_join">Join</string>
+    <string name="group_add_your_group_photo">Add your Group photo</string>
+    <string name="group_you_have_not_following_groups">You haven\'t joined to any groups</string>
+    <string name="group_tap_to_join">Tap to Join</string>
+    <string name="group_header_title">Add Group</string>
+    <string name="group_type">Group Type</string>
+    <string name="group_name">Group Name</string>
+    <string name="group_about">About</string>
+    <string name="group_added_successfully">Group has been added successfully</string>
+    <string name="group_could_not_load_group">Couldn\'t able to load group.Try again</string>
+    <string name="group_could_not_add_group">Couldn\'t add group at a moment.Try again later</string>
+    <string name="group_add_tag_group">Add Tags to group</string>
+    <string name="group_joined">Joined</string>
+    <string name="group_select_cover_photo">Select Cover Photo</string>
+    <string name="group_add">Add Group</string>
+    <string name="group_select_type">Select Group Type</string>
+    <string name="group_following_count">%s Followers</string>
+    <string name="group_members">%s members</string>
+    <string name="group_information">Group Information</string>
+    <string name="group_members_data">Members(%s)</string>
+    <string name="market_place">Marketplace</string>
+    <string name="discussion">Discussions</string>
+    <string name="group_to_join">Groups to Join</string>
+    <string name="groups_no_available">No Groups available</string>
+    <!--endregion-->
+
+    <!--region CHAT DETAIL SCREEN-->
+    <string name="chatdetail_type_message">ஒரு செய்தியைத் டைப் செய்க</string>
+    <string name="chatdetail_send">அனுப்பு</string>
+    <string name="chatdetail_file">கோப்பு</string>
+    <string name="chatdetail_photo">படம்</string>
+    <string name="chatdetail_video">காணொளி</string>
+    <string name="chatdetail_audio">ஆடியோ</string>
+    <string name="chatdetail_product">தயாரிப்பு</string>
+    <string name="chatdetail_no_messages">செய்திகள் இல்லை</string>
+    <string name="chatdetail_offer_requested">நீங்கள் ஒரு வாய்ப்பைக் கோரியுள்ளீர்கள்</string>
+    <string name="chatdetail_accept">ஏற்றுக்கொள்</string>
+    <string name="chatdetail_decline">நிராகரிக்கவும்</string>
+    <string name="chatdetail_ratings">%s மதிப்பீடுகள்</string>
+    <string name="chatdetail_make_offer">சலுகை செய்</string>
+    <!--endregion-->
+
+    <!--region ADD STORE SCREEN-->
+    <string name="addstore_required">தேவை</string>
+    <string name="addstore_category">வகை</string>
+    <string name="addstore_address">முகவரி</string>
+    <string name="addstore_add_your_store_photo">உங்கள் ஸ்டோர் புகைப்படத்தைச் சேர்க்கவும்</string>
+    <string name="addstore_header_title">உங்கள் கடையை உருவாக்கவும்</string>
+    <string name="addstore_alert_message_choose_shipment">விருப்பமான ஏற்றுமதி</string>
+    <string name="addstore_use_comma_to_add_value"><font size="12">மதிப்புகளைச் சேர்க்க கமா பயன்படுத்தவும்</font></string>
+    <string name="addstore_store_name">கடையின் பெயர்</string>
+    <string name="addstore_store_web_address">ஸ்டோர் வலை முகவரி</string>
+    <string name="addstore_store_description">கடையின் விளக்கம்</string>
+    <string name="addstore_store_url">ஸ்டோர் URL</string>
+    <string name="addstore_alert_please_select_address">நாட்டைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="addstore_edit_store">ஸ்டோரைத் திருத்து</string>
+    <string name="addstore_select_cover_photo">உங்கள் தயாரிப்பு புகைப்படம் சேர்</string>
+    <string name="addstore_invalid_url">தவறான வலைதள முகவரி</string>
+    <string name="addstore_alert_message_store_link_alias">பெயர் ஏற்கனவே எடுத்துக்கொள்ளபட்டுவிட்டது</string> <!--NT-->
+    <string name="addstore_store_created_successfully">கடை வெற்றிகரமாக உருவாக்கப்பட்டது</string>
+    <string name="addstore_store_updated_successfully">கடை வெற்றிகரமாக புதுப்பிக்கப்பட்டது</string>
+    <!--endregion-->
+
+    <!--region MAP SCREEN-->
+    <string name="map_location">இடம்</string>
+    <string name="map_change">மாற்றம்</string>
+    <string name="map_select_location">இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <!--endregion-->
+
+    <!--region PRODUCT DETAIL SCREEN-->
+    <string name="product_location">இடம்</string>
+    <string name="product_follow">பின்பற்றவும்</string>
+    <string name="product_following">தொடர்ந்து</string>
+    <string name="product_add_to_cart">கார்ட்டில் சேர்</string>
+    <string name="product_adding_to_cart">கார்ட்க்கு சேல்</string>
+    <string name="product_chat">சாட்</string>
+    <string name="product_directions">திசைகள்</string>
+    <string name="product_go_to_cart">ஷாப்பிங் பட்டியல் செல்லவும்</string>
+    <string name="product_book_now">பதிவு</string>
+    <string name="product_no_reviews_found">விமர்சனங்கள் இல்லை</string>
+    <string name="product_description">விளக்கம்</string>
+    <string name="product_sold_out">விற்கப்பட்டது</string>
+    <string name="product_mark_as_sold">விற்றதாக குறித்துவை</string>
+    <string name="product_tags">டாக்ஸ்</string>
+    <string name="product_details">விவரங்கள்</string>
+    <string name="shipping_charge">விநியோக கட்டணம்</string>
+    <string name="product_select_variant">Select Variant</string>
+    <string name="product_edit">தொகு</string>
+    <string name="product_waiting_for_approval">ஒப்புதலுக்கு காத்திருக்கிறது</string>
+    <string name="product_rejected">நிராகரிக்கப்பட்டது</string>
+    <string name="product_delete">அழி</string>
+    <string name="product_error_alert_product_delete">ஒரு பொருளை ஒரு நொடியில் நீக்க முடியவில்லை. பிறகு முயற்சிக்கவும்</string>
+    <string name="product_delete_product">தயாரிப்பை நீக்கவும்</string>
+    <string name="product_alert_success_product_delete">தயாரிப்பு வெற்றிகரமாக நீக்கப்பட்டது</string>
+    <string name="product_alert_product_delete">நிச்சயமாக நீங்கள் இந்த தயாரிப்பை நீக்க விரும்புகிறீர்களா?</string>
+    <string name="product_combination_not_exist">This Combination doesn\'t exist</string>
+    <string name="product_added_successfully">தயாரிப்பு சேர்க்கப்பட்டது \ n வெற்றிகரமாக</string>
+    <string name="product_updated_successfully">தயாரிப்பு புதுப்பிக்கப்பட்டது \ n வெற்றிகரமாக</string>
+    <string name="product_go_to_store">கடைக்குச் செல்லவும்</string>
+    <string name="product_clear_cart">ஷாப்பிங் பட்டியல் அழி</string>
+    <string name="product_alert_message_cart_clear_failed">இந்த நேரத்தில் ஷாப்பிங் பட்டியல் அழிக்க முடியவில்லை. மீண்டும் முயற்சி செய்</string>
+    <string name="product_clear_cart_info">உங்கள் ஷாப்பிங் பட்டியல் மற்றொரு விற்பனையாளரிடமிருந்து பொருட்கள் உள்ளன. உங்கள் ஷாப்பிங் பட்டியல் அழித்து இந்த உருப்படியை சேர்க்க வேண்டுமா?</string>
+    <string name="product_choose_category">நிலை தேர்ந்தெடுக்கவும்</string>
+    <string name="product_buy_now">இப்போது வாங்கவும்</string>
+    <string name="product_negotiate">சொல்லாடல்</string>
+    <string name="product_negotiated">பேச்சுவார்த்தை நடத்தியது</string>
+    <string name="product_share">பகிர்</string>
+    <string name="product_whatsapp">WhatsApp</string>
+    <string name="product_copy_link">இணைப்பை நகலெடுக்கவும்</string>
+    <string name="product_link_copied">இணைப்பு நகலெடுக்கப்பட்டது</string>
+    <string name="product_similar_product_title">நீங்கள் இதை விரும்பலாம்</string>
+    <!--endregion-->
+
+    <!--region ADD PRODUCT -->
+    <string name="makeoffer_enter_amount">தொகையை உள்ளிடவும்</string>
+    <string name="makeoffer_alert_less_amount">பேச்சுவார்த்தை விலை தயாரிப்பு விலையை விட குறைவாக இருக்கக்கூடாது %s%s</string>
+    <!--endregion-->
+
+    <!--region ADD PRODUCT -->
+    <string name="addproduct_product_title">தயாரிப்பு தலைப்பு</string>
+    <string name="addproduct_header_title">தயாரிப்பு விவரங்கள்</string>
+    <string name="addproduct_price">விலை</string>
+    <string name="addproduct_location">இடம்</string>
+    <string name="addproduct_category">வகை</string>
+    <string name="addproduct_min_price_error">விலை குறைந்தது %s ஆக இருக்க வேண்டும்</string>
+    <string name="addproduct_alert_image_select_add_product">குறைந்தது 1 தயாரிப்பு படத்தை தேர்ந்தெடுக்கவும்</string>
+    <string name="addproduct_alert_message_add_product_failed">ஒரு நேரத்தில் தயாரிப்பைச் சேர்க்க முடியவில்லை. பிறகு முயற்சிக்கவும்</string>
+    <string name="addproduct_upload_image">படத்தை பதிவேற்றுகிறது&#8230;</string>
+    <string name="addproduct_upload_listing">பதிவேற்ற பதிவேற்றம்&#8230;</string>
+    <string name="addproduct_sub_category">துணை வகை</string>
+    <string name="addproduct_description">விளக்கம்</string>
+    <string name="addproduct_address">முகவரி</string>
+    <string name="addproduct_add_product">தயாரிப்பைச் சேர்க்கவும்</string>
+    <string name="addproduct_max_qty">அதிகபட்ச அளவு</string>
+    <string name="addproduct_price_offer">விலை சலுகை (சதவீதத்தில்)</string>
+    <string name="addproduct_add_products">தயாரிப்புகளைச் சேர்க்கவும்</string>
+    <string name="addproduct_save">சேமி</string>
+    <string name="addproduct_go_to_myorders">எனது ஆர்டர்க்குச் செல்லவும்</string>
+    <string name="addproduct_go_to_home">முகப்பு போ</string>
+    <string name="addproduct_your_product">உங்கள் தயாரிப்பை டேக் செய்யவும் (விரும்பினால்)</string>
+    <string name="addproduct_alert_message_max_atleast_one">அதிகபட்ச அளவு பூஜ்ஜியத்தை விட அதிகமாக இருக்க வேண்டும்</string>
+    <string name="addproduct_stock">பங்கு</string>
+    <string name="addproduct_ticket">டிக்கெட்</string>
+    <string name="addproduct_required">தேவை</string>
+    <string name="addproduct_alert_message_upload_file_failed">தற்போது கோப்பை பதிவேற்ற முடியாது</string>
+    <string name="addproduct_alert_no_subscription">தயாரிப்புகளைச் சேர்க்க உங்களுக்கு அனுமதி இல்லை, மேலும் விவரங்களுக்கு தயவுசெய்து உங்கள் மின்னஞ்சலைப் பார்க்கவும்</string>
+    <!--endregion-->
+
+    <!--region FEEDBACK SCREEN-->
+    <string name="feedback_location">இடம்</string>
+    <string name="feedback_header_title">பின்னூட்டம்</string>
+    <string name="feedback_reaction_title">எங்கள் பயன்பாட்டைப் பற்றி நீங்கள் என்ன நினைக்கிறீர்கள்</string>
+    <string name="feedback_title">எங்களுடன் எதைப் பகிர்ந்து கொள்ள விரும்புகிறீர்கள்?</string>
+    <string name="feedback_contactInfo_title"> மேலும் உள்ளீட்டிற்கு நாங்கள் உங்களைத் தொடர்பு கொள்ளலாமா?</string>
+    <string name="feedback_tell_us_about_it">அதைப் பற்றி எங்களிடம் கூறுங்கள்</string>
+    <string name="feedback_email_mobileNo">மின்னஞ்சல் அல்லது தொலைபேசி எண்</string>
+    <string name="feedback_email">மின்னஞ்சல்</string>
+    <string name="feedback_mobileno">தொலைபேசி எண்</string>
+    <string name="feedback_additional_information">கூடுதல் தகவல்</string>
+    <string name="feedback_attachment">இணைப்பு</string>
+    <string name="feedback_attachments">இணைப்பு(%s)</string>
+    <string name="feedback_sending_feedback">கருத்துக்களை அனுப்புகிறது</string>
+    <string name="feedback_max_attachment_message">4 க்கும் மேற்பட்ட கோப்புகளைத் தேர்ந்தெடுக்க முடியாது</string>
+    <string name="feedback_sent_successfully">கருத்து வெற்றிகரமாக அனுப்பப்பட்டது</string>
+    <string name="feedback_upload_attachment">இணைப்பைப் பதிவேற்றுகிறது</string>
+    <string name="feedback_alert_message_feedback_failed">கருத்து அனுப்பும் போது ஏதோ தவறு ஏற்பட்டது</string>
+    <!--endregion-->
+
+    <!-- region GENERAL-->
+    <string name="general" translatable="false">General</string>
+    <string name="empty"></string>
+    <string name="gallery">கேலரி</string>
+    <string name="camera">புகைப்பட கருவி</string>
+    <string name="document">ஆவணம்</string>
+    <string name="share">பகிர்</string>
+    <string name="done">முடிந்தது</string>
+    <string name="save">சேமி</string>
+    <string name="off_data">%s%% சலுகை</string>
+    <string name="media_failed_msg">தற்போது கோப்பை பதிவேற்ற முடியாது</string>
+    <string name="app_permission_gallery">வெளிப்புற சேமிப்பகத்தை அணுக பயன்பாட்டிற்கு அனுமதி தேவை</string>
+    <string name="app_permission_camera">படத்தைப் பிடிக்க பயன்பாட்டிற்கு கேமரா அனுமதி தேவை</string>
+    <string name="app_need_location_permission">இருப்பிடத்தை அணுக பயன்பாட்டிற்கு அனுமதி தேவை</string>
+    <string name="update_tradly">பயன்பாட்டைப் புதுப்பிக்கவும்</string>
+    <string name="powered_by_tradly_platform">Powered by \n <b>Tradly Platform</b></string>
+    <string name="update">புதுப்பி</string>
+    <string name="add_photo">புகைப்படம் சேர்க்க</string>
+    <string name="take_photo">புகைப்படம் எடுங்கள்</string>
+    <string name="select_from_gellery">கேலரியில் இருந்து தேர்ந்தெடுக்கவும்</string>
+    <string name="check_data_connection">உங்கள் தரவு இணைப்பைச் சரிபார்க்கவும் அல்லது உங்கள் இணைப்பு மெதுவாக இருக்கலாம். மீண்டும் முயற்சி செய்.</string>
+    <string name="dial_code_country">(+%s) %s</string>
+    <string name="dialCodeConcat">+%s</string>
+    <string name="logging_in">உள்நுழைக&#8230;</string>
+    <string name="logging_out">வெளியேறுகிறது&#8230;</string>
+    <string name="please_wait">காத்திருக்கவும்&#8230;</string>
+    <string name="no_internet">இன்டர்நெட் இல்லை</string>
+    <string name="authFailed">அங்கீகரிப்பு தோல்வியுற்றது</string>
+    <string name="choose">தேர்வு செய்யவும்&#160;</string>
+    <string name="currency">நாணய</string>
+    <string name="two_data">%s%s</string>
+    <string name="invalid_no">தவறான எண்</string>
+    <string name="invalid_price">தவறான விலை</string>
+    <string name="edit_photo">புகைப்படத்தைத் திருத்தவும்</string>
+    <string name="edit_profile">சுயவிவரத்தைத் திருத்து</string>
+    <string name="available">கிடைக்கும் %s</string>
+    <string name="two_data_seperator">%s,%s</string>
+    <string name="hast_tag">#%s</string>
+    <string name="timeout_message">நெட்வொர்க்குடன் இணைக்க முடியவில்லை, மீண்டும் முயற்சிக்கவும்.</string><!--NT-->
+    <string name="browser_not_found">உங்கள் சாதனத்தில் உலாவி பயன்பாடு இல்லை.</string><!--NT-->
+    <string name="app_not_found">திறக்க உங்கள் சாதனத்தில் தேர்ந்தெடுக்கப்பட்ட பயன்பாடு இல்லை.</string>
+    <string name="camera_app_not_found" translatable="false">Your device does not have a camera app to open.</string>
+    <string name="chosen_app_not_found" translatable="false">Your device does not have a %s app to open.</string>
+    <string name="playstore" translatable="false">PlayStore</string>
+    <string name="google_map" translatable="false">Google Map</string>
+    <string name="near_by_store_title">அருகிலுள்ள கடைகளைக் கண்டறியவும்</string>
+    <string name="rate_our_app">பயன்பாட்டை மதிப்பிடுங்கள்</string><!--NT-->
+    <string name="support">ஆதரவு</string>
+    <string name="cancel">ரத்து</string>
+    <string name="from">இருந்து</string><!--NT-->
+    <string name="to">To</string><!--NT-->
+    <string name="install_now">நிறுவு</string>
+    <string name="required">தேவை</string>
+    <string name="app_migration_message">We have made tremendous improvement to our TradlySocial App. Promosing a new feature every month from now. This app will be unavailable from play store from 1st September, 2020.  To avail this, download the new app </string>
+    <string name="date_month_placeholder">dd/mm/yy - hh:mm</string> <!--NT-->
+    <string name="near_by_store_desc">உங்கள் சமூகத்திலிருந்து அருகிலுள்ள கடைகளைக் கண்டறிய உங்கள் இருப்பிடத்தைப் பகிரவும். நீங்கள் பயன்பாட்டைப் பயன்படுத்தும் போது மட்டுமே நாங்கள் உங்கள் இருப்பிடத்தைப் பயன்படுத்துகிறோம்.</string>
+    <string name="something_went_wrong">ஏதோ தவறாகிவிட்டது. பிறகு முயற்சிக்கவும்</string>
+    <string name="no_internet_warning_message">உங்கள் இணைய இணைப்பு முடக்கப்பட்டிருப்பது போல் தெரிகிறது. தயவுசெய்து அதை இயக்கவும் மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="version_update_msg">எங்கள் பயன்பாடு சிறப்பாக உள்ளது. சமீபத்திய மேம்பாடுகள் மற்றும் அம்சங்களை அனுபவிக்க இப்போது பயன்பாட்டைப் புதுப்பிக்கவும்.</string>
+    <string name="placeholder_two_with_hyphen">%s - %s</string>
+    <!--endregion-->
+
+    <!--region TAG SCREEN-->
+    <string name="tag_header_title">குறிச்சொற்களைச் சேர்க்கவும்</string>
+    <string name="tag_use_comma_to_add_tag"><font size="12">குறிச்சொல்லைச் சேர்க்க காற்புள்ளிகளைப் பயன்படுத்தவும்</font></string>
+    <!--endregion-->
+
+    <!--region REVIEW SCREEN-->
+    <string name="review_read_all_reviews">அனைத்து விமர்சனங்களையும் படிக்கவும்</string>
+    <string name="product_all_reviews">அனைத்து விமர்சனங்களும்</string>
+    <string name="review_rating_count">%s மதிப்பீடுகள்</string>
+    <string name="review_reviews_count">%s விமர்சனங்கள்</string>
+    <string name="review_helpful">உதவிகரமான</string>
+    <string name="addreview_what_you_rate">நீங்கள் எதை மதிப்பிடுகிறீர்கள்?</string>
+    <string name="addreview_share_opinion">தயவுசெய்து உங்கள் கருத்தை \ n தயாரிப்பு பற்றி பகிர்ந்து கொள்ளுங்கள்t</string>
+    <string name="addreview_write_your_review_note">உங்கள் நன்றி குறிப்பை எழுதுங்கள்&#8230;</string>
+    <string name="addreview_send_review">மதிப்பாய்வு அனுப்பு</string>
+    <string name="addreview_review_success_message">மதிப்பாய்வு வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது</string>
+    <string name="addreview_review_error_message">மதிப்பாய்வை சமர்ப்பிக்கும் போது ஏதோ தவறு ஏற்பட்டது. பிறகு முயற்சிக்கவும்</string>
+    <string name="addreview_please_provide_rating">தயவுசெய்து மதிப்பீட்டைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="addreview_opinion_one">சிறந்த சேவை</string>
+    <string name="addreview_opinion_two">சிறந்த தயாரிப்பு</string>
+    <string name="addreview_opinion_three">நல்ல பேக்கேஜிங்</string>
+    <string name="addreview_opinion_four">உடனடி பதில்</string>
+    <string name="review_rate_this_store">இந்த கடையை மதிப்பிடுங்கள்</string>
+    <string name="review_write_review">ஒரு விமர்சனம் எழுத</string>
+    <string name="review_with_photo">புகைப்படத்துடன்</string>
+    <string name="review_tell_others_think">நீங்கள் என்ன நினைக்கிறீர்கள் என்று மற்றவர்களிடம் சொல்லுங்கள்</string>
+    <!--endregion-->
+
+    <!--regionPREFERENCE SCREEN-->
+    <string name="preference_open_shop">திறந்த கடை</string>
+    <string name="preference_buy_item">பொருட்களை வாங்குங்கள்</string>
+    <string name="preference_what_your_preference">What your Preference?</string>
+    <!--endregion-->
+
+    <!--region LANGUAGE SCREEN-->
+    <string name="language_select">மொழியை தேர்ந்தெடுங்கள்</string>
+    <string name="language_choose">உங்கள் மொழியை தேர்வு செய்யவும்</string>
+    <string name="language_alert_message_choose_your_language">தயவுசெய்து உங்கள் மொழியை தேர்வு செய்யவும்</string> <!--NT-->
+    <!--endregion-->
+
+    <!-- region INVITE SCREEN-->
+    <string name="invite_tradly">நண்பர்களை அழைக்கவும் %s</string>
+    <string name="invite_friends">வாங்கவும் விற்கவும் உங்கள் நண்பர்களை அழைக்கவும்</string>
+    <string name="invite_your_friends_products">பொருட்களை வாங்கவும் விற்கவும் உங்கள் நண்பர்களை அழைக்கவும் %s</string>
+    <string name="invite_now">இப்போது அழைக்கவும்</string>
+    <!--endregion-->
+
+    <!--region DEEPLINK-->
+    <string name="link_listing_desc">Check out this listing on %s.Buy, Sell, Chat to get what you wanted. </string>
+    <string name="link_store_desc">Check out this shop on %s.Buy, Sell, Chat to get what you wanted.</string>
+    <!--endregion-->
+
+    <!--region APP STATIC URL-->
+    <string name="google_play_url">https://play.google.com/store/apps/details?id=%s</string>
+    <!--endregion-->
+
+    <string name="sales">விற்பனை</string>
+    <string name="sales_cancelled">விற்பனை ரத்து செய்யப்பட்டது</string>
+    <string name="commision_created">கமிஷன் உருவாக்கப்பட்டது</string>
+    <string name="commision_canceled">கமிஷன் ரத்து செய்யப்பட்டது</string>
+    <string name="transfer_created">இடமாற்றம் உருவாக்கப்பட்டது</string>
+    <string name="transfer_canceled">இடமாற்றம் ரத்து செய்யப்பட்டது</string>
+    <string name="payout_sent">பணம் அனுப்பப்பட்டது</string>
+    <string name="subscription_fee">சந்தா கட்டணம்</string>
+    <string name="processing_fee">செயலாக்க கட்டணம்</string>
+    <string name="processing_fee_canceled">செயலாக்க கட்டணம் ரத்து செய்யப்பட்டது</string>
+
+    <!-- subscription-->
+    <string name="purchases">கொள்முதல்</string>
+    <string name="important_message">முக்கியமான செய்தி</string>
+    <string name="membership_management_not_supported">இந்த பயன்பாட்டில் உறுப்பினர் மேலாண்மை ஆதரிக்கப்படவில்லை</string>
+    <string name="membership_since">அங்கிருந்து உறுப்பினர்:</string>
+    <string name="membership">உறுப்பினர்:</string>
+    <string name="appname_subscription">%s சந்தா</string>
+    <string name="membership_subscription">உறுப்பினர்: %s சந்தா</string>
+    <string name="billing_status">பில்லிங் நிலை</string>
+    <string name="billing_charging_date"> %s, நீங்கள் ஒரு மாதத்திற்கு கட்டணம் வசூலிப்பீர்கள் %s</string>
+    <string name="subscription_mail_sent">அஞ்சல் வெற்றிகரமாக அனுப்பப்பட்டது</string>
+    <string name="subscription_allow_listings_exhausted_message">நீங்கள் அதிகபட்ச எண்ணிக்கையிலான பட்டியல்களை அடைந்துவிட்டீர்கள்.</string>
+    <string name="subscription_already_purchased_message">நீங்கள் ஏற்கனவே பல்வேறு திட்டங்களைச் சந்தா செய்துள்ளீர்கள். தயவுசெய்து தற்போதைய திட்டத்தை குழுவிலகவும்</string>
+    <string name="upgrade_now">இப்போது மேம்படுத்தவும்</string>
+    <string name="okay">சரி</string>
+
+    <!-- Add Event -->
+    <string name="add_event_form_title">Event Details</string>
+    <string name="add_event_fab_title">Add Event</string>
+
+    <!-- Event Bookings-->
+    <string name="event_explore">Explore</string>
+    <string name="event_confirm_bookings_direction">Directions</string>
+    <string name="event_confirm_bookings_number_of_tickets">Number of Tickets</string>
+    <string name="event_confirm_bookings_total">Total</string>
+    <string name="event_confirm_booking_title">Confirm Booking</string>
+    <string name="confirm_booking_cancel_booking">Cancel Booking</string>
+    <string name="event_confirm_booking_confirm_booking">Confirm Boooking</string>
+
+    <!-- Event Time Create -->
+    <string name="add_event_time_title">Event Date &amp; Timing</string>
+    <string name="add_event_time_button_title">Add</string>
+    <string name="add_event_time_save">Save</string>
+    <string name="add_event_time_set">Set</string>
+    <string name="add_event_time_selected_hint">Selected Date and time</string>
+
+    <!-- Add Variant -->
+    <string name="add_variant_title">Variant</string>
+    <string name="add_variant_button_title">Add Variant</string>
+    <string name="add_variant_variants_size">%s Variants</string>
+    <string name="add_variant_add_image">Add Images</string>
+
+    <!--Event Details -->
+    <string name="event_detail_tickets_left">%s Tickets left</string>
+
+    <!--Event Explore -->
+    <string name="event_explore_no_events_found">No Events found. Please use search to explore</string>
+    <string name="event_explore_no_events_found_dismiss">Dismiss</string>
+
+
+
+    <string name="alert_message_cancel_order_failed">Something went wrong While cancelling order, Try again later</string>
+    <string name="alert_message_order_cancelled_successfully">Order Cancelled Successfully</string>
+
+
+    <string name="event_set_time_title">Set Time</string>
+    <string name="event_set_time_colon">&#58;</string>
+    <string name="event_set_time_AM">AM</string>
+    <string name="event_set_time_PM">PM</string>
+    <string name="event_set_time_from">From</string>
+    <string name="event_set_time_to">To</string>
+    <string name="event_set_time_hours">Hour</string>
+    <string name="event_set_time_minute">Minute</string>
+    <string name="add_event_title">Title</string>
+    <string name="add_event_description">Description</string>
+    <string name="add_event_price">Price</string>
+    <string name="add_event_offer">Offer</string>
+    <string name="add_event_ticket_limit">Tickets Limit</string>
+    <string name="add_event_save_changes">Save Changes</string>
+    <string name="add_event_event_details">Event Details</string>
+
+    <string name="add_variant_variant_type">Variant Type</string>
+    <string name="add_variant_selected_variant">Selected Variant</string>
+    <string name="add_variant_enter_event_title_error">Please enter Variant Title</string>
+    <string name="add_variant_enter_event_description_error">Please enter Variant description</string>
+    <string name="add_variant_enter_event_price_error">Price should be greater than 0</string>
+    <string name="add_variant_select_variant">Please Add Variant</string>
+    <string name="add_variant_enter_event_price_empty_error">Please enter price</string>
+    <string name="add_variant_enter_event_offer_invalid_error">Please enter valid offer</string>
+    <string name="add_variant_enter_event_image_empty_error">Please add atleast one image</string>
+    <string name="add_variant_save">Save</string>
+    <string name="add_variant_variant_details">Variant Details</string>
+
+    <string name="add_time_title">Event Timing</string>
+
+    <string name="explore_event_today">Today</string>
+    <string name="exlpore_event_search">Search here</string>
+    <string name="explore_event_filters">பில்டர்</string>
+    <string name="explore_event_view_by_time">View by Time</string>
+    <string name="exlpore_filter_done">Done</string>
+    <string name="exlpore_filter_time">Time</string>
+    <string name="exlpore_filter_price_range">Price Range</string>
+    <string name="exlpore_filter_date_posted">Date Posted</string>
+    <string name="exlpore_filter_ratings">Ratings</string>
+    <string name="exlpore_filter_distance">Distance</string>
+    <string name="exlpore_filter_category">Category</string>
+
+    <string name="explore_filter_price_low_high">Price - Low to High</string>
+    <string name="explore_filter_price_high_low">Price - High to Low</string>
+    <string name="explore_filter_price_popularity">Popularity</string>
+
+    <string name="explore_filter_category_online">Online</string>
+    <string name="explore_filter_category_clubs">Clubs</string>
+    <string name="explore_filter_category_regular_class">Regular Class</string>
+    <string name="explore_filter_category_event_type">Event Type</string>
+    <string name="explore_filter_events_found">Events Found</string>
+    <string name="explore_filter_apply">விண்ணப்பிக்கவும்</string>
+    <string name="explore_filter_view_map">View map</string>
+    <string name="explore_filter_sort_by">வகைபடுத்து</string>
+    <string name="explore_filter_clear_filters">கிளியர் பில்டர்</string>
+
+
+
+    <!--Module title-->
+    <string name="dynamic_module_event_explore_title">Event</string>
+    <string name="dynamic_module_event_bookings_title">Event Booking</string>
+    <string name="dynamic_module_add_event_title">AddEvent</string>
+
+
+</resources>

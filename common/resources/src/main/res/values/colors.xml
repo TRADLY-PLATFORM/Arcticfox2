@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorLightBlack">#E4231F20</color>
+    <color name="colorAccent">#4f4f4f</color>
+    <color name="colorCustomBlack">#4f4f4f</color>
+    <color name="colorMediumBlack">#333a42</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorDarkBlack">#292C2E</color>
+    <color name="colorVeryLightBlack">#BEBDBD</color>
+    <color name="colorHomeViewTopItem">#74F6F9FF</color>
+    <color name="colorHomeCategoryImageTwo">#3c3352</color>
+    <color name="colorTextBlack">#1c1e21</color>
+    <color name="colorBlueLight">#46535F</color>
+    <color name="colorVeryBlueLight">#697886</color>
+    <color name="colorWhite">@android:color/white</color>
+    <color name="colorWhiteLight">#E9ECE9</color>
+    <color name="colorWhiteWhisper">#F4F5F9</color>
+    <color name="colorWhiteVeryLight">#FBFBFB</color>
+    <color name="colorWhiteLightTransparent">#37F7F7F7</color>
+    <color name="colorTransparent">@android:color/transparent</color>
+    <color name="colorDarkGrey">#545554</color>
+    <color name="colorMediumGrey">#E9969996</color>
+    <color name="colorLightGrey">#f6f9ff</color>
+    <color name="colorWindowBackground">#f6f9ff</color>
+    <color name="colorLightMediumGrey">#ECECEC</color>
+    <color name="colorGreenStart">#13b58d</color>
+    <color name="colorGreenEnd">#18BB93</color>
+    <color name="home_navigation_color">#123a4c82</color>
+    <color name="colorGridStoke">#FCE3E6EB</color>
+    <color name="colorGreenOffer">#19991D</color>
+    <color name="colorChatLeft">#ECECEE</color>
+    <color name="colorChatDocBg">#C9DBDADA</color>
+    <color name="colorButtonDirection">#F00A83E4</color>
+    <color name="colorRed">#CC4439</color>
+    <color name="colorMediumRed">#E6564A</color>
+    <color name="white">#fff</color>
+    <color name="warning_Yellow">#C9E0BB4B</color>
+    <color name="colorYellowOrange">#FFBA49</color>
+    <color name="colorSpecification">#F8F8FF</color>
+    <color name="colorDotGrey">#606A7B</color>
+    <color name="colorPayoutBtn">#F01390F4</color>
+    <color name="colorPayoutBtnPressed">#F00470C6</color>
+    <color name="colorPureDarkBlack">#212121</color>
+    <color name="colorMidDarkBlue">#606A7B</color>
+    <color name="colorYellow">#EBE0BB4B</color>
+    <color name="colorChatStatusSent">#545554</color>
+    <color name="colorChatStatusDelivered">#33b5ee</color>
+    <color name="colorGreen">#13b58c</color>
+    <color name="colorProductTag">#EDF0F5</color>
+    <color name="colorTag">#EDF0F5</color>
+    <color name="defaultRipple">#EEEAF7F5</color>
+    <color name="colorLightSpaceGrey">#EDF0F5</color>
+    <color name="colorGrey">#DADADA</color>
+
+
+    <!--Tradly Theme-->
+    <color name="colorPrimaryGreen">#09b58d</color>
+    <color name="colorPrimaryDarkGreen">#cc09b58d</color>
+    <color name="colorPrimaryGreenLight">#BF88E6D0</color>
+    <color name="colorPrimaryGreenVeryLight">#D4F6EE</color>
+    <color name="colorHomeViewTop">#E609B58D</color>
+    <color name="defaultRippleGreen">#EEEAF7F5</color>
+    <color name="colorChatRight">#CBDAF8F1</color>
+    <color name="colorChatDocBgRight">#BFE0D8</color>
+    <color name="colorGreenBtnPressed">#D909B58D</color>
+    <color name="colorGreenBtnNotPressed">#09b58d</color>
+    <color name="colorCircleStartGreen">#2ADABF</color>
+    <color name="colorGreenSoapBlue">#DFFBF4</color>
+
+    <!--Theme Blue-->
+    <color name="colorPrimaryBlue">#2874f0</color>
+    <color name="colorPrimaryDarkBlue">#1A5FCF</color>
+    <color name="colorPrimaryBlueLight">#BA7BA6EC</color>
+    <color name="colorPrimaryBlueVeryLight">#DDEAFF</color>
+    <color name="colorHomeViewTopBlue">#E62874F0</color>
+    <color name="defaultRippleBlue">#EAECF7</color>
+    <color name="colorChatRightBlue">#CBBCD2F3</color>
+    <color name="colorChatDocBgRightBlue">#BFCBE0</color>
+    <color name="colorBlueBtnPressed">#D92874F0</color>
+    <color name="colorBlueBtnNotPressed">#2874f0</color>
+    <color name="colorBlueSoapBlue">#DFEDFB</color>
+
+    <!--Theme Red-->
+    <color name="colorPrimaryRed">#ef5350</color>
+    <color name="colorPrimaryDarkRed">#db4f4c</color>
+    <color name="colorPrimaryRedLight">#A9E89291</color>
+    <color name="colorPrimaryRedVeryLight">#FAD9D8</color>
+    <color name="colorHomeViewTopRed">#E6EF5350</color>
+    <color name="defaultRippleRed">#F7EBEA</color>
+    <color name="colorChatRightRed">#CBF8DEDA</color>
+    <color name="colorChatDocBgRightRed">#E0C4BF</color>
+    <color name="colorRedBtnPressed">#D9EF5350</color>
+    <color name="colorRedSoapBlue">#B4FBE3DF</color>
+    <color name="colorRedBtnNotPressed">#ef5350</color>
+
+    <!-- British Racing Green -->
+    <color name="colorPrimaryGreenBR">#073023</color>
+    <color name="colorPrimaryDarkBRGreen">#032C1F</color>
+    <color name="colorPrimaryBRGreenLight">#175C46</color>
+    <color name="colorPrimaryBRGreenVeryLight">#D7FAEF</color>
+    <color name="colorHomeViewTopBRGreen">#E6073023</color>
+    <color name="defaultRippleBRGreen">#EEEAF7F5</color>
+    <color name="colorChatRightBRGreen">#CBDAF8F1</color>
+    <color name="colorChatDocBgRightBRGreen">#BFE0D8</color>
+    <color name="colorBRnGreenBtnPressed">#D9073023</color>
+    <color name="colorBRGreenBtnNotPressed">#073023</color>
+    <color name="colorBRGreenSoapBlue">#DFFBF4</color>
+
+    <!--Persian Green Theme -->
+    <color name="colorPrimaryPersianGreen">#00b8a9</color>
+    <color name="colorPrimaryDarkPersianGreen">#00766C</color>
+    <color name="colorPrimaryPersianGreenLight">#A19DEDE7</color>
+    <color name="colorPrimaryPersianGreenVeryLight">#D7FAF7</color>
+    <color name="colorHomeViewTopPersianGreen">#E600B8A9</color>
+    <color name="defaultRipplePersianGreen">#EEEAF7F5</color>
+    <color name="colorChatRightPersianGreen">#CBDAF8F1</color>
+    <color name="colorChatDocBgRightPersianGreen">#BFE0D8</color>
+    <color name="colorPersianGreenBtnPressed">#D900B8A9</color>
+    <color name="colorPersianGreenBtnNotPressed">#00b8a9</color>
+    <color name="colorNavyBlue">#042C5C</color>
+    <color name="colorPersianGreenSoapBlue">#DFFBF4</color>
+
+    <!--Brick orange-->
+    <color name="colorPrimaryBrickOrange">#BA431F</color>
+    <color name="colorPrimaryDarkBrickOrange">#BA3911</color>
+    <color name="colorPrimaryBrickOrangeLight">#AF563B</color>
+    <color name="colorPrimaryBrickOrangeVeryLight">#F8DDD4</color>
+    <color name="colorHomeViewTopBrickOrange">#E6BA431F</color>
+    <color name="defaultRippleBrickOrange">#EEF7EAEF</color>
+    <color name="colorChatRightBrickOrange">#CBF8DEDA</color>
+    <color name="colorChatDocBgRightBrickOrange">#E0C2BF</color>
+    <color name="colorBrickOrangeBtnPressed">#D9BA431F</color>
+    <color name="colorBrickOrangeBtnNotPressed">#BA431F</color>
+    <color name="colorBrickOrangeSoapBlue">#FBE2DF</color>
+
+    <!-- Light Sea Green-->
+    <color name="colorPrimaryLSGreen">#1CDCA4</color>
+    <color name="colorPrimaryDarkLSGreen">#06AA7A</color>
+    <color name="colorPrimaryLSGreenLight">#CC1CDCA4</color>
+    <color name="colorPrimaryLSGreenVeryLight">#D5F8EE</color>
+    <color name="colorHomeViewTopLSGreen">#E61CDCA4</color>
+    <color name="defaultRippleLSGreen">#EEEAF7F1</color>
+    <color name="colorChatRightLSGreen">#CBDAF8F1</color>
+    <color name="colorChatDocBgRightLSGreen">#BFE0D8</color>
+    <color name="colorLSGreenBtnPressed">#D91CDCA4</color>
+    <color name="colorLSGreenBtnNotPressed">#1CDCA4</color>
+    <color name="colorLSGreenSoapBlue">#DFFBF4</color>
+
+</resources>

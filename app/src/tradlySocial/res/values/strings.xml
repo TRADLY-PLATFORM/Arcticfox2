@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TradlySocial</string>
+    <string name="app_home_title">TradlySocial</string>
+    <string name="app_label">TradlySocial</string>
+    <string name="onboarding_1_message">Empowering Artisans,\nFarmers &amp; Micro Business</string>
+    <string name="onboarding_2_message">Connecting NGOs, Social\nEnterprises with Communities</string>
+    <string name="onboarding_3_message">Trade, Donate, Recycle &amp;\n Support</string>
+
+</resources>
